@@ -64,38 +64,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-
-        const mailtoLink = `mailto:Lucas@starkids.team,jason@starkids.team?subject=${encodeURIComponent('Star Kids - Solicitação de Informações')}&body=${encodeURIComponent(
-            `Escola: ${data.school}\n` +
-            `Contato: ${data.contact}\n` +
-            `Email: ${data.email}\n` +
-            `Telefone: ${data.phone}\n` +
-            `Cidade: ${data.city}\n\n` +
-            `Mensagem:\n${data.message || 'Gostaria de agendar uma aula experimental gratuita.'}`
-        )}`;
-        
-        window.location.href = mailtoLink;
-        
-        alert(currentLang === 'pt' ? 
-            'Obrigado! Seu cliente de email será aberto para enviar a mensagem.' :
-            'Thank you! Your email client will open to send the message.'
-        );
-        
-        contactForm.reset();
-    });
-}
-
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
