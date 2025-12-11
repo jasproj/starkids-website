@@ -1126,3 +1126,25 @@ section {
         padding: 0 20px 20px;
     }
 }
+
+/* Footer Subsidiary */
+.footer-subsidiary {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-subsidiary a {
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-subsidiary a:hover {
+    text-decoration: underline;
+}
+
+.email-copy {
+    user-select: all;
+    cursor: text;
+}
