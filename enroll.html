@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição | Star Kids Brasil</title>
+    <meta name="description" content="Inscreva seu filho no programa Star Kids - Futebol e Inglês para crianças de 2 a 8 anos.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --green: #2E7D32;
+            --green-light: #66BB6A;
+            --gold: #F9A825;
+            --yellow: #FFD700;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #666;
+            --gray-dark: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-dark);
+            background: var(--gray-light);
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .back-link {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-link:hover {
+            color: var(--green-light);
+        }
+        
+        /* Main Content */
+        .main {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .form-container {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--gray-light);
+        }
+        
+        .form-header h1 {
+            color: var(--green);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-header p {
+            color: var(--gray);
+        }
+        
+        /* Form Sections */
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            color: var(--green);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 500px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e53935;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        select {
+            background: var(--white);
+            cursor: pointer;
+        }
+        
+        /* Checkboxes */
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--green);
+            cursor: pointer;
+        }
+        
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Help Text */
+        .help-text {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+        
+        /* Footer Note */
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        
+        .form-footer a {
+            color: var(--green);
+        }
+        
+        /* Privacy Note */
+        .privacy-note {
+            background: var(--gray-light);
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-note strong {
+            color: var(--gray-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logo-main-new.jpg" alt="Star Kids" class="logo">
+            </a>
+            <a href="index.html" class="back-link">
+                ← Voltar ao site
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Form -->
+    <main class="main">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>⚽ Ficha de Inscrição</h1>
+                <p>Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids</p>
+            </div>
+
+            <form action="https://formspree.io/f/manrldeg" method="POST">
+                
+                <!-- Dados da Criança -->
+                <div class="form-section">
+                    <h2 class="section-title">👦 Dados da Criança</h2>
+                    
+                    <div class="form-group">
+                        <label for="child_name" class="required">Nome completo da criança</label>
+                        <input type="text" id="child_name" name="child_name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthdate" class="required">Data de nascimento</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gênero</label>
+                            <select id="gender" name="gender">
+                                <option value="">Selecione...</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outro</option>
+                                <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="program" class="required">Programa de interesse</label>
+                        <select id="program" name="program" required>
+                            <option value="">Selecione a faixa etária...</option>
+                            <option value="little_stars">Little Stars (2-3 anos)</option>
+                            <option value="rising_stars">Rising Stars (3-4 anos)</option>
+                            <option value="super_stars">Super Stars (5-6 anos)</option>
+                            <option value="shooting_stars">Shooting Stars (7-8 anos)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="english_level">Nível de exposição ao inglês</label>
+                        <select id="english_level" name="english_level">
+                            <option value="">Selecione...</option>
+                            <option value="nenhum">Nenhuma exposição</option>
+                            <option value="basico">Básico (algumas palavras)</option>
+                            <option value="intermediario">Intermediário (frases simples)</option>
+                            <option value="avancado">Avançado (conversação)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Dados do Responsável -->
+                <div class="form-section">
+                    <h2 class="section-title">👨‍👩‍👧 Dados do Responsável</h2>
+                    
+                    <div class="form-group">
+                        <label for="parent_name" class="required">Nome completo</label>
+                        <input type="text" id="parent_name" name="parent_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="relationship" class="required">Parentesco</label>
+                        <select id="relationship" name="relationship" required>
+                            <option value="">Selecione...</option>
+                            <option value="mae">Mãe</option>
+                            <option value="pai">Pai</option>
+                            <option value="avo">Avô/Avó</option>
+                            <option value="tio">Tio/Tia</option>
+                            <option value="responsavel_legal">Responsável Legal</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="required">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="required">Celular/WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(31) 99999-9999" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contato de Emergência -->
+                <div class="form-section">
+                    <h2 class="section-title">🚨 Contato de Emergência</h2>
+                    <p class="help-text" style="margin-bottom: 1rem;">Pessoa alternativa para contato em caso de emergência</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergency_name" class="required">Nome</label>
+                            <input type="text" id="emergency_name" name="emergency_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergency_phone" class="required">Telefone</label>
+                            <input type="tel" id="emergency_phone" name="emergency_phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergency_relationship">Parentesco com a criança</label>
+                        <input type="text" id="emergency_relationship" name="emergency_relationship" placeholder="Ex: Avó, Tio, Vizinha...">
+                    </div>
+                </div>
+
+                <!-- Informações Médicas -->
+                <div class="form-section">
+                    <h2 class="section-title">🏥 Informações Médicas</h2>
+                    
+                    <div class="form-group">
+                        <label for="allergies">Alergias</label>
+                        <textarea id="allergies" name="allergies" placeholder="Liste quaisquer alergias (alimentos, medicamentos, outros) ou escreva 'Nenhuma'"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="medical_conditions">Condições médicas ou necessidades especiais</label>
+                        <textarea id="medical_conditions" name="medical_conditions" placeholder="Informe condições como asma, diabetes, TDAH, autismo, ou outras condições relevantes. Escreva 'Nenhuma' se não houver."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="medications">Medicamentos de uso contínuo</label>
+                        <textarea id="medications" name="medications" placeholder="Liste medicamentos que a criança toma regularmente ou escreva 'Nenhum'"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="health_insurance">Plano de saúde (opcional)</label>
+                        <input type="text" id="health_insurance" name="health_insurance" placeholder="Nome do plano e número da carteirinha">
+                    </div>
+                </div>
+
+                <!-- Preferências -->
+                <div class="form-section">
+                    <h2 class="section-title">📅 Preferências</h2>
+                    
+                    <div class="form-group">
+                        <label>Dias de preferência para as aulas</label>
+                        <div class="checkbox-group" style="margin-top: 0.5rem;">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_seg" name="preferred_days" value="segunda">
+                                <label for="day_seg">Segunda-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_ter" name="preferred_days" value="terca">
+                                <label for="day_ter">Terça-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_qua" name="preferred_days" value="quarta">
+                                <label for="day_qua">Quarta-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_qui" name="preferred_days" value="quinta">
+                                <label for="day_qui">Quinta-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_sex" name="preferred_days" value="sexta">
+                                <label for="day_sex">Sexta-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_sab" name="preferred_days" value="sabado">
+                                <label for="day_sab">Sábado</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferred_time">Horário de preferência</label>
+                        <select id="preferred_time" name="preferred_time">
+                            <option value="">Selecione...</option>
+                            <option value="manha">Manhã (8h - 12h)</option>
+                            <option value="tarde">Tarde (14h - 18h)</option>
+                            <option value="qualquer">Qualquer horário</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school_name">Escola atual da criança (opcional)</label>
+                        <input type="text" id="school_name" name="school_name" placeholder="Nome da escola">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="how_found" class="required">Como conheceu o Star Kids?</label>
+                        <select id="how_found" name="how_found" required>
+                            <option value="">Selecione...</option>
+                            <option value="indicacao">Indicação de amigo/familiar</option>
+                            <option value="escola">Através da escola</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="google">Pesquisa no Google</option>
+                            <option value="evento">Evento/Demonstração</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Observações -->
+                <div class="form-section">
+                    <h2 class="section-title">📝 Observações Adicionais</h2>
+                    
+                    <div class="form-group">
+                        <label for="notes">Algo mais que devemos saber sobre seu filho(a)?</label>
+                        <textarea id="notes" name="notes" placeholder="Compartilhe informações que possam nos ajudar a proporcionar a melhor experiência para seu filho(a). Ex: interesses, medos, características de personalidade..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Autorizações -->
+                <div class="form-section">
+                    <h2 class="section-title">✅ Autorizações</h2>
+                    
+                    <div class="privacy-note">
+                        <strong>🔒 Privacidade:</strong> Seus dados são tratados com total sigilo e utilizados apenas para fins do programa Star Kids, conforme a LGPD.
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="consent_terms" name="consent_terms" value="sim" required>
+                            <label for="consent_terms" class="required">Li e concordo com os termos de participação do programa Star Kids e autorizo meu filho(a) a participar das atividades.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="consent_photos" name="consent_photos" value="sim">
+                            <label for="consent_photos">Autorizo o uso de fotos e vídeos do meu filho(a) para divulgação do programa em redes sociais e materiais promocionais.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="consent_whatsapp" name="consent_whatsapp" value="sim">
+                            <label for="consent_whatsapp">Desejo receber atualizações e informações do Star Kids via WhatsApp.</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">
+                    Enviar Inscrição ⚽
+                </button>
+
+                <div class="form-footer">
+                    <p>Dúvidas? Entre em contato:<br>
+                    📧 <span style="user-select: all; cursor: text;">Lucas@starkids.team</span><br>
+                    📱 <a href="https://wa.me/5531983719846">(31) 98371-9846</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Phone mask script -->
+    <script>
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 6) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+            } else if (value.length > 2) {
+                value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                value = `(${value}`;
+            }
+            e.target.value = value;
+        });
+        
+        document.getElementById('emergency_phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 6) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+            } else if (value.length > 2
