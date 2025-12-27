@@ -493,6 +493,58 @@
                     </div>
                 </div>
 
+                <!-- Termo de Responsabilidade -->
+                <div class="form-section">
+                    <h2 class="section-title">⚖️ Termo de Responsabilidade</h2>
+                    
+                    <div class="liability-notice" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+                        <strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo.
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="liability_health" name="liability_health" value="sim" required>
+                            <label for="liability_health" class="required"><strong>Declaração de Aptidão Física:</strong> Declaro que meu filho(a) está em boas condições de saúde e apto(a) a participar de atividades físicas e esportivas. Informei todas as condições médicas, alergias e medicamentos relevantes neste formulário.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="liability_risk" name="liability_risk" value="sim" required>
+                            <label for="liability_risk" class="required"><strong>Ciência dos Riscos:</strong> Declaro estar ciente de que a prática de atividades físicas e esportivas envolve riscos inerentes, incluindo, mas não limitado a: quedas, contusões, entorses, escoriações e outras lesões típicas de atividades esportivas infantis.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="liability_release" name="liability_release" value="sim" required>
+                            <label for="liability_release" class="required"><strong>Termo de Responsabilidade:</strong> Assumo integral responsabilidade pela participação do meu filho(a) nas atividades do programa Star Kids e isento a Star Kids Brasil, seus sócios, instrutores, colaboradores e a escola parceira de responsabilidade por eventuais acidentes ou lesões decorrentes da prática normal das atividades esportivas, desde que não haja dolo ou negligência comprovada.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="liability_emergency" name="liability_emergency" value="sim" required>
+                            <label for="liability_emergency" class="required"><strong>Autorização de Emergência:</strong> Em caso de acidente ou emergência médica, autorizo a equipe Star Kids a tomar as providências necessárias para atendimento de primeiros socorros e, se necessário, encaminhar meu filho(a) ao serviço de saúde mais próximo, comprometendo-me a arcar com os custos decorrentes.</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="liability_rules" name="liability_rules" value="sim" required>
+                            <label for="liability_rules" class="required"><strong>Regras do Programa:</strong> Comprometo-me a respeitar os horários das aulas, comunicar ausências com antecedência, buscar meu filho(a) pontualmente ao término das atividades e garantir que ele(a) compareça com vestimenta e calçados adequados para a prática esportiva.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="guardian_name" class="required">Nome completo do responsável legal</label>
+                        <input type="text" id="guardian_name" name="guardian_name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guardian_cpf" class="required">CPF do responsável</label>
+                            <input type="text" id="guardian_cpf" name="guardian_cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consent_date" class="required">Data</label>
+                            <input type="date" id="consent_date" name="consent_date" required>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Autorizações -->
                 <div class="form-section">
                     <h2 class="section-title">✅ Autorizações</h2>
@@ -526,15 +578,16 @@
 
                 <div class="form-footer">
                     <p>Dúvidas? Entre em contato:<br>
-                    📧 <span style="user-select: all; cursor: text;">Lucas@starkids.team</span><br>
+                    📧 <span style="user-select: all; cursor: text;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87cbf2e4e6f4c7f4f3e6f5eceee3f4a9f3e2e6ea">[email&#160;protected]</a></span><br>
                     📱 <a href="https://wa.me/5531983719846">(31) 98371-9846</a></p>
                 </div>
             </form>
         </div>
     </main>
 
-    <!-- Phone mask script -->
+    <!-- Phone and CPF mask scripts -->
     <script>
+        // Phone mask
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 11) value = value.slice(0, 11);
@@ -548,9 +601,36 @@
             e.target.value = value;
         });
         
+        // Emergency phone mask
         document.getElementById('emergency_phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 11) value = value.slice(0, 11);
             if (value.length > 6) {
                 value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
-            } else if (value.length > 2
+            } else if (value.length > 2) {
+                value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                value = `(${value}`;
+            }
+            e.target.value = value;
+        });
+        
+        // CPF mask
+        document.getElementById('guardian_cpf').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 9) {
+                value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6,9)}-${value.slice(9)}`;
+            } else if (value.length > 6) {
+                value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6)}`;
+            } else if (value.length > 3) {
+                value = `${value.slice(0,3)}.${value.slice(3)}`;
+            }
+            e.target.value = value;
+        });
+        
+        // Set today's date as default for consent date
+        document.getElementById('consent_date').valueAsDate = new Date();
+    </script>
+</body>
+</html>
