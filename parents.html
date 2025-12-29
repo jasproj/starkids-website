@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Star Kids - Aulas de futebol e inglês para crianças de 2 a 8 anos. Metodologia Play Not Push validada por Cambridge. Inscreva seu filho hoje!">
+    <meta name="keywords" content="aulas de futebol para crianças, inglês para crianças, futebol infantil, escola de futebol, atividades extracurriculares, Belo Horizonte">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Star Kids - Futebol + Inglês para Crianças">
+    <meta property="og:description" content="Seu filho aprende inglês enquanto se diverte jogando futebol. Idades 2-8 anos.">
+    <meta property="og:image" content="https://starkids.team/images/logo-main-new.jpg">
+    <meta property="og:url" content="https://starkids.team/parents">
+    
+    <title>Star Kids - Futebol + Inglês para Crianças | Idades 2-8 anos</title>
+    
+    <!-- Google Analytics - Replace GA_MEASUREMENT_ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Facebook Pixel - Replace YOUR_PIXEL_ID -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --green: #2E7D32;
+            --green-light: #66BB6A;
+            --green-dark: #1B5E20;
+            --gold: #F9A825;
+            --yellow: #FFD700;
+            --white: #ffffff;
+            --gray-light: #f8f9fa;
+            --gray: #666;
+            --gray-dark: #333;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .header-cta {
+            background: var(--green);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .header-cta:hover {
+            background: var(--green-dark);
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "⚽";
+            position: absolute;
+            font-size: 400px;
+            opacity: 0.05;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-content {
+            color: var(--white);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--gray-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 span {
+            color: var(--yellow);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--gray-dark);
+        }
+        
+        .btn-primary:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--green);
+        }
+        
+        .hero-image {
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+        }
+        
+        /* Trust Badges */
+        .trust-section {
+            background: var(--white);
+            padding: 30px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .trust-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .trust-item span {
+            font-size: 1.5rem;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 20px;
+            background: var(--gray-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.8rem;
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            position: relative;
+        }
+        
+        .steps-container::before {
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 15%;
+            right: 15%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green), var(--yellow), var(--green));
+            border-radius: 2px;
+            z-index: 0;
+        }
+        
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(46,125,50,0.3);
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: var(--gray);
+            max-width: 250px;
+            margin: 0 auto;
+        }
+        
+        /* Programs Section */
+        .programs {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            color: var(--white);
+        }
+        
+        .programs .section-header h2 {
+            color: var(--white);
+        }
+        
+        .programs .section-header p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .program-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+        
+        .program-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .program-emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .program-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--yellow);
+        }
+        
+        .program-age {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .program-card p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 20px;
+            background: var(--gray-light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 5rem;
+            color: var(--green);
+            opacity: 0.15;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--gray-dark);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            color: var(--green);
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--gold) 100%);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            color: var(--gray-dark);
+            opacity: 0.85;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section .btn-primary {
+            background: var(--green);
+            color: var(--white);
+            font-size: 1.3rem;
+            padding: 20px 50px;
+        }
+        
+        .cta-section .btn-primary:hover {
+            background: var(--green-dark);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-dark);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .footer p {
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+        
+        .footer-contact {
+            margin: 25px 0;
+        }
+        
+        .footer-contact a {
+            color: var(--white);
+            margin: 0 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-contact a:hover {
+            opacity: 1;
+        }
+        
+        .footer-subsidiary {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-features {
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .steps-container::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 20px 60px;
+                min-height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .header-cta {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logo-main-new.jpg" alt="Star Kids" class="logo">
+            </a>
+            <a href="enroll.html" class="header-cta">Inscreva-se Agora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🎓 Metodologia Cambridge</div>
+                <h1>Seu Filho Aprende <span>Inglês</span> Jogando <span>Futebol</span></h1>
+                <p class="hero-subtitle">Diversão garantida! Crianças de 2 a 8 anos desenvolvem inglês, coordenação e confiança em um ambiente alegre e sem pressão.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span>⚽</span> Futebol Lúdico
+                    </div>
+                    <div class="hero-feature">
+                        <span>🇬🇧</span> Inglês Natural
+                    </div>
+                    <div class="hero-feature">
+                        <span>😊</span> Zero Pressão
+                    </div>
+                    <div class="hero-feature">
+                        <span>🏆</span> Certificados
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="enroll.html" class="btn btn-primary">Inscreva Seu Filho →</a>
+                    <a href="https://wa.me/5531983719846" class="btn btn-secondary">Fale Conosco</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/logo-badge-new.png" alt="Star Kids Badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-item">
+                <span>🎓</span> Validado por Cambridge
+            </div>
+            <div class="trust-item">
+                <span>👶</span> Idades 2-8 anos
+            </div>
+            <div class="trust-item">
+                <span>⭐</span> Metodologia "Play Not Push"
+            </div>
+            <div class="trust-item">
+                <span>📜</span> Certificados de Conquista
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Que Pais Escolhem Star Kids?</h2>
+                <p>Muito mais que futebol - desenvolvemos crianças completas e felizes</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Inglês Sem Esforço</h3>
+                    <p>Seu filho aprende inglês naturalmente através da brincadeira, sem perceber que está estudando.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Confiança & Autoestima</h3>
+                    <p>Ambiente acolhedor onde toda criança é celebrada, construindo confiança para a vida.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Habilidades Sociais</h3>
+                    <p>Trabalho em equipe, fazer amigos e aprender a cooperar de forma divertida.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏃</div>
+                    <h3>Coordenação Motora</h3>
+                    <p>Desenvolvimento físico adequado à idade com movimentos e jogos lúdicos.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">😄</div>
+                    <h3>Diversão Garantida</h3>
+                    <p>Crianças pedem para voltar! Aulas são o ponto alto da semana deles.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Sem Pressão</h3>
+                    <p>Metodologia "Play Not Push" - aprendizado através da brincadeira, não da competição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona?</h2>
+                <p>Simples e fácil para você e seu filho</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Inscreva-se</h3>
+                    <p>Preencha o formulário online em menos de 3 minutos</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Aula Experimental</h3>
+                    <p>Seu filho participa de uma aula gratuita para experimentar</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Diversão Começa!</h3>
+                    <p>Aulas semanais de 45-60 min com treinadores bilíngues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Programas por Idade</h2>
+                <p>Cada faixa etária tem um programa especialmente desenvolvido</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-emoji">👶</div>
+                    <h3>Star Tots</h3>
+                    <div class="program-age">18 meses - 2,5 anos</div>
+                    <p>Interação com pais, movimentos básicos, primeiras palavras em inglês</p>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-emoji">🧒</div>
+                    <h3>Star Juniors</h3>
+                    <div class="program-age">2,5 - 3,5 anos</div>
+                    <p>Desenvolvendo independência, jogos simples, vocabulário de ações</p>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-emoji">⚽</div>
+                    <h3>Star Players</h3>
+                    <div class="program-age">3,5 - 5 anos</div>
+                    <p>Coordenação e velocidade, mini jogos, frases em inglês</p>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-emoji">🏆</div>
+                    <h3>Star Champions</h3>
+                    <div class="program-age">5 - 8 anos</div>
+                    <p>Habilidades avançadas, partidas, conversação em inglês</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Pais Dizem</h2>
+                <p>Famílias reais, resultados reais</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <h4>Maria Santos</h4>
+                            <p>Mãe do Pedro, 5 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div class="author-info">
+                            <h4>Roberto Lima</h4>
+                            <p>Pai da Sofia, 4 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"A aula é o momento favorito da semana do meu filho. Ele já chega em casa falando 'ball', 'kick', 'goal'! Recomendo demais."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <h4>Ana Oliveira</h4>
+                            <p>Mãe do Lucas, 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>🌟 Inscreva Seu Filho Hoje!</h2>
+            <p>Vagas limitadas por turma. Garanta o lugar do seu pequeno campeão.</p>
+            <a href="enroll.html" class="btn btn-primary">Fazer Inscrição →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="images/logo-main-new.jpg" alt="Star Kids" class="footer-logo">
+            <p>Star Kids Brasil - Futebol + Inglês para Crianças</p>
+            <p>Metodologia validada pela Universidade de Cambridge</p>
+            
+            <div class="footer-contact">
+                <a href="https://wa.me/5531983719846">📱 WhatsApp</a>
+                <a href="mailto:Lucas@starkids.team">✉️ Email</a>
+                <a href="index.html">🌐 Site Principal</a>
+            </div>
+            
+            <p>© 2025 Star Kids Brasil. Todos os direitos reservados.</p>
+            <p class="footer-subsidiary">
+                Uma subsidiária de <a href="https://cladutacorp.com" target="_blank">CLADUTA CORP</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
