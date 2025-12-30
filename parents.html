@@ -389,9 +389,46 @@
         /* How It Works */
         .how-it-works {
             padding: 100px 20px;
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
-                        url('bh-skyline.jpg') center/cover no-repeat;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .how-it-works::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: url('bh-skyline.jpg') center/cover no-repeat;
+            animation: slowPan 30s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+        
+        .how-it-works::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            z-index: -1;
+        }
+        
+        @keyframes slowPan {
+            0% {
+                transform: translate(0, 0) scale(1.1);
+            }
+            33% {
+                transform: translate(-5%, -3%) scale(1.15);
+            }
+            66% {
+                transform: translate(-3%, 2%) scale(1.1);
+            }
+            100% {
+                transform: translate(-8%, -2%) scale(1.12);
+            }
         }
         
         .steps-container {
