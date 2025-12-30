@@ -1,0 +1,232 @@
+{
+  "animation_json": {
+    "files": [
+      {
+        "url": "assets/animations.json",
+        "type": "animation",
+        "key": "animations"
+      }
+    ]
+  },
+  "fonts": {
+    "files": [
+      {
+        "url": "assets/fronts/retro-pixel-arcade.otf.woff2",
+        "type": "font",
+        "key": "RetroPixel",
+        "fontType": "opentype"
+      },
+      {
+        "url": "assets/fronts/supercell-magic_0.ttf",
+        "type": "font",
+        "key": "SupercellMagic",
+        "fontType": "opentype"
+      }
+    ]
+  },
+  "backgrounds": {
+    "files": [
+      {
+        "type": "image",
+        "key": "soccer_field_background",
+        "url": "https://cdn-game-mcp.gambo.ai/c664669a-4836-4bd4-9370-8fcdcfc0c6a0/images/soccer_field_background.png"
+      }
+    ]
+  },
+  "ui_images": {
+    "files": [
+      {
+        "type": "image",
+        "key": "game_title_star_kids",
+        "url": "https://cdn-game-mcp.gambo.ai/a24d8a3d-745f-4705-b287-554e2c2adcee/images/game_title_star_kids.png"
+      },
+      {
+        "type": "image",
+        "key": "coach_character",
+        "url": "https://cdn-game-mcp.gambo.ai/9e6334f5-0fba-461b-b799-c6c5502c68da/images/coach_character.png"
+      },
+      {
+        "type": "image",
+        "key": "soccer_ball",
+        "url": "https://cdn-game-mcp.gambo.ai/171bde91-d8c8-4744-a756-bbcd7c9a06d0/images/soccer_ball.png"
+      },
+      {
+        "type": "image",
+        "key": "golden_star",
+        "url": "https://cdn-game-mcp.gambo.ai/be2e9e89-03a9-4b88-b6d6-5d555aef90c7/images/golden_star.png"
+      },
+      {
+        "type": "image",
+        "key": "goal_net",
+        "url": "https://cdn-game-mcp.gambo.ai/44eff0b5-76f5-4d21-b8b5-aaa6c854ebfe/images/goal_net.png"
+      },
+      {
+        "type": "image",
+        "key": "target_bubble",
+        "url": "https://cdn-game-mcp.gambo.ai/db9ea30a-c37e-4a60-bb2e-dbe2b3008e21/images/target_bubble.png"
+      },
+      {
+        "type": "image",
+        "key": "correct_checkmark",
+        "url": "https://cdn-game-mcp.gambo.ai/7707d1ad-c1d9-4e1b-b72e-55ae8ee495a1/images/correct_checkmark.png"
+      },
+      {
+        "type": "image",
+        "key": "try_again_icon",
+        "url": "https://cdn-game-mcp.gambo.ai/08bf429e-6020-4f72-9c66-53d84b45bc20/images/try_again_icon.png"
+      }
+    ]
+  },
+  "vocabulary_images": {
+    "files": [
+      {
+        "type": "image",
+        "key": "vocab_red",
+        "url": "https://cdn-game-mcp.gambo.ai/3148f95a-2c99-4250-b8e4-a68be8470edc/images/vocab_red.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_blue",
+        "url": "https://cdn-game-mcp.gambo.ai/cdba29b2-fe31-422e-ab0e-7048a2af0251/images/vocab_blue.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_yellow",
+        "url": "https://cdn-game-mcp.gambo.ai/be0f5810-1dfb-4c2e-8468-ef9d53441c0d/images/vocab_yellow.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_green",
+        "url": "https://cdn-game-mcp.gambo.ai/33394f25-5088-4f66-bade-38f693c8d7ef/images/vocab_green.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_orange_color",
+        "url": "https://cdn-game-mcp.gambo.ai/77869167-1b85-42fe-b614-b6c2c7d9e3e6/images/vocab_orange_color.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_purple",
+        "url": "https://cdn-game-mcp.gambo.ai/5935eaa0-aa76-4f7a-ad2e-31356648750b/images/vocab_purple.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_dog",
+        "url": "https://cdn-game-mcp.gambo.ai/b162479d-3e93-49ad-93ab-9b61a7d6e26e/images/vocab_dog.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_cat",
+        "url": "https://cdn-game-mcp.gambo.ai/9a706383-9bd6-463c-8e97-d0b5fe920e12/images/vocab_cat.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_bird",
+        "url": "https://cdn-game-mcp.gambo.ai/6ef5424d-6f68-46be-b74b-6dd82e50aac3/images/vocab_bird.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_apple",
+        "url": "https://cdn-game-mcp.gambo.ai/145a6c33-d107-479d-9299-d867855032e4/images/vocab_apple.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_banana",
+        "url": "https://cdn-game-mcp.gambo.ai/3b7a1d63-8062-4eae-9875-61abd970ddc0/images/vocab_banana.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_orange_fruit",
+        "url": "https://cdn-game-mcp.gambo.ai/19169186-0dad-45a8-b99f-3f89ace248a2/images/vocab_orange_fruit.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_grape",
+        "url": "https://cdn-game-mcp.gambo.ai/ceed201d-a2cf-4f67-b1b1-74d7acd4b4e0/images/vocab_grape.png"
+      },
+      {
+        "type": "image",
+        "key": "number_1",
+        "url": "https://cdn-game-mcp.gambo.ai/0cdcc896-bba8-4c2c-9284-3a80e629715f/images/number_1.png"
+      },
+      {
+        "type": "image",
+        "key": "number_2",
+        "url": "https://cdn-game-mcp.gambo.ai/35a5fa4f-6c1d-4ed3-a4fb-1c7a64f4ff74/images/number_2.png"
+      },
+      {
+        "type": "image",
+        "key": "number_3",
+        "url": "https://cdn-game-mcp.gambo.ai/6433d8e8-b607-4046-925d-c8cbf2ede1ef/images/number_3.png"
+      },
+      {
+        "type": "image",
+        "key": "number_4",
+        "url": "https://cdn-game-mcp.gambo.ai/f7eb57ef-d070-464a-9845-3844bed04450/images/number_4.png"
+      },
+      {
+        "type": "image",
+        "key": "number_5",
+        "url": "https://cdn-game-mcp.gambo.ai/a1671bab-245a-417b-b8a9-f44e325d4818/images/number_5.png"
+      }
+    ]
+  },
+  "sound_effects": {
+    "files": [
+      {
+        "type": "audio",
+        "key": "ball_kick",
+        "url": "https://cdn-game-mcp.gambo.ai/0d009cab-0921-4211-8914-d270bc1a12e9/sound_effects/ball_kick.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "goal_celebration",
+        "url": "https://cdn-game-mcp.gambo.ai/b7a33906-58ec-4aa2-bf7d-a3d4b89deb7d/sound_effects/goal_celebration.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "whistle_blow",
+        "url": "https://cdn-game-mcp.gambo.ai/a75ef79a-1f99-4419-a25b-bc2304aa1914/sound_effects/whistle_blow.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "correct_answer",
+        "url": "https://cdn-game-mcp.gambo.ai/808c76bb-d55e-49b8-b4b6-e474739f3a70/sound_effects/correct_answer.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "try_again",
+        "url": "https://cdn-game-mcp.gambo.ai/5d621b86-b0e4-4ec3-9637-26fa278d266c/sound_effects/try_again.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "star_collect",
+        "url": "https://cdn-game-mcp.gambo.ai/5d64d85e-908d-4a94-ba91-f65f87ba6c64/sound_effects/star_collect.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "ui_click",
+        "url": "https://cdn-game-mcp.gambo.ai/4bc9f9ca-8fcb-473f-9f0b-e3a84a280a09/sound_effects/ui_click.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "level_complete",
+        "url": "https://cdn-game-mcp.gambo.ai/90db361a-523d-4fb4-b432-676f12234fe9/sound_effects/level_complete.mp3"
+      }
+    ]
+  },
+  "background_musics": {
+    "files": [
+      {
+        "type": "audio",
+        "key": "happy_soccer_theme",
+        "url": "https://cdn-game-mcp.gambo.ai/52809703-c5b3-411a-be49-1cc717b0e914/music/happy_soccer_theme.mp3"
+      }
+    ]
+  },
+  "meta": {
+    "app": "Gambo AI",
+    "version": 1,
+    "showAllFilesInBlocks": false
+  }
+}
