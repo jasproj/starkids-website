@@ -273,6 +273,30 @@
         .privacy-note strong {
             color: var(--gray-dark);
         }
+        
+        /* Language Toggle */
+        .lang-toggle {
+            background: transparent;
+            border: 2px solid var(--green);
+            color: var(--green);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            margin-right: 15px;
+        }
+        
+        .lang-toggle:hover {
+            background: var(--green);
+            color: white;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -282,9 +306,12 @@
             <a href="index.html">
                 <img src="images/logo-main-new.jpg" alt="Star Kids" class="logo">
             </a>
-            <a href="index.html" class="back-link">
-                ← Voltar ao site
-            </a>
+            <div class="header-right">
+                <button class="lang-toggle" id="langBtn">EN 🇺🇸</button>
+                <a href="parents.html" class="back-link" data-pt="← Voltar ao site" data-en="← Back to site">
+                    ← Voltar ao site
+                </a>
+            </div>
         </div>
     </header>
 
@@ -292,42 +319,42 @@
     <main class="main">
         <div class="form-container">
             <div class="form-header">
-                <h1>⚽ Ficha de Inscrição</h1>
-                <p>Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids</p>
+                <h1 data-pt="⚽ Ficha de Inscrição" data-en="⚽ Enrollment Form">⚽ Ficha de Inscrição</h1>
+                <p data-pt="Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids" data-en="Fill in the information below to enroll your child in the Star Kids program">Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids</p>
             </div>
 
             <form action="https://formspree.io/f/manrldeg" method="POST">
                 
                 <!-- Dados da Criança -->
                 <div class="form-section">
-                    <h2 class="section-title">👦 Dados da Criança</h2>
+                    <h2 class="section-title" data-pt="👦 Dados da Criança" data-en="👦 Child Information">👦 Dados da Criança</h2>
                     
                     <div class="form-group">
-                        <label for="child_name" class="required">Nome completo da criança</label>
+                        <label for="child_name" class="required" data-pt="Nome completo da criança" data-en="Child's full name">Nome completo da criança</label>
                         <input type="text" id="child_name" name="child_name" required>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="birthdate" class="required">Data de nascimento</label>
+                            <label for="birthdate" class="required" data-pt="Data de nascimento" data-en="Date of birth">Data de nascimento</label>
                             <input type="date" id="birthdate" name="birthdate" required>
                         </div>
                         <div class="form-group">
-                            <label for="gender">Gênero</label>
+                            <label for="gender" data-pt="Gênero" data-en="Gender">Gênero</label>
                             <select id="gender" name="gender">
-                                <option value="">Selecione...</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="outro">Outro</option>
-                                <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+                                <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
+                                <option value="masculino" data-pt="Masculino" data-en="Male">Masculino</option>
+                                <option value="feminino" data-pt="Feminino" data-en="Female">Feminino</option>
+                                <option value="outro" data-pt="Outro" data-en="Other">Outro</option>
+                                <option value="prefiro_nao_dizer" data-pt="Prefiro não dizer" data-en="Prefer not to say">Prefiro não dizer</option>
                             </select>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="program" class="required">Programa de interesse</label>
+                        <label for="program" class="required" data-pt="Programa de interesse" data-en="Program of interest">Programa de interesse</label>
                         <select id="program" name="program" required>
-                            <option value="">Selecione a faixa etária...</option>
+                            <option value="" data-pt="Selecione a faixa etária..." data-en="Select age group...">Selecione a faixa etária...</option>
                             <option value="little_stars">Little Stars (2-3 anos)</option>
                             <option value="rising_stars">Rising Stars (3-4 anos)</option>
                             <option value="super_stars">Super Stars (5-6 anos)</option>
@@ -349,7 +376,7 @@
 
                 <!-- Dados do Responsável -->
                 <div class="form-section">
-                    <h2 class="section-title">👨‍👩‍👧 Dados do Responsável</h2>
+                    <h2 class="section-title" data-pt="👨‍👩‍👧 Dados do Responsável" data-en="👨‍👩‍👧 Parent/Guardian Information">👨‍👩‍👧 Dados do Responsável</h2>
                     
                     <div class="form-group">
                         <label for="parent_name" class="required">Nome completo</label>
@@ -383,8 +410,8 @@
 
                 <!-- Contato de Emergência -->
                 <div class="form-section">
-                    <h2 class="section-title">🚨 Contato de Emergência</h2>
-                    <p class="help-text" style="margin-bottom: 1rem;">Pessoa alternativa para contato em caso de emergência</p>
+                    <h2 class="section-title" data-pt="🚨 Contato de Emergência" data-en="🚨 Emergency Contact">🚨 Contato de Emergência</h2>
+                    <p class="help-text" style="margin-bottom: 1rem;" data-pt="Pessoa alternativa para contato em caso de emergência" data-en="Alternative person to contact in case of emergency">Pessoa alternativa para contato em caso de emergência</p>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -405,7 +432,7 @@
 
                 <!-- Informações Médicas -->
                 <div class="form-section">
-                    <h2 class="section-title">🏥 Informações Médicas</h2>
+                    <h2 class="section-title" data-pt="🏥 Informações Médicas" data-en="🏥 Medical Information">🏥 Informações Médicas</h2>
                     
                     <div class="form-group">
                         <label for="allergies">Alergias</label>
@@ -430,7 +457,7 @@
 
                 <!-- Preferências -->
                 <div class="form-section">
-                    <h2 class="section-title">📅 Preferências</h2>
+                    <h2 class="section-title" data-pt="📅 Preferências" data-en="📅 Preferences">📅 Preferências</h2>
                     
                     <div class="form-group">
                         <label>Dias de preferência para as aulas</label>
@@ -505,7 +532,7 @@
 
                 <!-- Termo de Responsabilidade -->
                 <div class="form-section">
-                    <h2 class="section-title">⚖️ Termo de Responsabilidade</h2>
+                    <h2 class="section-title" data-pt="⚖️ Termo de Responsabilidade" data-en="⚖️ Liability Waiver">⚖️ Termo de Responsabilidade</h2>
                     
                     <div class="liability-notice" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
                         <strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo.
@@ -557,7 +584,7 @@
 
                 <!-- Autorizações -->
                 <div class="form-section">
-                    <h2 class="section-title">✅ Autorizações</h2>
+                    <h2 class="section-title" data-pt="✅ Autorizações" data-en="✅ Authorizations">✅ Autorizações</h2>
                     
                     <div class="privacy-note">
                         <strong>🔒 Privacidade:</strong> Seus dados são tratados com total sigilo e utilizados apenas para fins do programa Star Kids, conforme a LGPD.
@@ -582,7 +609,7 @@
                 </div>
 
                 <!-- Submit -->
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" data-pt="Enviar Inscrição ⚽" data-en="Submit Enrollment ⚽">
                     Enviar Inscrição ⚽
                 </button>
 
@@ -641,6 +668,23 @@
         
         // Set today's date as default for consent date
         document.getElementById('consent_date').valueAsDate = new Date();
+        
+        // Language Toggle
+        let currentLang = "pt";
+        
+        document.getElementById("langBtn").addEventListener("click", function() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+            this.textContent = currentLang === "pt" ? "EN 🇺🇸" : "PT 🇧🇷";
+            
+            document.querySelectorAll("[data-pt][data-en]").forEach(el => {
+                const text = el.getAttribute("data-" + currentLang);
+                if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                    el.placeholder = text;
+                } else {
+                    el.innerHTML = text;
+                }
+            });
+        });
     </script>
 </body>
-</html> 
+</html>

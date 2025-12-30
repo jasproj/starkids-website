@@ -129,6 +129,23 @@
             transform: scale(1.05);
         }
         
+        .lang-toggle {
+            background: transparent;
+            border: 2px solid var(--green);
+            color: var(--green);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .lang-toggle:hover {
+            background: var(--green);
+            color: white;
+        }
+        
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -800,9 +817,11 @@
             <div class="header-right">
                 <div class="header-contact">
                     <a href="https://wa.me/5531983719846">📱 (31) 97331-3443</a>
-                    <a href="/cdn-cgi/l/email-protection#aee2dbcdcfddeedddacfdcc5c7cadd80dacbcfc3">✉️ <span class="__cf_email__" data-cfemail="d29ea7b1b3a192a1a6b3a0b9bbb6a1fca6b7b3bf">[email&#160;protected]</span></a>
+                    <a href="mailto:Lucas@starkids.team">✉️ Lucas@starkids.team</a>
                 </div>
-                <a href="enroll.html" class="header-cta">Inscreva-se Agora</a>
+                <a href="index.html" class="header-link" data-pt="🏫 Escolas" data-en="🏫 Schools" style="color: var(--green); text-decoration: none; font-weight: 600; margin-right: 15px;">🏫 Escolas</a>
+                <button class="lang-toggle" id="langBtn">EN 🇺🇸</button>
+                <a href="enroll.html" class="header-cta" data-pt="Inscreva-se Agora" data-en="Enroll Now">Inscreva-se Agora</a>
             </div>
         </div>
     </header>
@@ -816,28 +835,28 @@
         <div class="hero-container">
             <div class="hero-content">
                 <img src="images/logo-main-new.jpg" alt="Star Kids" class="hero-logo">
-                <div class="hero-badge">🎓 Metodologia Cambridge</div>
-                <h1>Seu Filho Aprende <span>Inglês</span> Jogando <span>Futebol</span></h1>
-                <p class="hero-subtitle">Diversão garantida! Crianças de 2 a 8 anos desenvolvem inglês, coordenação e confiança em um ambiente alegre e sem pressão.</p>
+                <div class="hero-badge" data-pt="🎓 Metodologia Cambridge" data-en="🎓 Cambridge Methodology">🎓 Metodologia Cambridge</div>
+                <h1 data-pt="Seu Filho Aprende <span>Inglês</span> Jogando <span>Futebol</span>" data-en="Your Child Learns <span>English</span> Playing <span>Soccer</span>">Seu Filho Aprende <span>Inglês</span> Jogando <span>Futebol</span></h1>
+                <p class="hero-subtitle" data-pt="Diversão garantida! Crianças de 2 a 8 anos desenvolvem inglês, coordenação e confiança em um ambiente alegre e sem pressão." data-en="Fun guaranteed! Children ages 2-8 develop English, coordination and confidence in a joyful, pressure-free environment.">Diversão garantida! Crianças de 2 a 8 anos desenvolvem inglês, coordenação e confiança em um ambiente alegre e sem pressão.</p>
                 
                 <div class="hero-features">
-                    <div class="hero-feature">
+                    <div class="hero-feature" data-pt="⚽ Futebol Lúdico" data-en="⚽ Playful Soccer">
                         <span>⚽</span> Futebol Lúdico
                     </div>
-                    <div class="hero-feature">
+                    <div class="hero-feature" data-pt="🇬🇧 Inglês Natural" data-en="🇬🇧 Natural English">
                         <span>🇬🇧</span> Inglês Natural
                     </div>
-                    <div class="hero-feature">
+                    <div class="hero-feature" data-pt="😊 Zero Pressão" data-en="😊 Zero Pressure">
                         <span>😊</span> Zero Pressão
                     </div>
-                    <div class="hero-feature">
+                    <div class="hero-feature" data-pt="🏆 Certificados" data-en="🏆 Certificates">
                         <span>🏆</span> Certificados
                     </div>
                 </div>
                 
                 <div class="hero-buttons">
-                    <a href="enroll.html" class="btn btn-primary">Inscreva Seu Filho →</a>
-                    <a href="https://wa.me/5531983719846" class="btn btn-secondary">Fale Conosco</a>
+                    <a href="enroll.html" class="btn btn-primary" data-pt="Inscreva Seu Filho →" data-en="Enroll Your Child →">Inscreva Seu Filho →</a>
+                    <a href="https://wa.me/5531983719846" class="btn btn-secondary" data-pt="Fale Conosco" data-en="Contact Us">Fale Conosco</a>
                 </div>
             </div>
         </div>
@@ -846,16 +865,16 @@
     <!-- Trust Badges -->
     <section class="trust-section">
         <div class="trust-container">
-            <div class="trust-item">
+            <div class="trust-item" data-pt="🎓 Validado por Cambridge" data-en="🎓 Cambridge Validated">
                 <span>🎓</span> Validado por Cambridge
             </div>
-            <div class="trust-item">
+            <div class="trust-item" data-pt="👶 Idades 2-8 anos" data-en="👶 Ages 2-8 years">
                 <span>👶</span> Idades 2-8 anos
             </div>
-            <div class="trust-item">
+            <div class="trust-item" data-pt="⭐ Metodologia 'Play Not Push'" data-en="⭐ 'Play Not Push' Methodology">
                 <span>⭐</span> Metodologia "Play Not Push"
             </div>
-            <div class="trust-item">
+            <div class="trust-item" data-pt="📜 Certificados de Conquista" data-en="📜 Achievement Certificates">
                 <span>📜</span> Certificados de Conquista
             </div>
         </div>
@@ -865,45 +884,45 @@
     <section class="benefits">
         <div class="container">
             <div class="section-header">
-                <h2>Por Que Pais Escolhem Star Kids?</h2>
-                <p>Muito mais que futebol - desenvolvemos crianças completas e felizes</p>
+                <h2 data-pt="Por Que Pais Escolhem Star Kids?" data-en="Why Parents Choose Star Kids?">Por Que Pais Escolhem Star Kids?</h2>
+                <p data-pt="Muito mais que futebol - desenvolvemos crianças completas e felizes" data-en="Much more than soccer - we develop complete and happy children">Muito mais que futebol - desenvolvemos crianças completas e felizes</p>
             </div>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🧠</div>
-                    <h3>Inglês Sem Esforço</h3>
-                    <p>Seu filho aprende inglês naturalmente através da brincadeira, sem perceber que está estudando.</p>
+                    <h3 data-pt="Inglês Sem Esforço" data-en="Effortless English">Inglês Sem Esforço</h3>
+                    <p data-pt="Seu filho aprende inglês naturalmente através da brincadeira, sem perceber que está estudando." data-en="Your child learns English naturally through play, without realizing they're studying.">Seu filho aprende inglês naturalmente através da brincadeira, sem perceber que está estudando.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">💪</div>
-                    <h3>Confiança & Autoestima</h3>
-                    <p>Ambiente acolhedor onde toda criança é celebrada, construindo confiança para a vida.</p>
+                    <h3 data-pt="Confiança & Autoestima" data-en="Confidence & Self-Esteem">Confiança & Autoestima</h3>
+                    <p data-pt="Ambiente acolhedor onde toda criança é celebrada, construindo confiança para a vida." data-en="Welcoming environment where every child is celebrated, building confidence for life.">Ambiente acolhedor onde toda criança é celebrada, construindo confiança para a vida.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">🤝</div>
-                    <h3>Habilidades Sociais</h3>
-                    <p>Trabalho em equipe, fazer amigos e aprender a cooperar de forma divertida.</p>
+                    <h3 data-pt="Habilidades Sociais" data-en="Social Skills">Habilidades Sociais</h3>
+                    <p data-pt="Trabalho em equipe, fazer amigos e aprender a cooperar de forma divertida." data-en="Teamwork, making friends and learning to cooperate in a fun way.">Trabalho em equipe, fazer amigos e aprender a cooperar de forma divertida.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">🏃</div>
-                    <h3>Coordenação Motora</h3>
-                    <p>Desenvolvimento físico adequado à idade com movimentos e jogos lúdicos.</p>
+                    <h3 data-pt="Coordenação Motora" data-en="Motor Coordination">Coordenação Motora</h3>
+                    <p data-pt="Desenvolvimento físico adequado à idade com movimentos e jogos lúdicos." data-en="Age-appropriate physical development with playful movements and games.">Desenvolvimento físico adequado à idade com movimentos e jogos lúdicos.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">😄</div>
-                    <h3>Diversão Garantida</h3>
-                    <p>Crianças pedem para voltar! Aulas são o ponto alto da semana deles.</p>
+                    <h3 data-pt="Diversão Garantida" data-en="Fun Guaranteed">Diversão Garantida</h3>
+                    <p data-pt="Crianças pedem para voltar! Aulas são o ponto alto da semana deles." data-en="Kids ask to come back! Classes are the highlight of their week.">Crianças pedem para voltar! Aulas são o ponto alto da semana deles.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">🎯</div>
-                    <h3>Sem Pressão</h3>
-                    <p>Metodologia "Play Not Push" - aprendizado através da brincadeira, não da competição.</p>
+                    <h3 data-pt="Sem Pressão" data-en="No Pressure">Sem Pressão</h3>
+                    <p data-pt="Metodologia 'Play Not Push' - aprendizado através da brincadeira, não da competição." data-en="'Play Not Push' methodology - learning through play, not competition.">Metodologia "Play Not Push" - aprendizado através da brincadeira, não da competição.</p>
                 </div>
             </div>
         </div>
@@ -913,27 +932,27 @@
     <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>Como Funciona?</h2>
-                <p>Simples e fácil para você e seu filho</p>
+                <h2 data-pt="Como Funciona?" data-en="How It Works?">Como Funciona?</h2>
+                <p data-pt="Simples e fácil para você e seu filho" data-en="Simple and easy for you and your child">Simples e fácil para você e seu filho</p>
             </div>
             
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Inscreva-se</h3>
-                    <p>Preencha o formulário online em menos de 3 minutos</p>
+                    <h3 data-pt="Inscreva-se" data-en="Sign Up">Inscreva-se</h3>
+                    <p data-pt="Preencha o formulário online em menos de 3 minutos" data-en="Fill out the online form in less than 3 minutes">Preencha o formulário online em menos de 3 minutos</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Aula Experimental</h3>
-                    <p>Seu filho participa de uma aula gratuita para experimentar</p>
+                    <h3 data-pt="Aula Experimental" data-en="Trial Class">Aula Experimental</h3>
+                    <p data-pt="Seu filho participa de uma aula gratuita para experimentar" data-en="Your child participates in a free trial class">Seu filho participa de uma aula gratuita para experimentar</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Diversão Começa!</h3>
-                    <p>Aulas semanais de 45-60 min com treinadores bilíngues</p>
+                    <h3 data-pt="Diversão Começa!" data-en="Fun Begins!">Diversão Começa!</h3>
+                    <p data-pt="Aulas semanais de 45-60 min com treinadores bilíngues" data-en="Weekly 45-60 min classes with bilingual coaches">Aulas semanais de 45-60 min com treinadores bilíngues</p>
                 </div>
             </div>
         </div>
@@ -943,37 +962,37 @@
     <section class="programs">
         <div class="container">
             <div class="section-header">
-                <h2>Programas por Idade</h2>
-                <p>Cada faixa etária tem um programa especialmente desenvolvido</p>
+                <h2 data-pt="Programas por Idade" data-en="Programs by Age">Programas por Idade</h2>
+                <p data-pt="Cada faixa etária tem um programa especialmente desenvolvido" data-en="Each age group has a specially developed program">Cada faixa etária tem um programa especialmente desenvolvido</p>
             </div>
             
             <div class="programs-grid">
                 <div class="program-card">
                     <div class="program-emoji">👶</div>
                     <h3>Star Tots</h3>
-                    <div class="program-age">18 meses - 2,5 anos</div>
-                    <p>Interação com pais, movimentos básicos, primeiras palavras em inglês</p>
+                    <div class="program-age" data-pt="18 meses - 2,5 anos" data-en="18 months - 2.5 years">18 meses - 2,5 anos</div>
+                    <p data-pt="Interação com pais, movimentos básicos, primeiras palavras em inglês" data-en="Parent interaction, basic movements, first English words">Interação com pais, movimentos básicos, primeiras palavras em inglês</p>
                 </div>
                 
                 <div class="program-card">
                     <div class="program-emoji">🧒</div>
                     <h3>Star Juniors</h3>
-                    <div class="program-age">2,5 - 3,5 anos</div>
-                    <p>Desenvolvendo independência, jogos simples, vocabulário de ações</p>
+                    <div class="program-age" data-pt="2,5 - 3,5 anos" data-en="2.5 - 3.5 years">2,5 - 3,5 anos</div>
+                    <p data-pt="Desenvolvendo independência, jogos simples, vocabulário de ações" data-en="Developing independence, simple games, action vocabulary">Desenvolvendo independência, jogos simples, vocabulário de ações</p>
                 </div>
                 
                 <div class="program-card">
                     <div class="program-emoji">⚽</div>
                     <h3>Star Players</h3>
-                    <div class="program-age">3,5 - 5 anos</div>
-                    <p>Coordenação e velocidade, mini jogos, frases em inglês</p>
+                    <div class="program-age" data-pt="3,5 - 5 anos" data-en="3.5 - 5 years">3,5 - 5 anos</div>
+                    <p data-pt="Coordenação e velocidade, mini jogos, frases em inglês" data-en="Coordination and speed, mini games, English phrases">Coordenação e velocidade, mini jogos, frases em inglês</p>
                 </div>
                 
                 <div class="program-card">
                     <div class="program-emoji">🏆</div>
                     <h3>Star Champions</h3>
-                    <div class="program-age">5 - 8 anos</div>
-                    <p>Habilidades avançadas, partidas, conversação em inglês</p>
+                    <div class="program-age" data-pt="5 - 8 anos" data-en="5 - 8 years">5 - 8 anos</div>
+                    <p data-pt="Habilidades avançadas, partidas, conversação em inglês" data-en="Advanced skills, matches, English conversation">Habilidades avançadas, partidas, conversação em inglês</p>
                 </div>
             </div>
         </div>
@@ -983,40 +1002,40 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>O Que Pais Dizem</h2>
-                <p>Famílias reais, resultados reais</p>
+                <h2 data-pt="O Que Pais Dizem" data-en="What Parents Say">O Que Pais Dizem</h2>
+                <p data-pt="Famílias reais, resultados reais" data-en="Real families, real results">Famílias reais, resultados reais</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele."</p>
+                    <p class="testimonial-text" data-pt="'Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele.'" data-en="'My son loves the classes! He's learning English without even realizing it, while having fun playing soccer. It's amazing to see his progress.'">"Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">👩</div>
                         <div class="author-info">
                             <h4>Maria Santos</h4>
-                            <p>Mãe do Pedro, 5 anos</p>
+                            <p data-pt="Mãe do Pedro, 5 anos" data-en="Pedro's mom, 5 years old">Mãe do Pedro, 5 anos</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!"</p>
+                    <p class="testimonial-text" data-pt="'A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!'" data-en="'The Play Not Push methodology really works. My daughter developed confidence, social skills and now speaks several English words!'">"A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">👨</div>
                         <div class="author-info">
                             <h4>Roberto Lima</h4>
-                            <p>Pai da Sofia, 4 anos</p>
+                            <p data-pt="Pai da Sofia, 4 anos" data-en="Sofia's dad, 4 years old">Pai da Sofia, 4 anos</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"A aula é o momento favorito da semana do meu filho. Ele já chega em casa falando 'ball', 'kick', 'goal'! Recomendo demais."</p>
+                    <p class="testimonial-text" data-pt="'A aula é o momento favorito da semana do meu filho. Ele já chega em casa falando ball, kick, goal! Recomendo demais.'" data-en="'Class is my son's favorite time of the week. He comes home saying ball, kick, goal! Highly recommend.'">"A aula é o momento favorito da semana do meu filho. Ele já chega em casa falando 'ball', 'kick', 'goal'! Recomendo demais."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">👩</div>
                         <div class="author-info">
                             <h4>Ana Oliveira</h4>
-                            <p>Mãe do Lucas, 3 anos</p>
+                            <p data-pt="Mãe do Lucas, 3 anos" data-en="Lucas's mom, 3 years old">Mãe do Lucas, 3 anos</p>
                         </div>
                     </div>
                 </div>
@@ -1027,9 +1046,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>🌟 Inscreva Seu Filho Hoje!</h2>
-            <p>Vagas limitadas por turma. Garanta o lugar do seu pequeno campeão.</p>
-            <a href="enroll.html" class="btn btn-primary">Fazer Inscrição →</a>
+            <h2 data-pt="🌟 Inscreva Seu Filho Hoje!" data-en="🌟 Enroll Your Child Today!">🌟 Inscreva Seu Filho Hoje!</h2>
+            <p data-pt="Vagas limitadas por turma. Garanta o lugar do seu pequeno campeão." data-en="Limited spots per class. Secure your little champion's place.">Vagas limitadas por turma. Garanta o lugar do seu pequeno campeão.</p>
+            <a href="enroll.html" class="btn btn-primary" data-pt="Fazer Inscrição →" data-en="Enroll Now →">Fazer Inscrição →</a>
         </div>
     </section>
 
@@ -1037,14 +1056,39 @@
     <footer class="footer">
         <div class="container">
             <img src="images/logo-main-new.jpg" alt="Star Kids" class="footer-logo">
-            <p>Star Kids Brasil - Futebol + Inglês para Crianças</p>
-            <p>Metodologia validada pela Universidade de Cambridge</p>
+            <p data-pt="Star Kids Brasil - Futebol + Inglês para Crianças" data-en="Star Kids Brasil - Soccer + English for Children">Star Kids Brasil - Futebol + Inglês para Crianças</p>
+            <p data-pt="Metodologia validada pela Universidade de Cambridge" data-en="Methodology validated by Cambridge University">Metodologia validada pela Universidade de Cambridge</p>
             
             <div class="footer-contact">
                 <a href="https://wa.me/5531983719846">📱 WhatsApp</a>
-                <a href="/cdn-cgi/l/email-protection#327e475153417241465340595b56411c4657535f">✉️ Email</a>
-                <a href="index.html">🌐 Site Principal</a>
+                <a href="mailto:Lucas@starkids.team">✉️ Email</a>
+                <a href="index.html" data-pt="🌐 Site Principal" data-en="🌐 Main Site">🌐 Site Principal</a>
             </div>
             
-            <p>© 2025 Star Kids Brasil. Todos os direitos reservados.</p>
-            <p class="footer-s
+            <p data-pt="© 2025 Star Kids Brasil. Todos os direitos reservados." data-en="© 2025 Star Kids Brasil. All rights reserved.">© 2025 Star Kids Brasil. Todos os direitos reservados.</p>
+            <p class="footer-subsidiary" data-pt="Uma subsidiária de" data-en="A subsidiary of">
+                Uma subsidiária de <a href="https://cladutacorp.com" target="_blank">CLADUTA CORP</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Language Toggle Script -->
+    <script>
+        let currentLang = "pt";
+        
+        document.getElementById("langBtn").addEventListener("click", function() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+            this.textContent = currentLang === "pt" ? "EN 🇺🇸" : "PT 🇧🇷";
+            
+            document.querySelectorAll("[data-pt][data-en]").forEach(el => {
+                const text = el.getAttribute("data-" + currentLang);
+                if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                    el.placeholder = text;
+                } else {
+                    el.innerHTML = text;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
