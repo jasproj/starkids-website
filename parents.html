@@ -87,7 +87,31 @@
         }
         
         .logo {
-            height: 50px;
+            height: 70px;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .header-contact {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .header-contact a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .header-contact a:hover {
+            color: var(--green);
         }
         
         .header-cta {
@@ -146,6 +170,9 @@
         
         .hero-content {
             color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .hero-logo {
@@ -362,7 +389,9 @@
         /* How It Works */
         .how-it-works {
             padding: 100px 20px;
-            background: var(--white);
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1598301257571-444b819db060?w=1920&q=80') center/cover no-repeat;
+            position: relative;
         }
         
         .steps-container {
@@ -670,6 +699,14 @@
         }
         
         @media (max-width: 768px) {
+            .header-contact {
+                display: none;
+            }
+            
+            .logo {
+                height: 50px;
+            }
+            
             .hero {
                 padding: 100px 20px 60px;
                 min-height: auto;
@@ -723,7 +760,13 @@
             <a href="index.html">
                 <img src="images/logo-main-new.jpg" alt="Star Kids" class="logo">
             </a>
-            <a href="enroll.html" class="header-cta">Inscreva-se Agora</a>
+            <div class="header-right">
+                <div class="header-contact">
+                    <a href="https://wa.me/5531983719846">📱 (31) 98371-9846</a>
+                    <a href="mailto:Lucas@starkids.team">✉️ Lucas@starkids.team</a>
+                </div>
+                <a href="enroll.html" class="header-cta">Inscreva-se Agora</a>
+            </div>
         </div>
     </header>
 
