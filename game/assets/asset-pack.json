@@ -111,6 +111,26 @@
       },
       {
         "type": "image",
+        "key": "vocab_pink",
+        "url": "https://cdn-game-mcp.gambo.ai/398c610e-bd26-42c8-b961-8350c03e1947/images/vocab_pink.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_brown",
+        "url": "https://cdn-game-mcp.gambo.ai/14e544df-0283-434a-8ad7-539a87f922d1/images/vocab_brown.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_black",
+        "url": "https://cdn-game-mcp.gambo.ai/5115f13d-12f6-4611-ba13-54fd9ca6ab17/images/vocab_black.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_white",
+        "url": "https://cdn-game-mcp.gambo.ai/3945c5eb-512e-4c76-be22-91a5ba3df7b6/images/vocab_white.png"
+      },
+      {
+        "type": "image",
         "key": "vocab_dog",
         "url": "https://cdn-game-mcp.gambo.ai/b162479d-3e93-49ad-93ab-9b61a7d6e26e/images/vocab_dog.png"
       },
@@ -123,6 +143,26 @@
         "type": "image",
         "key": "vocab_bird",
         "url": "https://cdn-game-mcp.gambo.ai/6ef5424d-6f68-46be-b74b-6dd82e50aac3/images/vocab_bird.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_fish",
+        "url": "https://cdn-game-mcp.gambo.ai/72a4d12f-06c7-41a4-8a46-5b18c18c3862/images/vocab_fish.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_rabbit",
+        "url": "https://cdn-game-mcp.gambo.ai/832bbe41-2800-43b8-be44-17be7ce2bee5/images/vocab_rabbit.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_elephant",
+        "url": "https://cdn-game-mcp.gambo.ai/bdde4d7b-9cb8-40f6-bd15-e42d8b5f3b98/images/vocab_elephant.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_lion",
+        "url": "https://cdn-game-mcp.gambo.ai/742aadea-cbe0-4e85-a332-bb785900ab0f/images/vocab_lion.png"
       },
       {
         "type": "image",
@@ -143,6 +183,266 @@
         "type": "image",
         "key": "vocab_grape",
         "url": "https://cdn-game-mcp.gambo.ai/ceed201d-a2cf-4f67-b1b1-74d7acd4b4e0/images/vocab_grape.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_strawberry",
+        "url": "https://cdn-game-mcp.gambo.ai/846cc8bd-9ae3-4046-b6c6-27a922eb1e04/images/vocab_strawberry.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_watermelon",
+        "url": "https://cdn-game-mcp.gambo.ai/471f9d8d-82db-49ba-ae3e-8feebac12c9d/images/vocab_watermelon.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_head",
+        "url": "https://cdn-game-mcp.gambo.ai/27d6e993-54de-43da-9684-4f48f8f38ca9/images/vocab_head.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_hand",
+        "url": "https://cdn-game-mcp.gambo.ai/2471bca1-e0f9-43e0-af18-8fefcfbc385b/images/vocab_hand.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_foot",
+        "url": "https://cdn-game-mcp.gambo.ai/caaf0269-c7f3-43d2-bbd3-e9bcda60ca31/images/vocab_foot.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_eye",
+        "url": "https://cdn-game-mcp.gambo.ai/a258d18d-28da-4e84-b8b4-8705f83be06d/images/vocab_eye.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_nose",
+        "url": "https://cdn-game-mcp.gambo.ai/8a4cc128-a545-4c3d-a9a6-768cfcc20d07/images/vocab_nose.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_mouth",
+        "url": "https://cdn-game-mcp.gambo.ai/1c771f81-4821-40b7-9185-6a5829e145f8/images/vocab_mouth.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_run",
+        "url": "https://cdn-game-mcp.gambo.ai/9e03e16c-3242-4c6e-8dd2-d00b4a18b72a/images/vocab_run.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_jump",
+        "url": "https://cdn-game-mcp.gambo.ai/f5ab0bf4-eac4-407c-8a25-d0e6b98d3629/images/vocab_jump.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_kick",
+        "url": "https://cdn-game-mcp.gambo.ai/3a404707-ed6d-42d6-a6ac-8b4933641949/images/vocab_kick.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_swim",
+        "url": "https://cdn-game-mcp.gambo.ai/58630135-99b2-421e-9088-2ddc56d3b47e/images/vocab_swim.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_dance",
+        "url": "https://cdn-game-mcp.gambo.ai/b7eed33e-24f8-4b8b-9e1c-8f71ab3c1d7a/images/vocab_dance.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_eat",
+        "url": "https://cdn-game-mcp.gambo.ai/651fe4a2-8e47-4d61-863f-07b38db70e68/images/vocab_eat.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_sleep",
+        "url": "https://cdn-game-mcp.gambo.ai/24bf6329-ea29-41ad-adb1-3688577ee0e3/images/vocab_sleep.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_read",
+        "url": "https://cdn-game-mcp.gambo.ai/87469014-84ee-4c11-ba17-e7343cef2b73/images/vocab_read.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_sunny",
+        "url": "https://cdn-game-mcp.gambo.ai/8a25bcba-bebd-42ba-b8df-d0cab1bdf55a/images/vocab_sunny.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_rainy",
+        "url": "https://cdn-game-mcp.gambo.ai/746972a1-3807-4829-9a03-6566512d1fe6/images/vocab_rainy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_cloudy",
+        "url": "https://cdn-game-mcp.gambo.ai/be985824-3f01-48a9-a1b6-a6359a471cbe/images/vocab_cloudy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_snowy",
+        "url": "https://cdn-game-mcp.gambo.ai/2b0f7826-42f8-4b95-8186-a83165b44e19/images/vocab_snowy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_windy",
+        "url": "https://cdn-game-mcp.gambo.ai/13cd21a0-c18b-43df-9079-a0f781da484d/images/vocab_windy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_stormy",
+        "url": "https://cdn-game-mcp.gambo.ai/5acd8097-0a6e-4ae5-80f7-070dc1b72885/images/vocab_stormy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_shirt",
+        "url": "https://cdn-game-mcp.gambo.ai/9bfdf9cc-b9d7-43a4-946b-449cbc84c7bd/images/vocab_shirt.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_pants",
+        "url": "https://cdn-game-mcp.gambo.ai/9aa0713b-dbb2-4e27-a5f1-c6504bfd7cd9/images/vocab_pants.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_shoes",
+        "url": "https://cdn-game-mcp.gambo.ai/a39d6a09-24fe-4a19-9b85-fc42e69d5ec4/images/vocab_shoes.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_hat",
+        "url": "https://cdn-game-mcp.gambo.ai/1ae1621c-1de6-4868-b6e5-1dee7ac6daf0/images/vocab_hat.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_jacket",
+        "url": "https://cdn-game-mcp.gambo.ai/546bbb85-2925-4707-9c37-42800b151be1/images/vocab_jacket.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_socks",
+        "url": "https://cdn-game-mcp.gambo.ai/db0198b2-d494-45d5-8e02-bdf8f1c0c2c8/images/vocab_socks.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_big",
+        "url": "https://cdn-game-mcp.gambo.ai/0b988414-051b-4de5-b628-a92527f504c8/images/vocab_big.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_small",
+        "url": "https://cdn-game-mcp.gambo.ai/4a7837a7-2eeb-4d06-bc52-06d6c3280cf7/images/vocab_small.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_hot",
+        "url": "https://cdn-game-mcp.gambo.ai/ac5b76ad-3693-4a14-aa5e-fc1d929f151d/images/vocab_hot.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_cold",
+        "url": "https://cdn-game-mcp.gambo.ai/0bc1711e-73ef-43ae-b60d-2cf0bcabf95a/images/vocab_cold.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_fast",
+        "url": "https://cdn-game-mcp.gambo.ai/654be22d-47e3-4df5-863f-f6a32a283bc8/images/vocab_fast.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_slow",
+        "url": "https://cdn-game-mcp.gambo.ai/70f4766c-7611-4529-ba65-3b1afb82a8d1/images/vocab_slow.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_happy",
+        "url": "https://cdn-game-mcp.gambo.ai/57befef8-7066-45e8-81ef-541e13e2747b/images/vocab_happy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_sad",
+        "url": "https://cdn-game-mcp.gambo.ai/62fa5482-056d-4abe-92fa-7728057e6a7a/images/vocab_sad.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_up",
+        "url": "https://cdn-game-mcp.gambo.ai/22e6fc19-2461-4c65-adb6-bd5bf8db5d53/images/vocab_up.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_down",
+        "url": "https://cdn-game-mcp.gambo.ai/d9ae08a9-1989-45e8-9637-be504b7a8edb/images/vocab_down.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_hello",
+        "url": "https://cdn-game-mcp.gambo.ai/a9328a71-3738-441b-aa59-abdb83d54d20/images/vocab_hello.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_goodbye",
+        "url": "https://cdn-game-mcp.gambo.ai/e9e06095-a438-4776-afac-177af95113f6/images/vocab_goodbye.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_thank_you",
+        "url": "https://cdn-game-mcp.gambo.ai/d405103a-8b88-4113-b723-092364099fd8/images/vocab_thank_you.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_please",
+        "url": "https://cdn-game-mcp.gambo.ai/c5541127-015b-4ce3-9932-b0037c5ec631/images/vocab_please.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_yes",
+        "url": "https://cdn-game-mcp.gambo.ai/9a4df482-f453-44b0-afff-9b70f6d4677c/images/vocab_yes.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_no",
+        "url": "https://cdn-game-mcp.gambo.ai/a41f91fa-7e1d-48c7-adbb-d181f6b2ba5f/images/vocab_no.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_i_love_soccer",
+        "url": "https://cdn-game-mcp.gambo.ai/eb2df85b-20a0-4c65-929d-34a034ecae63/images/vocab_i_love_soccer.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_lets_play",
+        "url": "https://cdn-game-mcp.gambo.ai/f8a87133-b7ca-47d1-bf45-e15f420fa27c/images/vocab_lets_play.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_food",
+        "url": "https://cdn-game-mcp.gambo.ai/e4fa0607-a23d-44c9-b29d-8b1dd8f7e5f8/images/vocab_food.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_animal_category",
+        "url": "https://cdn-game-mcp.gambo.ai/7d2676ac-5983-4654-839b-b039c2da97bd/images/vocab_animal_category.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_vehicle",
+        "url": "https://cdn-game-mcp.gambo.ai/a2b0adcf-7687-4847-922c-445064f90433/images/vocab_vehicle.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_toy",
+        "url": "https://cdn-game-mcp.gambo.ai/b64c9549-7507-433e-ae9c-ba14807dcc27/images/vocab_toy.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_sport",
+        "url": "https://cdn-game-mcp.gambo.ai/1d81189a-2ce9-4d93-9d54-bd19111af766/images/vocab_sport.png"
+      },
+      {
+        "type": "image",
+        "key": "vocab_nature",
+        "url": "https://cdn-game-mcp.gambo.ai/fbaecf8e-bc90-4654-b8f9-a450719a80d6/images/vocab_nature.png"
       },
       {
         "type": "image",
@@ -168,6 +468,31 @@
         "type": "image",
         "key": "number_5",
         "url": "https://cdn-game-mcp.gambo.ai/a1671bab-245a-417b-b8a9-f44e325d4818/images/number_5.png"
+      },
+      {
+        "type": "image",
+        "key": "number_6",
+        "url": "https://cdn-game-mcp.gambo.ai/c18544be-a2b1-4a5d-9dca-a661cc7d6b4d/images/number_6.png"
+      },
+      {
+        "type": "image",
+        "key": "number_7",
+        "url": "https://cdn-game-mcp.gambo.ai/f7665ae3-e1ef-40bf-9d49-5af93f0c77ca/images/number_7.png"
+      },
+      {
+        "type": "image",
+        "key": "number_8",
+        "url": "https://cdn-game-mcp.gambo.ai/3a831d52-5707-41ff-9226-1f1a75ebe254/images/number_8.png"
+      },
+      {
+        "type": "image",
+        "key": "number_9",
+        "url": "https://cdn-game-mcp.gambo.ai/aa7857bf-2222-4d1e-b844-460a401c49e0/images/number_9.png"
+      },
+      {
+        "type": "image",
+        "key": "number_10",
+        "url": "https://cdn-game-mcp.gambo.ai/d954bbaa-6a56-4c04-b34e-8ea23c7e7d90/images/number_10.png"
       }
     ]
   },
