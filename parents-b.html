@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÚLTIMAS VAGAS! Aulas de inglês para crianças de 2-8 anos em BH. Metodologia Cambridge. Turmas de Fevereiro!">
+    <title>⚡ ÚLTIMAS VAGAS - Inglês + Futebol | Star Kids BH</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWEEV4G2FS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWEEV4G2FS');
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1869589853656744');
+        fbq('track', 'PageView');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #16a34a; --green-dark: #15803d; --gold: #eab308; --yellow: #fbbf24;
+            --red: #dc2626; --red-dark: #b91c1c; --gray-50: #f9fafb; --gray-100: #f3f4f6;
+            --gray-600: #4b5563; --gray-800: #1f2937; --gray-900: #111827;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; color: var(--gray-800); background: #fff; }
+        
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 9999; text-decoration: none; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } }
+        
+        .countdown-banner {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: white; padding: 12px 20px; text-align: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .countdown-content { max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; }
+        .countdown-text { font-weight: 700; font-size: 0.95rem; }
+        .countdown-timer { display: flex; gap: 8px; }
+        .countdown-box { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; text-align: center; min-width: 50px; }
+        .countdown-number { font-size: 1.3rem; font-weight: 700; display: block; line-height: 1; }
+        .countdown-label { font-size: 0.65rem; text-transform: uppercase; opacity: 0.9; }
+        
+        .header { background: white; padding: 12px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .header-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { height: 50px; }
+        .spots-badge { background: var(--red); color: white; padding: 8px 16px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; animation: blink 1.5s ease-in-out infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        
+        .hero { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); padding: 50px 20px 60px; text-align: center; }
+        .hero-content { max-width: 700px; margin: 0 auto; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--yellow); color: var(--gray-900); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 20px; }
+        .hero h1 { color: white; font-size: 2.5rem; font-weight: 800; line-height: 1.15; margin-bottom: 15px; }
+        .hero h1 span { color: var(--yellow); }
+        .hero-subtitle { color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--yellow); color: var(--gray-900); padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+        
+        .social-proof { background: var(--gray-900); color: white; padding: 15px 20px; text-align: center; }
+        .social-proof-content { max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 40px; font-size: 0.9rem; }
+        .proof-item strong { color: var(--yellow); }
+        
+        .scarcity { padding: 40px 20px; background: var(--gray-50); text-align: center; }
+        .scarcity h2 { font-size: 1.6rem; color: var(--gray-900); margin-bottom: 20px; }
+        .scarcity h2 span { color: var(--red); }
+        .spots-visual { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto; }
+        .spot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; }
+        .spot.taken { background: var(--gray-600); color: white; }
+        .spot.available { background: var(--green); color: white; animation: pulse-green 2s infinite; }
+        @keyframes pulse-green { 0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); } }
+        .spots-legend { display: flex; justify-content: center; gap: 30px; font-size: 0.85rem; color: var(--gray-600); }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .legend-dot.taken { background: var(--gray-600); }
+        .legend-dot.available { background: var(--green); }
+        
+        .benefits { padding: 50px 20px; background: white; }
+        .benefits-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .benefit-card { background: var(--gray-50); padding: 25px; border-radius: 16px; text-align: center; transition: transform 0.3s; }
+        .benefit-card:hover { transform: translateY(-5px); }
+        .benefit-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .benefit-card h3 { font-size: 1.1rem; color: var(--gray-900); margin-bottom: 8px; }
+        .benefit-card p { font-size: 0.9rem; color: var(--gray-600); }
+        
+        .testimonial { padding: 50px 20px; background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color: white; text-align: center; }
+        .testimonial-content { max-width: 600px; margin: 0 auto; }
+        .testimonial-quote { font-size: 1.3rem; font-style: italic; margin-bottom: 20px; line-height: 1.5; }
+        .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .testimonial-name { font-weight: 700; }
+        .testimonial-role { font-size: 0.85rem; opacity: 0.9; }
+        
+        .form-section { padding: 60px 20px; background: var(--gray-50); }
+        .form-container { max-width: 500px; margin: 0 auto; background: white; border-radius: 20px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .form-header { text-align: center; margin-bottom: 25px; }
+        .form-header h2 { font-size: 1.5rem; color: var(--gray-900); margin-bottom: 8px; }
+        .form-header p { color: var(--gray-600); font-size: 0.95rem; }
+        .form-urgency { background: #fef2f2; border: 2px solid var(--red); border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 25px; font-weight: 600; color: var(--red); font-size: 0.9rem; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; color: var(--gray-800); }
+        .form-group input, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--gray-100); border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--green); }
+        .form-submit { width: 100%; background: var(--green); color: white; border: none; padding: 16px; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; font-family: inherit; }
+        .form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
+        .form-guarantee { text-align: center; margin-top: 15px; font-size: 0.8rem; color: var(--gray-600); }
+        
+        .steps-section { padding: 50px 20px; background: white; }
+        .steps-section h2 { text-align: center; font-size: 1.6rem; color: var(--gray-900); margin-bottom: 35px; }
+        .steps { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+        .step { display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 20px; border-radius: 12px; }
+        .step-number { width: 45px; height: 45px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
+        .step-content h3 { font-size: 1rem; color: var(--gray-900); margin-bottom: 4px; }
+        .step-content p { font-size: 0.9rem; color: var(--gray-600); }
+        
+        .final-cta { padding: 60px 20px; background: var(--gray-900); text-align: center; color: white; }
+        .final-cta h2 { font-size: 1.8rem; margin-bottom: 10px; }
+        .final-cta h2 span { color: var(--yellow); }
+        .final-cta p { margin-bottom: 25px; opacity: 0.9; }
+        .final-cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: white; padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; }
+        .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+        .btn-whatsapp { background: #25D366; }
+        .btn-whatsapp:hover { background: #128C7E; }
+        
+        .footer { background: var(--gray-900); color: rgba(255,255,255,0.7); padding: 30px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer p { font-size: 0.85rem; margin-bottom: 8px; }
+        .footer a { color: var(--yellow); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .countdown-content { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .social-proof-content { flex-direction: column; gap: 10px; }
+            .form-container { padding: 25px; }
+            .header-content { flex-wrap: wrap; gap: 10px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://wa.me/5531973313443?text=Olá!%20Quero%20saber%20sobre%20as%20aulas!" class="whatsapp-float">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    
+    <div class="countdown-banner">
+        <div class="countdown-content">
+            <div class="countdown-text">🔥 Turmas de Fevereiro começam em:</div>
+            <div class="countdown-timer">
+                <div class="countdown-box"><span class="countdown-number" id="days">00</span><span class="countdown-label">Dias</span></div>
+                <div class="countdown-box"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Horas</span></div>
+                <div class="countdown-box"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Min</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="header-content">
+            <img src="https://starkids.team/images/logo-main-new.jpg" alt="Star Kids Brasil" class="logo">
+            <div class="spots-badge">⚡ APENAS 12 VAGAS</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🎓 Metodologia Cambridge University</div>
+            <h1>Seu Filho Aprende <span>Inglês</span> Jogando <span>Futebol</span></h1>
+            <p class="hero-subtitle">Crianças de 2 a 8 anos. Aulas presenciais em Santa Terezinha, BH. Turmas de Fevereiro quase completas!</p>
+            <a href="#inscricao" class="hero-cta">GARANTIR MINHA VAGA →</a>
+        </div>
+    </section>
+    
+    <div class="social-proof">
+        <div class="social-proof-content">
+            <div class="proof-item">👨‍👩‍👧‍👦 <strong>47</strong> famílias já inscreveram</div>
+            <div class="proof-item">⭐ <strong>4.9</strong> avaliação dos pais</div>
+            <div class="proof-item">📍 Santa Terezinha, <strong>BH</strong></div>
+        </div>
+    </div>
+    
+    <section class="scarcity">
+        <h2>Turmas de Fevereiro: <span>Apenas 12 Vagas</span></h2>
+        <div class="spots-visual">
+            <div class="spot taken">✓</div><div class="spot taken">✓</div><div class="spot taken">✓</div>
+            <div class="spot taken">✓</div><div class="spot taken">✓</div><div class="spot taken">✓</div>
+            <div class="spot available"></div><div class="spot available"></div><div class="spot available"></div>
+            <div class="spot available"></div><div class="spot available"></div><div class="spot available"></div>
+            <div class="spot available"></div><div class="spot available"></div><div class="spot available"></div>
+            <div class="spot available"></div><div class="spot available"></div><div class="spot available"></div>
+        </div>
+        <div class="spots-legend">
+            <div class="legend-item"><div class="legend-dot taken"></div> Preenchidas</div>
+            <div class="legend-item"><div class="legend-dot available"></div> Disponíveis</div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">⚽</div>
+                <h3>Aprende Brincando</h3>
+                <p>Metodologia "Play Not Push" da Cambridge. Inglês natural através do futebol.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🧠</div>
+                <h3>Idade Ideal</h3>
+                <p>2-8 anos é a janela de ouro para aquisição de idiomas. Aproveitamento máximo.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📍</div>
+                <h3>Perto de Você</h3>
+                <p>Santa Terezinha, BH. Terças e Quintas. Horários: 8:30 ou 18:30.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <p class="testimonial-quote">"Meu filho de 4 anos adora as aulas! Em 3 meses já está falando cores e números em inglês naturalmente. Recomendo demais!"</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">👩</div>
+                <div style="text-align: left;">
+                    <div class="testimonial-name">Carolina M.</div>
+                    <div class="testimonial-role">Mãe do Pedro, 4 anos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="form-section" id="inscricao">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Garanta a Vaga do Seu Filho</h2>
+                <p>Preencha e entraremos em contato em até 24h</p>
+            </div>
+            <div class="form-urgency">⚠️ Última semana de inscrições para Fevereiro!</div>
+            <form action="https://formspree.io/f/xykzlepv" method="POST">
+                <input type="hidden" name="_subject" value="🔥 URGENTE - Landing Page B">
+                <input type="hidden" name="_next" value="https://starkids.team/obrigado.html">
+                <input type="hidden" name="variant" value="B">
+                <div class="form-group">
+                    <label for="parent_name">Seu Nome</label>
+                    <input type="text" id="parent_name" name="parent_name" placeholder="Nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(31) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="child_age">Idade da Criança</label>
+                    <select id="child_age" name="child_age" required>
+                        <option value="">Selecione...</option>
+                        <option value="2 anos">2 anos</option>
+                        <option value="3 anos">3 anos</option>
+                        <option value="4 anos">4 anos</option>
+                        <option value="5 anos">5 anos</option>
+                        <option value="6 anos">6 anos</option>
+                        <option value="7 anos">7 anos</option>
+                        <option value="8 anos">8 anos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preferred_time">Horário de Preferência</label>
+                    <select id="preferred_time" name="preferred_time" required>
+                        <option value="">Selecione...</option>
+                        <option value="8:30 - Manhã">8:30 - Manhã</option>
+                        <option value="18:30 - Noite">18:30 - Noite</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">QUERO GARANTIR A VAGA →</button>
+                <div class="form-guarantee">🔒 Seus dados estão seguros. Primeira aula experimental grátis.</div>
+            </form>
+        </div>
+    </section>
+    
+    <section class="steps-section">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+            <div class="step"><div class="step-number">1</div><div class="step-content"><h3>Preencha o formulário</h3><p>Leva menos de 1 minuto. Entraremos em contato pelo WhatsApp.</p></div></div>
+            <div class="step"><div class="step-number">2</div><div class="step-content"><h3>Aula experimental grátis</h3><p>Seu filho participa de uma aula sem compromisso para você conhecer.</p></div></div>
+            <div class="step"><div class="step-number">3</div><div class="step-content"><h3>Turmas começam em Fevereiro</h3><p>Terças e Quintas, horários flexíveis. A partir de R$100/mês.</p></div></div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <h2>Não Deixe Para <span>Depois</span></h2>
+        <p>Vagas limitadas. Turmas de Fevereiro quase completas.</p>
+        <div class="final-cta-buttons">
+            <a href="#inscricao" class="btn-primary">GARANTIR VAGA AGORA</a>
+            <a href="https://wa.me/5531973313443?text=Olá!%20Quero%20saber%20sobre%20as%20aulas!" class="btn-primary btn-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                FALAR NO WHATSAPP
+            </a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p><strong>Star Kids Brasil</strong> | Rua Congonhal 445, Santa Terezinha, BH</p>
+        <p>📞 <a href="tel:+5531973313443">(31) 97331-3443</a> | ✉️ <a href="mailto:lucas@starkids.team">lucas@starkids.team</a></p>
+        <p style="margin-top: 15px; font-size: 0.75rem;">Uma empresa <a href="https://cladutacorp.com">Claduta Corp</a></p>
+    </footer>
+    
+    <script>
+        const countdownDate = new Date('2026-02-03T08:30:00-03:00').getTime();
+        function updateCountdown() {
+            const now = new Date().getTime(), distance = countdownDate - now;
+            if (distance > 0) {
+                document.getElementById('days').textContent = String(Math.floor(distance / (1000*60*60*24))).padStart(2,'0');
+                document.getElementById('hours').textContent = String(Math.floor((distance % (1000*60*60*24)) / (1000*60*60))).padStart(2,'0');
+                document.getElementById('minutes').textContent = String(Math.floor((distance % (1000*60*60)) / (1000*60))).padStart(2,'0');
+            }
+        }
+        updateCountdown(); setInterval(updateCountdown, 60000);
+        
+        if (typeof gtag !== 'undefined') gtag('event', 'page_view', { 'ab_test_variant': 'B' });
+        document.querySelector('form').addEventListener('submit', () => {
+            if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { 'variant': 'B' });
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+        });
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if (typeof gtag !== 'undefined') gtag('event', 'whatsapp_click', { 'variant': 'B' });
+                if (typeof fbq !== 'undefined') fbq('track', 'Contact');
+            });
+        });
+    </script>
+</body>
+</html>
