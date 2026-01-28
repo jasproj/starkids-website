@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! | Star Kids Brasil</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWEEV4G2FS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWEEV4G2FS');
+        // Track conversion
+        gtag('event', 'generate_lead', {
+            'event_category': 'form',
+            'event_label': 'enrollment'
+        });
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1869589853656744');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --green: #2E7D32;
+            --green-light: #66BB6A;
+            --gold: #F9A825;
+            --yellow: #FFD700;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-dark: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 550px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            width: 120px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            animation: pop 0.5s ease;
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .checkmark span {
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: var(--green);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: var(--gray-dark);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .next-steps {
+            background: var(--gray-light);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: var(--green);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            background: var(--gold);
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .step p {
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #1DA851;
+            transform: scale(1.05);
+        }
+        
+        .back-link {
+            color: var(--green);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .checkmark {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .checkmark span {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-toggle" id="langBtn">EN 🇺🇸</button>
+    
+    <div class="container">
+        <img src="images/logo-main-new.jpg" alt="Star Kids" class="logo">
+        
+        <div class="checkmark">
+            <span>✓</span>
+        </div>
+        
+        <h1 data-pt="Inscrição Recebida!" data-en="Enrollment Received!">Inscrição Recebida!</h1>
+        
+        <p class="subtitle" data-pt="Obrigado por inscrever seu filho(a) no Star Kids Brasil! Estamos muito felizes em tê-los conosco." data-en="Thank you for enrolling your child in Star Kids Brasil! We're so happy to have you with us.">
+            Obrigado por inscrever seu filho(a) no Star Kids Brasil! Estamos muito felizes em tê-los conosco.
+        </p>
+        
+        <div class="next-steps">
+            <h3 data-pt="📋 Próximos Passos:" data-en="📋 Next Steps:">📋 Próximos Passos:</h3>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <p data-pt="Lucas entrará em contato via WhatsApp em até 24 horas" data-en="Lucas will contact you via WhatsApp within 24 hours">Lucas entrará em contato via WhatsApp em até 24 horas</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <p data-pt="Agendaremos a aula experimental gratuita" data-en="We'll schedule your free trial class">Agendaremos a aula experimental gratuita</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <p data-pt="Seu filho começa a aprender inglês jogando futebol!" data-en="Your child starts learning English while playing soccer!">Seu filho começa a aprender inglês jogando futebol!</p>
+            </div>
+        </div>
+        
+        <a href="https://wa.me/5531973313443" class="whatsapp-btn" data-pt="💬 Falar com Lucas Agora" data-en="💬 Chat with Lucas Now">
+            💬 Falar com Lucas Agora
+        </a>
+        
+        <br>
+        
+        <a href="parents.html" class="back-link" data-pt="← Voltar ao site" data-en="← Back to site">← Voltar ao site</a>
+    </div>
+    
+    <script>
+        let currentLang = "pt";
+        
+        document.getElementById("langBtn").addEventListener("click", function() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+            this.textContent = currentLang === "pt" ? "EN 🇺🇸" : "PT 🇧🇷";
+            
+            document.querySelectorAll("[data-pt][data-en]").forEach(el => {
+                const text = el.getAttribute("data-" + currentLang);
+                el.innerHTML = text;
+            });
+        });
+    </script>
+</body>
+</html>

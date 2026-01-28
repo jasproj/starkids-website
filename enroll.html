@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-pt="Inscrição | Star Kids Brasil" data-en="Registration | Star Kids Brazil">Inscrição | Star Kids Brasil</title>
+    <title>Inscrição | Star Kids Brasil</title>
     <meta name="description" content="Inscreva seu filho no programa Star Kids - Futebol e Inglês para crianças de 2 a 8 anos.">
     
     <!-- Google Analytics -->
@@ -337,7 +337,8 @@
                 <p data-pt="Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids" data-en="Fill in the information below to enroll your child in the Star Kids program">Preencha os dados abaixo para inscrever seu filho(a) no programa Star Kids</p>
             </div>
 
-            <form action="https://formspree.io/f/xykzlepv" method="POST">
+            <form action="https://formspree.io/f/manrldeg" method="POST">
+                <input type="hidden" name="_next" value="https://starkids.team/thank-you.html">
                 
                 <!-- Dados da Criança -->
                 <div class="form-section">
@@ -354,8 +355,8 @@
                             <input type="date" id="birthdate" name="birthdate" required>
                         </div>
                         <div class="form-group">
-                            <label for="gender" class="required" data-pt="Gênero" data-en="Gender">Gênero</label>
-                            <select id="gender" name="gender" required>
+                            <label for="gender" data-pt="Gênero" data-en="Gender">Gênero</label>
+                            <select id="gender" name="gender">
                                 <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
                                 <option value="masculino" data-pt="Masculino" data-en="Male">Masculino</option>
                                 <option value="feminino" data-pt="Feminino" data-en="Female">Feminino</option>
@@ -369,21 +370,21 @@
                         <label for="program" class="required" data-pt="Programa de interesse" data-en="Program of interest">Programa de interesse</label>
                         <select id="program" name="program" required>
                             <option value="" data-pt="Selecione a faixa etária..." data-en="Select age group...">Selecione a faixa etária...</option>
-                            <option value="little_stars" data-pt="Little Stars (2-3 anos)" data-en="Little Stars (2-3 years)">Little Stars (2-3 anos)</option>
-                            <option value="rising_stars" data-pt="Rising Stars (3-4 anos)" data-en="Rising Stars (3-4 years)">Rising Stars (3-4 anos)</option>
-                            <option value="super_stars" data-pt="Super Stars (5-6 anos)" data-en="Super Stars (5-6 years)">Super Stars (5-6 anos)</option>
-                            <option value="shooting_stars" data-pt="Shooting Stars (7-8 anos)" data-en="Shooting Stars (7-8 years)">Shooting Stars (7-8 anos)</option>
+                            <option value="little_stars">Little Stars (2-3 anos)</option>
+                            <option value="rising_stars">Rising Stars (3-4 anos)</option>
+                            <option value="super_stars">Super Stars (5-6 anos)</option>
+                            <option value="shooting_stars">Shooting Stars (7-8 anos)</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="english_level" class="required" data-pt="Nível de exposição ao inglês" data-en="English exposure level">Nível de exposição ao inglês</label>
-                        <select id="english_level" name="english_level" required>
-                            <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
-                            <option value="nenhum" data-pt="Nenhuma exposição" data-en="No exposure">Nenhuma exposição</option>
-                            <option value="basico" data-pt="Básico (algumas palavras)" data-en="Basic (some words)">Básico (algumas palavras)</option>
-                            <option value="intermediario" data-pt="Intermediário (frases simples)" data-en="Intermediate (simple phrases)">Intermediário (frases simples)</option>
-                            <option value="avancado" data-pt="Avançado (conversação)" data-en="Advanced (conversation)">Avançado (conversação)</option>
+                        <label for="english_level">Nível de exposição ao inglês</label>
+                        <select id="english_level" name="english_level">
+                            <option value="">Selecione...</option>
+                            <option value="nenhum">Nenhuma exposição</option>
+                            <option value="basico">Básico (algumas palavras)</option>
+                            <option value="intermediario">Intermediário (frases simples)</option>
+                            <option value="avancado">Avançado (conversação)</option>
                         </select>
                     </div>
                 </div>
@@ -393,30 +394,30 @@
                     <h2 class="section-title" data-pt="👨‍👩‍👧 Dados do Responsável" data-en="👨‍👩‍👧 Parent/Guardian Information">👨‍👩‍👧 Dados do Responsável</h2>
                     
                     <div class="form-group">
-                        <label for="parent_name" class="required" data-pt="Nome completo" data-en="Full name">Nome completo</label>
+                        <label for="parent_name" class="required">Nome completo</label>
                         <input type="text" id="parent_name" name="parent_name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="relationship" class="required" data-pt="Parentesco" data-en="Relationship">Parentesco</label>
+                        <label for="relationship" class="required">Parentesco</label>
                         <select id="relationship" name="relationship" required>
-                            <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
-                            <option value="mae" data-pt="Mãe" data-en="Mother">Mãe</option>
-                            <option value="pai" data-pt="Pai" data-en="Father">Pai</option>
-                            <option value="avo" data-pt="Avô/Avó" data-en="Grandparent">Avô/Avó</option>
-                            <option value="tio" data-pt="Tio/Tia" data-en="Uncle/Aunt">Tio/Tia</option>
-                            <option value="responsavel_legal" data-pt="Responsável Legal" data-en="Legal Guardian">Responsável Legal</option>
-                            <option value="outro" data-pt="Outro" data-en="Other">Outro</option>
+                            <option value="">Selecione...</option>
+                            <option value="mae">Mãe</option>
+                            <option value="pai">Pai</option>
+                            <option value="avo">Avô/Avó</option>
+                            <option value="tio">Tio/Tia</option>
+                            <option value="responsavel_legal">Responsável Legal</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email" class="required" data-pt="E-mail" data-en="Email">E-mail</label>
+                            <label for="email" class="required">E-mail</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone" class="required" data-pt="Celular/WhatsApp" data-en="Phone/WhatsApp">Celular/WhatsApp</label>
+                            <label for="phone" class="required">Celular/WhatsApp</label>
                             <input type="tel" id="phone" name="phone" placeholder="(31) 99999-9999" required>
                         </div>
                     </div>
@@ -429,18 +430,18 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="emergency_name" class="required" data-pt="Nome" data-en="Name">Nome</label>
+                            <label for="emergency_name" class="required">Nome</label>
                             <input type="text" id="emergency_name" name="emergency_name" required>
                         </div>
                         <div class="form-group">
-                            <label for="emergency_phone" class="required" data-pt="Telefone" data-en="Phone">Telefone</label>
+                            <label for="emergency_phone" class="required">Telefone</label>
                             <input type="tel" id="emergency_phone" name="emergency_phone" required>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="emergency_relationship" class="required" data-pt="Parentesco com a criança" data-en="Relationship to child">Parentesco com a criança</label>
-                        <input type="text" id="emergency_relationship" name="emergency_relationship" data-pt-placeholder="Ex: Avó, Tio, Vizinha..." data-en-placeholder="Ex: Grandma, Uncle, Neighbor..." placeholder="Ex: Avó, Tio, Vizinha..." required>
+                        <label for="emergency_relationship">Parentesco com a criança</label>
+                        <input type="text" id="emergency_relationship" name="emergency_relationship" placeholder="Ex: Avó, Tio, Vizinha...">
                     </div>
                 </div>
 
@@ -449,23 +450,23 @@
                     <h2 class="section-title" data-pt="🏥 Informações Médicas" data-en="🏥 Medical Information">🏥 Informações Médicas</h2>
                     
                     <div class="form-group">
-                        <label for="allergies" data-pt="Alergias" data-en="Allergies">Alergias</label>
-                        <textarea id="allergies" name="allergies" data-pt-placeholder="Liste quaisquer alergias (alimentos, medicamentos, outros) ou escreva 'Nenhuma'" data-en-placeholder="List any allergies (food, medicine, other) or write 'None'" placeholder="Liste quaisquer alergias (alimentos, medicamentos, outros) ou escreva 'Nenhuma'"></textarea>
+                        <label for="allergies">Alergias</label>
+                        <textarea id="allergies" name="allergies" placeholder="Liste quaisquer alergias (alimentos, medicamentos, outros) ou escreva 'Nenhuma'"></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="medical_conditions" data-pt="Condições médicas ou necessidades especiais" data-en="Medical conditions or special needs">Condições médicas ou necessidades especiais</label>
-                        <textarea id="medical_conditions" name="medical_conditions" data-pt-placeholder="Informe condições como asma, diabetes, TDAH, autismo, ou outras condições relevantes. Escreva 'Nenhuma' se não houver." data-en-placeholder="Report conditions such as asthma, diabetes, ADHD, autism, or other relevant conditions. Write 'None' if there are none." placeholder="Informe condições como asma, diabetes, TDAH, autismo, ou outras condições relevantes. Escreva 'Nenhuma' se não houver."></textarea>
+                        <label for="medical_conditions">Condições médicas ou necessidades especiais</label>
+                        <textarea id="medical_conditions" name="medical_conditions" placeholder="Informe condições como asma, diabetes, TDAH, autismo, ou outras condições relevantes. Escreva 'Nenhuma' se não houver."></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="medications" data-pt="Medicamentos de uso contínuo" data-en="Ongoing medications">Medicamentos de uso contínuo</label>
-                        <textarea id="medications" name="medications" data-pt-placeholder="Liste medicamentos que a criança toma regularmente ou escreva 'Nenhum'" data-en-placeholder="List medications the child takes regularly or write 'None'" placeholder="Liste medicamentos que a criança toma regularmente ou escreva 'Nenhum'"></textarea>
+                        <label for="medications">Medicamentos de uso contínuo</label>
+                        <textarea id="medications" name="medications" placeholder="Liste medicamentos que a criança toma regularmente ou escreva 'Nenhum'"></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="health_insurance" data-pt="Plano de saúde (opcional)" data-en="Health insurance (optional)">Plano de saúde (opcional)</label>
-                        <input type="text" id="health_insurance" name="health_insurance" data-pt-placeholder="Nome do plano e número da carteirinha" data-en-placeholder="Insurance name and card number" placeholder="Nome do plano e número da carteirinha">
+                        <label for="health_insurance">Plano de saúde (opcional)</label>
+                        <input type="text" id="health_insurance" name="health_insurance" placeholder="Nome do plano e número da carteirinha">
                     </div>
                 </div>
 
@@ -474,55 +475,73 @@
                     <h2 class="section-title" data-pt="📅 Preferências" data-en="📅 Preferences">📅 Preferências</h2>
                     
                     <div class="form-group">
-                        <label data-pt="Dias de preferência para as aulas" data-en="Preferred days for classes">Dias de preferência para as aulas</label>
+                        <label>Dias de preferência para as aulas</label>
                         <div class="checkbox-group" style="margin-top: 0.5rem;">
                             <div class="checkbox-item">
+                                <input type="checkbox" id="day_seg" name="preferred_days" value="segunda">
+                                <label for="day_seg">Segunda-feira</label>
+                            </div>
+                            <div class="checkbox-item">
                                 <input type="checkbox" id="day_ter" name="preferred_days" value="terca">
-                                <label for="day_ter" data-pt="Terça-feira" data-en="Tuesday">Terça-feira</label>
+                                <label for="day_ter">Terça-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_qua" name="preferred_days" value="quarta">
+                                <label for="day_qua">Quarta-feira</label>
                             </div>
                             <div class="checkbox-item">
                                 <input type="checkbox" id="day_qui" name="preferred_days" value="quinta">
-                                <label for="day_qui" data-pt="Quinta-feira" data-en="Thursday">Quinta-feira</label>
+                                <label for="day_qui">Quinta-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_sex" name="preferred_days" value="sexta">
+                                <label for="day_sex">Sexta-feira</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="day_sab" name="preferred_days" value="sabado">
+                                <label for="day_sab">Sábado</label>
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="preferred_time" data-pt="Horário de preferência" data-en="Preferred time">Horário de preferência</label>
+                        <label for="preferred_time">Horário de preferência</label>
                         <select id="preferred_time" name="preferred_time">
-                            <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
-                            <option value="830" data-pt="8:30 - Manhã" data-en="8:30 AM - Morning">8:30 - Manhã</option>
-                            <option value="1830" data-pt="18:30 - Noite" data-en="6:30 PM - Evening">18:30 - Noite</option>
+                            <option value="">Selecione...</option>
+                            <option value="8-850">8:00 - 8:50 AM</option>
+                            <option value="9-950">9:00 - 9:50 AM</option>
+                            <option value="630-720">6:30 - 7:20 PM</option>
+                            <option value="730-820">7:30 - 8:20 PM</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="school_name" data-pt="Escola atual da criança (opcional)" data-en="Child's current school (optional)">Escola atual da criança (opcional)</label>
-                        <input type="text" id="school_name" name="school_name" data-pt-placeholder="Nome da escola" data-en-placeholder="School name" placeholder="Nome da escola">
+                        <label for="school_name">Escola atual da criança (opcional)</label>
+                        <input type="text" id="school_name" name="school_name" placeholder="Nome da escola">
                     </div>
                     
                     <div class="form-group">
-                        <label for="how_found" class="required" data-pt="Como conheceu o Star Kids?" data-en="How did you hear about Star Kids?">Como conheceu o Star Kids?</label>
+                        <label for="how_found" class="required">Como conheceu o Star Kids?</label>
                         <select id="how_found" name="how_found" required>
-                            <option value="" data-pt="Selecione..." data-en="Select...">Selecione...</option>
-                            <option value="indicacao" data-pt="Indicação de amigo/familiar" data-en="Friend/family referral">Indicação de amigo/familiar</option>
-                            <option value="escola" data-pt="Através da escola" data-en="Through school">Através da escola</option>
-                            <option value="instagram" data-pt="Instagram" data-en="Instagram">Instagram</option>
-                            <option value="facebook" data-pt="Facebook" data-en="Facebook">Facebook</option>
-                            <option value="google" data-pt="Pesquisa no Google" data-en="Google search">Pesquisa no Google</option>
-                            <option value="evento" data-pt="Evento/Demonstração" data-en="Event/Demo">Evento/Demonstração</option>
-                            <option value="outro" data-pt="Outro" data-en="Other">Outro</option>
+                            <option value="">Selecione...</option>
+                            <option value="indicacao">Indicação de amigo/familiar</option>
+                            <option value="escola">Através da escola</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="google">Pesquisa no Google</option>
+                            <option value="evento">Evento/Demonstração</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Observações -->
                 <div class="form-section">
-                    <h2 class="section-title" data-pt="📝 Observações Adicionais" data-en="📝 Additional Notes">📝 Observações Adicionais</h2>
+                    <h2 class="section-title">📝 Observações Adicionais</h2>
                     
                     <div class="form-group">
-                        <label for="notes" data-pt="Algo mais que devemos saber sobre seu filho(a)?" data-en="Anything else we should know about your child?">Algo mais que devemos saber sobre seu filho(a)?</label>
-                        <textarea id="notes" name="notes" data-pt-placeholder="Compartilhe informações que possam nos ajudar a proporcionar a melhor experiência para seu filho(a). Ex: interesses, medos, características de personalidade..." data-en-placeholder="Share information that can help us provide the best experience for your child. Ex: interests, fears, personality traits..." placeholder="Compartilhe informações que possam nos ajudar a proporcionar a melhor experiência para seu filho(a). Ex: interesses, medos, características de personalidade..."></textarea>
+                        <label for="notes">Algo mais que devemos saber sobre seu filho(a)?</label>
+                        <textarea id="notes" name="notes" placeholder="Compartilhe informações que possam nos ajudar a proporcionar a melhor experiência para seu filho(a). Ex: interesses, medos, características de personalidade..."></textarea>
                     </div>
                 </div>
 
@@ -531,48 +550,48 @@
                     <h2 class="section-title" data-pt="⚖️ Termo de Responsabilidade" data-en="⚖️ Liability Waiver">⚖️ Termo de Responsabilidade</h2>
                     
                     <div class="liability-notice" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
-                        <span data-pt="<strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo." data-en="<strong>📋 Read carefully:</strong> This waiver is required for participation in the Star Kids program. By signing, you acknowledge the conditions below."><strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo.</span>
+                        <strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo.
                     </div>
                     
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_health" name="liability_health" value="sim" required>
-                            <label for="liability_health" class="required" data-pt="<strong>Declaração de Aptidão Física:</strong> Declaro que meu filho(a) está em boas condições de saúde e apto(a) a participar de atividades físicas e esportivas. Informei todas as condições médicas, alergias e medicamentos relevantes neste formulário." data-en="<strong>Physical Fitness Declaration:</strong> I declare that my child is in good health and able to participate in physical and sports activities. I have reported all relevant medical conditions, allergies, and medications in this form."><strong>Declaração de Aptidão Física:</strong> Declaro que meu filho(a) está em boas condições de saúde e apto(a) a participar de atividades físicas e esportivas. Informei todas as condições médicas, alergias e medicamentos relevantes neste formulário.</label>
+                            <label for="liability_health" class="required"><strong>Declaração de Aptidão Física:</strong> Declaro que meu filho(a) está em boas condições de saúde e apto(a) a participar de atividades físicas e esportivas. Informei todas as condições médicas, alergias e medicamentos relevantes neste formulário.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_risk" name="liability_risk" value="sim" required>
-                            <label for="liability_risk" class="required" data-pt="<strong>Ciência dos Riscos:</strong> Declaro estar ciente de que a prática de atividades físicas e esportivas envolve riscos inerentes, incluindo, mas não limitado a: quedas, contusões, entorses, escoriações e outras lesões típicas de atividades esportivas infantis." data-en="<strong>Risk Acknowledgment:</strong> I acknowledge that physical and sports activities involve inherent risks, including but not limited to: falls, bruises, sprains, scrapes, and other injuries typical of children's sports activities."><strong>Ciência dos Riscos:</strong> Declaro estar ciente de que a prática de atividades físicas e esportivas envolve riscos inerentes, incluindo, mas não limitado a: quedas, contusões, entorses, escoriações e outras lesões típicas de atividades esportivas infantis.</label>
+                            <label for="liability_risk" class="required"><strong>Ciência dos Riscos:</strong> Declaro estar ciente de que a prática de atividades físicas e esportivas envolve riscos inerentes, incluindo, mas não limitado a: quedas, contusões, entorses, escoriações e outras lesões típicas de atividades esportivas infantis.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_release" name="liability_release" value="sim" required>
-                            <label for="liability_release" class="required" data-pt="<strong>Termo de Responsabilidade:</strong> Assumo integral responsabilidade pela participação do meu filho(a) nas atividades do programa Star Kids e isento a Star Kids Brasil, seus sócios, instrutores, colaboradores e a escola parceira de responsabilidade por eventuais acidentes ou lesões decorrentes da prática normal das atividades esportivas, desde que não haja dolo ou negligência comprovada." data-en="<strong>Liability Waiver:</strong> I assume full responsibility for my child's participation in Star Kids program activities and release Star Kids Brasil, its partners, instructors, staff, and partner schools from liability for any accidents or injuries resulting from normal sports activities, provided there is no proven intent or negligence."><strong>Termo de Responsabilidade:</strong> Assumo integral responsabilidade pela participação do meu filho(a) nas atividades do programa Star Kids e isento a Star Kids Brasil, seus sócios, instrutores, colaboradores e a escola parceira de responsabilidade por eventuais acidentes ou lesões decorrentes da prática normal das atividades esportivas, desde que não haja dolo ou negligência comprovada.</label>
+                            <label for="liability_release" class="required"><strong>Termo de Responsabilidade:</strong> Assumo integral responsabilidade pela participação do meu filho(a) nas atividades do programa Star Kids e isento a Star Kids Brasil, seus sócios, instrutores, colaboradores e a escola parceira de responsabilidade por eventuais acidentes ou lesões decorrentes da prática normal das atividades esportivas, desde que não haja dolo ou negligência comprovada.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_emergency" name="liability_emergency" value="sim" required>
-                            <label for="liability_emergency" class="required" data-pt="<strong>Autorização de Emergência:</strong> Em caso de acidente ou emergência médica, autorizo a equipe Star Kids a tomar as providências necessárias para atendimento de primeiros socorros e, se necessário, encaminhar meu filho(a) ao serviço de saúde mais próximo, comprometendo-me a arcar com os custos decorrentes." data-en="<strong>Emergency Authorization:</strong> In case of accident or medical emergency, I authorize the Star Kids team to take necessary measures for first aid and, if needed, transport my child to the nearest health service, and I agree to cover any resulting costs."><strong>Autorização de Emergência:</strong> Em caso de acidente ou emergência médica, autorizo a equipe Star Kids a tomar as providências necessárias para atendimento de primeiros socorros e, se necessário, encaminhar meu filho(a) ao serviço de saúde mais próximo, comprometendo-me a arcar com os custos decorrentes.</label>
+                            <label for="liability_emergency" class="required"><strong>Autorização de Emergência:</strong> Em caso de acidente ou emergência médica, autorizo a equipe Star Kids a tomar as providências necessárias para atendimento de primeiros socorros e, se necessário, encaminhar meu filho(a) ao serviço de saúde mais próximo, comprometendo-me a arcar com os custos decorrentes.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_rules" name="liability_rules" value="sim" required>
-                            <label for="liability_rules" class="required" data-pt="<strong>Regras do Programa:</strong> Comprometo-me a respeitar os horários das aulas, comunicar ausências com antecedência, buscar meu filho(a) pontualmente ao término das atividades e garantir que ele(a) compareça com vestimenta e calçados adequados para a prática esportiva." data-en="<strong>Program Rules:</strong> I commit to respecting class schedules, communicating absences in advance, picking up my child promptly at the end of activities, and ensuring they attend with appropriate clothing and footwear for sports."><strong>Regras do Programa:</strong> Comprometo-me a respeitar os horários das aulas, comunicar ausências com antecedência, buscar meu filho(a) pontualmente ao término das atividades e garantir que ele(a) compareça com vestimenta e calçados adequados para a prática esportiva.</label>
+                            <label for="liability_rules" class="required"><strong>Regras do Programa:</strong> Comprometo-me a respeitar os horários das aulas, comunicar ausências com antecedência, buscar meu filho(a) pontualmente ao término das atividades e garantir que ele(a) compareça com vestimenta e calçados adequados para a prática esportiva.</label>
                         </div>
                     </div>
                     
                     <div class="form-group" style="margin-top: 20px;">
-                        <label for="guardian_name" class="required" data-pt="Nome completo do responsável legal" data-en="Legal guardian's full name">Nome completo do responsável legal</label>
+                        <label for="guardian_name" class="required">Nome completo do responsável legal</label>
                         <input type="text" id="guardian_name" name="guardian_name" required>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="guardian_cpf" class="required" data-pt="CPF do responsável" data-en="Guardian's CPF (Tax ID)">CPF do responsável</label>
+                            <label for="guardian_cpf" class="required">CPF do responsável</label>
                             <input type="text" id="guardian_cpf" name="guardian_cpf" placeholder="000.000.000-00" required>
                         </div>
                         <div class="form-group">
-                            <label for="consent_date" class="required" data-pt="Data" data-en="Date">Data</label>
+                            <label for="consent_date" class="required">Data</label>
                             <input type="date" id="consent_date" name="consent_date" required>
                         </div>
                     </div>
@@ -583,23 +602,23 @@
                     <h2 class="section-title" data-pt="✅ Autorizações" data-en="✅ Authorizations">✅ Autorizações</h2>
                     
                     <div class="privacy-note">
-                        <span data-pt="<strong>🔒 Privacidade:</strong> Seus dados são tratados com total sigilo e utilizados apenas para fins do programa Star Kids, conforme a LGPD." data-en="<strong>🔒 Privacy:</strong> Your data is treated with complete confidentiality and used only for Star Kids program purposes, in accordance with LGPD."><strong>🔒 Privacidade:</strong> Seus dados são tratados com total sigilo e utilizados apenas para fins do programa Star Kids, conforme a LGPD.</span>
+                        <strong>🔒 Privacidade:</strong> Seus dados são tratados com total sigilo e utilizados apenas para fins do programa Star Kids, conforme a LGPD.
                     </div>
                     
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" id="consent_terms" name="consent_terms" value="sim" required>
-                            <label for="consent_terms" class="required" data-pt="Li e concordo com os termos de participação do programa Star Kids e autorizo meu filho(a) a participar das atividades." data-en="I have read and agree to the Star Kids program participation terms and authorize my child to participate in the activities.">Li e concordo com os termos de participação do programa Star Kids e autorizo meu filho(a) a participar das atividades.</label>
+                            <label for="consent_terms" class="required">Li e concordo com os termos de participação do programa Star Kids e autorizo meu filho(a) a participar das atividades.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="consent_photos" name="consent_photos" value="sim">
-                            <label for="consent_photos" data-pt="Autorizo o uso de fotos e vídeos do meu filho(a) para divulgação do programa em redes sociais e materiais promocionais." data-en="I authorize the use of photos and videos of my child for program promotion on social media and promotional materials.">Autorizo o uso de fotos e vídeos do meu filho(a) para divulgação do programa em redes sociais e materiais promocionais.</label>
+                            <label for="consent_photos">Autorizo o uso de fotos e vídeos do meu filho(a) para divulgação do programa em redes sociais e materiais promocionais.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="consent_whatsapp" name="consent_whatsapp" value="sim">
-                            <label for="consent_whatsapp" data-pt="Desejo receber atualizações e informações do Star Kids via WhatsApp." data-en="I want to receive Star Kids updates and information via WhatsApp.">Desejo receber atualizações e informações do Star Kids via WhatsApp.</label>
+                            <label for="consent_whatsapp">Desejo receber atualizações e informações do Star Kids via WhatsApp.</label>
                         </div>
                     </div>
                 </div>
@@ -610,9 +629,9 @@
                 </button>
 
                 <div class="form-footer">
-                    <p data-pt="Dúvidas? Entre em contato:" data-en="Questions? Contact us:">Dúvidas? Entre em contato:</p>
-                    <p>📧 lucas@starkids.team<br>
-                    📱 <a href="https://wa.me/5531973313443">(31) 97331-3443</a></p>
+                    <p>Dúvidas? Entre em contato:<br>
+                    📧 <span style="user-select: all; cursor: text;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87cbf2e4e6f4c7f4f3e6f5eceee3f4a9f3e2e6ea">[email&#160;protected]</a></span><br>
+                    📱 <a href="https://wa.me/5531983719846">(31) 97331-3443</a></p>
                 </div>
             </form>
         </div>
@@ -679,12 +698,6 @@
                 } else {
                     el.innerHTML = text;
                 }
-            });
-            
-            // Handle placeholders separately
-            document.querySelectorAll("[data-pt-placeholder][data-en-placeholder]").forEach(el => {
-                const placeholder = el.getAttribute("data-" + currentLang + "-placeholder");
-                el.placeholder = placeholder;
             });
         });
     </script>
