@@ -2,7 +2,7 @@
     "name": "Star Kids Coach",
     "short_name": "Star Kids",
     "description": "App para coaches Star Kids Brasil",
-    "start_url": "/",
+    "start_url": "/coach/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#2E7D32",
