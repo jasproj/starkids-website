@@ -1,1 +1,1137 @@
-1
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2E7D32">
+    <title>Star Kids Coach</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --green: #2E7D32;
+            --green-light: #66BB6A;
+            --gold: #FFD700;
+            --yellow: #F9A825;
+            --white: #FFFFFF;
+            --gray: #666666;
+            --gray-light: #f5f5f5;
+            --gray-dark: #333333;
+            --danger: #dc2626;
+            --whatsapp: #25D366;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gray-light);
+            color: var(--gray-dark);
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--green);
+            color: white;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .header-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+        
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 16px;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 11px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .nav-item.active {
+            color: var(--green);
+        }
+        
+        .nav-item svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+        
+        /* Content */
+        .content {
+            padding: 16px;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .card-subtitle {
+            font-size: 13px;
+            color: var(--gray);
+        }
+        
+        /* Status Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-active { background: #dcfce7; color: #166534; }
+        .badge-trial { background: #fef3c7; color: #92400e; }
+        .badge-paused { background: #f3f4f6; color: #6b7280; }
+        .badge-paid { background: #dcfce7; color: #166534; }
+        .badge-pending { background: #fef3c7; color: #92400e; }
+        .badge-late { background: #fee2e2; color: #991b1b; }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--green);
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+        
+        /* List Items */
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+        
+        .list-content {
+            flex: 1;
+        }
+        
+        .list-title {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .list-meta {
+            font-size: 13px;
+            color: var(--gray);
+        }
+        
+        .list-action {
+            padding: 8px;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+        
+        .whatsapp-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+            gap: 8px;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-primary {
+            background: var(--green);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: var(--gray-light);
+            color: var(--gray-dark);
+        }
+        
+        .btn-block {
+            width: 100%;
+        }
+        
+        /* Forms */
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--gray-dark);
+        }
+        
+        .form-input, .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+        }
+        
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--green);
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 200;
+            align-items: flex-end;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: white;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: 24px;
+            padding-bottom: calc(24px + env(safe-area-inset-bottom));
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        
+        /* Attendance */
+        .attendance-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .attendance-checkbox {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            margin-right: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        
+        .attendance-checkbox.checked {
+            background: var(--green);
+            border-color: var(--green);
+            color: white;
+        }
+        
+        /* Loading */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: var(--gray);
+        }
+        
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #eee;
+            border-top-color: var(--green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 12px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Date selector */
+        .date-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .date-nav {
+            background: none;
+            border: none;
+            font-size: 20px;
+            padding: 8px;
+            cursor: pointer;
+        }
+        
+        .date-display {
+            font-weight: 600;
+        }
+        
+        /* Section Header */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray);
+        }
+        
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .quick-action {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: white;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .quick-action:active {
+            background: var(--gray-light);
+        }
+        
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 16px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            background: none;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 6px;
+            color: var(--gray);
+        }
+        
+        .tab.active {
+            background: var(--green);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Setup Screen (shown if no token) -->
+    <div id="setup-screen" style="display: none; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);">
+        <div style="background: white; padding: 30px; border-radius: 16px; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <div style="font-size: 48px; margin-bottom: 10px;">⭐</div>
+            <h1 style="color: #2E7D32; margin-bottom: 8px;">Star Kids Coach</h1>
+            <p style="color: #666; margin-bottom: 24px;">Digite o token para acessar</p>
+            <input type="password" id="token-input" placeholder="Cole o token aqui" style="width: 100%; padding: 14px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; margin-bottom: 16px;">
+            <button onclick="saveToken()" style="width: 100%; padding: 14px; background: #2E7D32; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Entrar</button>
+            <p style="color: #999; font-size: 12px; margin-top: 16px;">Token salvo apenas neste dispositivo</p>
+        </div>
+    </div>
+
+    <!-- App Content (hidden until token entered) -->
+    <div id="app-content">
+    <!-- Header -->
+    <header class="header">
+        <h1>⭐ Star Kids Coach</h1>
+        <div class="header-subtitle">Rua Julita Nogueira Soares, COJAM</div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <!-- Dashboard Page -->
+        <div id="page-dashboard" class="page active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-students">-</div>
+                    <div class="stat-label">Alunos Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-revenue">-</div>
+                    <div class="stat-label">Receita Mensal</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-pending">-</div>
+                    <div class="stat-label">Pagtos Pendentes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-trials">-</div>
+                    <div class="stat-label">Testes Agendados</div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <span class="section-title">Próxima Aula</span>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title" id="next-class-date">Carregando...</div>
+                        <div class="card-subtitle" id="next-class-time">18:00 - Quadra COJAM</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="openAttendance()">Chamada</button>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <span class="section-title">Ações Rápidas</span>
+            </div>
+            <div class="quick-actions">
+                <button class="quick-action" onclick="openModal('add-student')">+ Aluno</button>
+                <button class="quick-action" onclick="openModal('add-payment')">+ Pagamento</button>
+                <button class="quick-action" onclick="showPage('students')">Ver Todos</button>
+            </div>
+        </div>
+
+        <!-- Students Page -->
+        <div id="page-students" class="page">
+            <div class="tabs">
+                <button class="tab active" onclick="filterStudents('all')">Todos</button>
+                <button class="tab" onclick="filterStudents('Active')">Ativos</button>
+                <button class="tab" onclick="filterStudents('Trial')">Teste</button>
+            </div>
+            
+            <div class="card">
+                <div id="students-list">
+                    <div class="loading"><div class="spinner"></div>Carregando...</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary btn-block" onclick="openModal('add-student')" style="margin-top:16px">
+                + Adicionar Aluno
+            </button>
+        </div>
+
+        <!-- Payments Page -->
+        <div id="page-payments" class="page">
+            <div class="tabs">
+                <button class="tab active" onclick="filterPayments('all')">Todos</button>
+                <button class="tab" onclick="filterPayments('Pending')">Pendentes</button>
+                <button class="tab" onclick="filterPayments('Late')">Atrasados</button>
+            </div>
+            
+            <div class="card">
+                <div id="payments-list">
+                    <div class="loading"><div class="spinner"></div>Carregando...</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary btn-block" onclick="openModal('add-payment')" style="margin-top:16px">
+                + Registrar Pagamento
+            </button>
+        </div>
+
+        <!-- Attendance Page -->
+        <div id="page-attendance" class="page">
+            <div class="date-selector">
+                <button class="date-nav" onclick="changeDate(-1)">‹</button>
+                <span class="date-display" id="attendance-date">Hoje</span>
+                <button class="date-nav" onclick="changeDate(1)">›</button>
+            </div>
+            
+            <div id="attendance-list">
+                <div class="loading"><div class="spinner"></div>Carregando...</div>
+            </div>
+            
+            <button class="btn btn-primary btn-block" onclick="saveAttendance()" style="margin-top:16px">
+                Salvar Chamada
+            </button>
+        </div>
+    </main>
+    </div><!-- end app-content -->
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <button class="nav-item active" onclick="showPage('dashboard')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            Início
+        </button>
+        <button class="nav-item" onclick="showPage('students')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Alunos
+        </button>
+        <button class="nav-item" onclick="showPage('payments')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            Pagamentos
+        </button>
+        <button class="nav-item" onclick="showPage('attendance')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+            Chamada
+        </button>
+    </nav>
+
+    <!-- Add Student Modal -->
+    <div class="modal-overlay" id="modal-add-student">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="modal-title">Adicionar Aluno</span>
+                <button class="modal-close" onclick="closeModal('add-student')">×</button>
+            </div>
+            <form id="form-add-student" onsubmit="addStudent(event)">
+                <div class="form-group">
+                    <label class="form-label">Nome do Aluno</label>
+                    <input type="text" class="form-input" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Idade</label>
+                    <input type="number" class="form-input" name="age" min="2" max="8" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Grupo</label>
+                    <select class="form-select" name="ageGroup" required>
+                        <option value="Little Stars">Little Stars (2-3)</option>
+                        <option value="Rising Stars">Rising Stars (3-4)</option>
+                        <option value="Super Stars">Super Stars (5-6)</option>
+                        <option value="Shooting Stars">Shooting Stars (7-8)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status">
+                        <option value="Trial">Teste</option>
+                        <option value="Active">Ativo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nome do Responsável</label>
+                    <input type="text" class="form-input" name="parentName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">WhatsApp</label>
+                    <input type="tel" class="form-input" name="whatsapp" placeholder="(31) 99999-9999" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Payment Modal -->
+    <div class="modal-overlay" id="modal-add-payment">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="modal-title">Registrar Pagamento</span>
+                <button class="modal-close" onclick="closeModal('add-payment')">×</button>
+            </div>
+            <form id="form-add-payment" onsubmit="addPayment(event)">
+                <div class="form-group">
+                    <label class="form-label">Aluno</label>
+                    <select class="form-select" name="studentId" id="payment-student-select" required>
+                        <option value="">Selecione...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mês Referência</label>
+                    <input type="month" class="form-input" name="month" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Valor Pago (R$)</label>
+                    <input type="number" class="form-input" name="amount" value="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Método</label>
+                    <select class="form-select" name="method">
+                        <option value="PIX">PIX</option>
+                        <option value="Cash">Dinheiro</option>
+                        <option value="Transfer">Transferência</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Airtable Configuration
+        const AIRTABLE_BASE_ID = 'appJ3UAtAaetOLnAN';
+        let AIRTABLE_TOKEN = localStorage.getItem('starkids_token') || '';
+        const API_URL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}`;
+
+        // Check if token exists on load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!AIRTABLE_TOKEN) {
+                showSetup();
+            } else {
+                loadData();
+            }
+        });
+
+        // Show setup screen
+        function showSetup() {
+            document.getElementById('app-content').style.display = 'none';
+            document.getElementById('bottom-nav').style.display = 'none';
+            document.getElementById('setup-screen').style.display = 'flex';
+        }
+
+        // Save token and start app
+        function saveToken() {
+            const token = document.getElementById('token-input').value.trim();
+            if (!token) {
+                alert('Digite o token');
+                return;
+            }
+            localStorage.setItem('starkids_token', token);
+            AIRTABLE_TOKEN = token;
+            document.getElementById('setup-screen').style.display = 'none';
+            document.getElementById('app-content').style.display = 'block';
+            document.getElementById('bottom-nav').style.display = 'flex';
+            loadData();
+        }
+
+        // Logout (clear token)
+        function logout() {
+            if (confirm('Sair e limpar token?')) {
+                localStorage.removeItem('starkids_token');
+                AIRTABLE_TOKEN = '';
+                showSetup();
+            }
+        }
+
+        // State
+        let students = [];
+        let parents = [];
+        let payments = [];
+        let attendance = [];
+        let currentDate = new Date();
+        let attendanceState = {};
+
+        // API Helper
+        async function api(table, method = 'GET', data = null) {
+            const options = {
+                method,
+                headers: {
+                    'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+                    'Content-Type': 'application/json'
+                }
+            };
+            if (data) options.body = JSON.stringify(data);
+            
+            const response = await fetch(`${API_URL}/${table}`, options);
+            return response.json();
+        }
+
+        // Load Data
+        async function loadData() {
+            try {
+                const [studentsRes, parentsRes, paymentsRes] = await Promise.all([
+                    api('Students'),
+                    api('Parents'),
+                    api('Payments')
+                ]);
+                
+                students = studentsRes.records || [];
+                parents = parentsRes.records || [];
+                payments = paymentsRes.records || [];
+                
+                updateDashboard();
+                renderStudents();
+                renderPayments();
+                renderAttendance();
+                updatePaymentStudentSelect();
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        // Update Dashboard
+        function updateDashboard() {
+            const activeStudents = students.filter(s => s.fields.Status === 'Active').length;
+            const trialStudents = students.filter(s => s.fields.Status === 'Trial').length;
+            const pendingPayments = payments.filter(p => p.fields.Status === 'Pending' || p.fields.Status === 'Late').length;
+            const totalRevenue = payments
+                .filter(p => p.fields.Status === 'Paid')
+                .reduce((sum, p) => sum + (p.fields['Amount Paid'] || 0), 0);
+
+            document.getElementById('stat-students').textContent = activeStudents;
+            document.getElementById('stat-trials').textContent = trialStudents;
+            document.getElementById('stat-pending').textContent = pendingPayments;
+            document.getElementById('stat-revenue').textContent = `R$${totalRevenue}`;
+
+            // Next class
+            const days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+            const today = new Date();
+            let nextClass = new Date(today);
+            
+            // Find next Tuesday or Thursday
+            while (nextClass.getDay() !== 2 && nextClass.getDay() !== 4) {
+                nextClass.setDate(nextClass.getDate() + 1);
+            }
+            
+            const isToday = nextClass.toDateString() === today.toDateString();
+            document.getElementById('next-class-date').textContent = isToday ? 'Hoje' : `${days[nextClass.getDay()]}, ${nextClass.getDate()}/${nextClass.getMonth() + 1}`;
+        }
+
+        // Render Students
+        function renderStudents(filter = 'all') {
+            const container = document.getElementById('students-list');
+            let filtered = students;
+            
+            if (filter !== 'all') {
+                filtered = students.filter(s => s.fields.Status === filter);
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="empty-state">Nenhum aluno encontrado</div>';
+                return;
+            }
+
+            container.innerHTML = filtered.map(student => {
+                const parent = parents.find(p => p.id === (student.fields.Parent?.[0]));
+                const whatsapp = parent?.fields?.WhatsApp || student.fields.ParentWhatsApp || '';
+                const initials = student.fields.Name?.split(' ').map(n => n[0]).join('').substring(0, 2) || '?';
+                
+                return `
+                    <div class="list-item">
+                        <div class="list-avatar">${initials}</div>
+                        <div class="list-content">
+                            <div class="list-title">${student.fields.Name || 'Sem nome'}</div>
+                            <div class="list-meta">${student.fields['Age Group'] || ''} • ${student.fields.Age || ''} anos</div>
+                        </div>
+                        <span class="badge badge-${student.fields.Status?.toLowerCase() || 'trial'}">${student.fields.Status || 'Trial'}</span>
+                        ${whatsapp ? `
+                            <a href="https://wa.me/55${whatsapp.replace(/\D/g, '')}" class="whatsapp-btn list-action">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </a>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Render Payments
+        function renderPayments(filter = 'all') {
+            const container = document.getElementById('payments-list');
+            let filtered = payments;
+            
+            if (filter !== 'all') {
+                filtered = payments.filter(p => p.fields.Status === filter);
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="empty-state">Nenhum pagamento encontrado</div>';
+                return;
+            }
+
+            container.innerHTML = filtered.map(payment => {
+                const student = students.find(s => s.id === (payment.fields.StudentLink?.[0]));
+                const studentName = student?.fields?.Name || 'Aluno';
+                const month = payment.fields.Date ? new Date(payment.fields.Date).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' }) : '';
+                
+                return `
+                    <div class="list-item">
+                        <div class="list-content">
+                            <div class="list-title">${studentName}</div>
+                            <div class="list-meta">${month} • R$${payment.fields['Amount Paid'] || payment.fields['Amount Due'] || 100}</div>
+                        </div>
+                        <span class="badge badge-${payment.fields.Status?.toLowerCase() || 'pending'}">${payment.fields.Status || 'Pending'}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Render Attendance
+        function renderAttendance() {
+            const container = document.getElementById('attendance-list');
+            const activeStudents = students.filter(s => s.fields.Status === 'Active' || s.fields.Status === 'Trial');
+
+            if (activeStudents.length === 0) {
+                container.innerHTML = '<div class="empty-state">Nenhum aluno para chamada</div>';
+                return;
+            }
+
+            container.innerHTML = activeStudents.map(student => {
+                const isPresent = attendanceState[student.id] || false;
+                return `
+                    <div class="attendance-item">
+                        <div class="attendance-checkbox ${isPresent ? 'checked' : ''}" onclick="toggleAttendance('${student.id}')">
+                            ${isPresent ? '✓' : ''}
+                        </div>
+                        <div class="list-content">
+                            <div class="list-title">${student.fields.Name || 'Sem nome'}</div>
+                            <div class="list-meta">${student.fields['Age Group'] || ''}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Update date display
+            const options = { weekday: 'long', day: 'numeric', month: 'short' };
+            document.getElementById('attendance-date').textContent = currentDate.toLocaleDateString('pt-BR', options);
+        }
+
+        // Toggle Attendance
+        function toggleAttendance(studentId) {
+            attendanceState[studentId] = !attendanceState[studentId];
+            renderAttendance();
+        }
+
+        // Save Attendance
+        async function saveAttendance() {
+            const records = Object.entries(attendanceState)
+                .filter(([id, present]) => present)
+                .map(([studentId]) => ({
+                    fields: {
+                        Date: currentDate.toISOString().split('T')[0],
+                        Student: [studentId],
+                        Present: true
+                    }
+                }));
+
+            if (records.length === 0) {
+                alert('Nenhum aluno marcado presente');
+                return;
+            }
+
+            try {
+                await api('Attendance', 'POST', { records });
+                alert(`Chamada salva! ${records.length} alunos presentes.`);
+                attendanceState = {};
+                renderAttendance();
+            } catch (error) {
+                console.error('Error saving attendance:', error);
+                alert('Erro ao salvar chamada');
+            }
+        }
+
+        // Add Student
+        async function addStudent(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                // Create parent first
+                const parentRes = await api('Parents', 'POST', {
+                    records: [{
+                        fields: {
+                            Name: formData.get('parentName'),
+                            WhatsApp: formData.get('whatsapp')
+                        }
+                    }]
+                });
+
+                const parentId = parentRes.records[0].id;
+
+                // Create student
+                await api('Students', 'POST', {
+                    records: [{
+                        fields: {
+                            Name: formData.get('name'),
+                            Age: parseInt(formData.get('age')),
+                            'Age Group': formData.get('ageGroup'),
+                            Status: formData.get('status'),
+                            Parent: [parentId],
+                            'Start Date': new Date().toISOString().split('T')[0]
+                        }
+                    }]
+                });
+
+                closeModal('add-student');
+                form.reset();
+                loadData();
+                alert('Aluno adicionado com sucesso!');
+            } catch (error) {
+                console.error('Error adding student:', error);
+                alert('Erro ao adicionar aluno');
+            }
+        }
+
+        // Add Payment
+        async function addPayment(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                await api('Payments', 'POST', {
+                    records: [{
+                        fields: {
+                            StudentLink: [formData.get('studentId')],
+                            Date: formData.get('month') + '-01',
+                            'Amount Due': 100,
+                            'Amount Paid': parseInt(formData.get('amount')),
+                            Status: 'Paid',
+                            'Paid Date': new Date().toISOString().split('T')[0],
+                            Method: formData.get('method')
+                        }
+                    }]
+                });
+
+                closeModal('add-payment');
+                form.reset();
+                loadData();
+                alert('Pagamento registrado!');
+            } catch (error) {
+                console.error('Error adding payment:', error);
+                alert('Erro ao registrar pagamento');
+            }
+        }
+
+        // Update Payment Student Select
+        function updatePaymentStudentSelect() {
+            const select = document.getElementById('payment-student-select');
+            select.innerHTML = '<option value="">Selecione...</option>' + 
+                students.map(s => `<option value="${s.id}">${s.fields.Name}</option>`).join('');
+        }
+
+        // Navigation
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.getElementById(`page-${page}`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Modal
+        function openModal(modal) {
+            document.getElementById(`modal-${modal}`).classList.add('active');
+        }
+
+        function closeModal(modal) {
+            document.getElementById(`modal-${modal}`).classList.remove('active');
+        }
+
+        // Date Navigation
+        function changeDate(delta) {
+            currentDate.setDate(currentDate.getDate() + delta);
+            renderAttendance();
+        }
+
+        // Filter functions
+        function filterStudents(filter) {
+            document.querySelectorAll('#page-students .tab').forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            renderStudents(filter);
+        }
+
+        function filterPayments(filter) {
+            document.querySelectorAll('#page-payments .tab').forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            renderPayments(filter);
+        }
+
+        // Open attendance page
+        function openAttendance() {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.getElementById('page-attendance').classList.add('active');
+            document.querySelectorAll('.nav-item')[3].classList.add('active');
+        }
+
+        // Initialize
+        loadData();
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
