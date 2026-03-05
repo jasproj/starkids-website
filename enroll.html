@@ -342,9 +342,21 @@
                 
                 <!-- Localização das Aulas -->
                 <div class="form-section" style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2E7D32; margin-bottom: 2rem;">
-                    <h2 class="section-title" style="border-bottom: none; margin-bottom: 0.5rem;">📍 Localização das Aulas</h2>
-                    <p style="margin: 0; font-size: 0.95rem; color: var(--gray-dark);"><strong>Vila Delícias</strong></p>
-                    <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: var(--gray);">Av. dos Engenheiros, 460 - Manacás<br>Belo Horizonte, MG</p>
+                    <h2 class="section-title" style="border-bottom: none; margin-bottom: 1rem;">📍 Qual(is) Local(is)?</h2>
+                    
+                    <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: var(--gray-dark);">Escolha um ou ambos os locais:</p>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="venue_vila" name="venue" value="vila_delicias">
+                            <label for="venue_vila"><strong>Vila Delícias</strong><br><span style="font-size: 0.85rem; color: var(--gray);">Av. dos Engenheiros, 460 - Manacás</span></label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="venue_cojam" name="venue" value="cojam">
+                            <label for="venue_cojam"><strong>Quadra de Tênis da Cojam</strong><br><span style="font-size: 0.85rem; color: var(--gray);">Rua Congonhal, 445 - Santa Terezinha</span></label>
+                        </div>
+                    </div>
+                    <p class="help-text" style="margin-top: 0.75rem; font-size: 0.85rem;">📅 Marque quantos locais forem necessários para seu filho(a)!</p>
                 </div>
                 
                 <!-- Dados da Criança -->
@@ -578,7 +590,7 @@
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_emergency" name="liability_emergency" value="sim" required>
-                            <label for="liability_emergency" class="required">✅ <strong>Emergências Médicas:</strong> Em caso de emergência, autorizo Star Kids a buscar atendimento médico imediato para meu filho(a) em Vila Delícias (Av. dos Engenheiros, 460).</label>
+                            <label for="liability_emergency" class="required">✅ <strong>Emergências Médicas:</strong> Em caso de emergência, autorizo Star Kids a buscar atendimento médico imediato para meu filho(a) no(s) local(is) selecionado(s) acima.</label>
                         </div>
                         
                         <div class="checkbox-item">
