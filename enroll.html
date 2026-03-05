@@ -554,36 +554,36 @@
 
                 <!-- Termo de Responsabilidade -->
                 <div class="form-section">
-                    <h2 class="section-title" data-pt="⚖️ Termo de Responsabilidade" data-en="⚖️ Liability Waiver">⚖️ Termo de Responsabilidade</h2>
+                    <h2 class="section-title" data-pt="✅ Confirmações Importantes" data-en="✅ Important Confirmations">✅ Confirmações Importantes</h2>
                     
-                    <div class="liability-notice" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
-                        <strong>📋 Leia com atenção:</strong> Este termo é obrigatório para a participação no programa Star Kids. Ao assinar, você declara estar ciente das condições abaixo.
+                    <div class="liability-notice" style="background: #e8f5e9; border-left: 4px solid #2E7D32; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+                        <strong>💚 Segurança e Bem-estar:</strong> Sua confiança é importante para nós. Aqui estão as confirmações que precisamos para cuidar melhor do seu filho(a).
                     </div>
                     
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_health" name="liability_health" value="sim" required>
-                            <label for="liability_health" class="required"><strong>Declaração de Aptidão Física:</strong> Declaro que meu filho(a) está em boas condições de saúde física e apto(a) a participar de atividades esportivas. Informei todas as condições médicas, alergias e medicamentos relevantes neste formulário.</label>
+                            <label for="liability_health" class="required">✅ <strong>Saúde do Meu Filho(a):</strong> Confirmo que meu filho(a) está saudável e apto para participar de atividades com futebol e movimento. Compartilhei todas as informações importantes (alergias, condições médicas, medicamentos) neste formulário.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_risk" name="liability_risk" value="sim" required>
-                            <label for="liability_risk" class="required"><strong>Ciência dos Riscos:</strong> Reconheço que a prática de atividades físicas e esportivas envolve riscos naturais, incluindo, mas não limitado a: quedas, contusões, entorses, escoriações e, em casos raros, lesões graves. Entendo que esses riscos existem apesar de todos os esforços de segurança.</label>
+                            <label for="liability_risk" class="required">✅ <strong>Riscos Naturais da Prática Esportiva:</strong> Entendo que qualquer atividade física envolve pequenos riscos (quedas, hematomas, pequenas lesões) e Star Kids toma todas as precauções para minimizar isso.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_release" name="liability_release" value="sim" required>
-                            <label for="liability_release" class="required"><strong>Termo de Responsabilidade:</strong> Por este presente, libero, eximo e desobro Star Kids Brasil, seus proprietários, funcionários, treinadores, agentes e todas as pessoas envolvidas nas aulas de qualquer e toda responsabilidade por lesões, danos, morte ou perda de propriedade que possa resultar da participação do meu filho(a). Assumo todo o risco de qualquer lesão ou dano que possa ocorrer durante a participação, transporte ou em conexão com as aulas.</label>
+                            <label for="liability_release" class="required">✅ <strong>Responsabilidade:</strong> Reconheço que acidentes podem acontecer e isento Star Kids de responsabilidade por lesões que ocorram durante as aulas, exceto em caso de negligência.</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_emergency" name="liability_emergency" value="sim" required>
-                            <label for="liability_emergency" class="required"><strong>Autorização de Emergência:</strong> Em caso de acidente ou emergência médica durante as aulas em Vila Delícias (Av. dos Engenheiros, 460), autorizo a equipe Star Kids a procurar atendimento médico de emergência, transportar meu filho(a) para hospital ou clínica, e autorizar procedimentos médicos de emergência. Comprometo-me a arcar com os custos decorrentes.</label>
+                            <label for="liability_emergency" class="required">✅ <strong>Emergências Médicas:</strong> Em caso de emergência, autorizo Star Kids a buscar atendimento médico imediato para meu filho(a) em Vila Delícias (Av. dos Engenheiros, 460).</label>
                         </div>
                         
                         <div class="checkbox-item">
                             <input type="checkbox" id="liability_rules" name="liability_rules" value="sim" required>
-                            <label for="liability_rules" class="required"><strong>Responsabilidades do Responsável:</strong> Comprometo-me a respeitar os horários das aulas, comunicar ausências com antecedência, buscar meu filho(a) pontualmente ao término das atividades e garantir que ele(a) compareça com vestimenta e calçados adequados para a prática esportiva.</label>
+                            <label for="liability_rules" class="required">✅ <strong>Meu Compromisso:</strong> Comprometo-me a respeitar os horários, avisar sobre faltas, buscar no horário e enviar meu filho(a) com roupas confortáveis para a prática esportiva.</label>
                         </div>
                     </div>
                     
@@ -636,14 +636,14 @@
 
                 <div class="form-footer">
                     <p>Dúvidas? Entre em contato:<br>
-                    📧 jason@starkids.team<br>
+                    📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="620803110d0c2211160310090b06114c1607030f">[email&#160;protected]</a><br>
                     📱 <a href="https://wa.me/5531973313443">(31) 97331-3443</a></p>
                 </div>
             </form>
         </div>
     </main>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 11) value = value.slice(0, 11);
@@ -693,13 +693,4 @@
             
             document.querySelectorAll("[data-pt][data-en]").forEach(el => {
                 const text = el.getAttribute("data-" + currentLang);
-                if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-                    el.placeholder = text;
-                } else {
-                    el.innerHTML = text;
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                if (el.tagName
