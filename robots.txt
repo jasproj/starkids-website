@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /coach/
+Disallow: /parents-a.html
+Disallow: /parents-b.html
+Disallow: /thank-you.html
+
+Sitemap: https://starkids.team/sitemap.xml
