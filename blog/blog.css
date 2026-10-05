@@ -1,0 +1,39 @@
+/* Star Kids blog — extends home.css */
+.post { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
+.post h1 { font-size: clamp(32px, 5vw, 46px); max-width: 22ch; margin-bottom: 22px; }
+.post h2 { font-size: clamp(24px, 3.2vw, 30px); margin: 44px 0 12px; }
+.post h3 { font-size: 20px; margin: 28px 0 8px; color: var(--green-deep); }
+.post p { margin: 0 0 18px; max-width: 66ch; }
+.post ul, .post ol { margin: 0 0 20px 22px; padding: 0; max-width: 64ch; }
+.post li { margin-bottom: 8px; }
+.post a { color: var(--green); }
+.post .highlight { background: var(--green-tint); border-left: 5px solid var(--yellow); padding: 18px 22px; margin: 28px 0; border-radius: 0 10px 10px 0; }
+.post .highlight p:last-child { margin-bottom: 0; }
+.post .info-box { border: 2px solid var(--green); border-radius: 12px; padding: 18px 22px; margin: 24px 0; }
+.post .info-box p:last-child { margin-bottom: 0; }
+.post .info-box strong { color: var(--green-deep); }
+.post .cta-box { background: var(--green); color: var(--chalk); padding: 32px 28px; border-radius: 16px; margin: 40px 0; }
+.post .cta-box h2 { color: var(--chalk); margin: 0 0 10px; }
+.post .cta-box p { color: rgba(255,255,255,.9); }
+.post .cta-box a { display: inline-flex; align-items: center; background: var(--yellow); color: var(--green-deep); padding: 14px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.post .related { border-top: 2px solid var(--green-deep); padding-top: 20px; margin-top: 44px; }
+.post .related h3 { margin-top: 0; }
+.post .related a { display: block; padding: 8px 0; text-decoration: none; border-bottom: 1px solid #DCE8DC; }
+.post .related a:hover { color: var(--green-deep); text-decoration: underline; }
+
+/* index */
+.blog-head { padding: 56px 0 24px; }
+.blog-head h1 { font-size: clamp(34px, 6vw, 60px); }
+.blog-head p { font-size: 19px; color: var(--ink-soft); max-width: 54ch; margin-top: 12px; }
+.blog .section-title { font-size: 24px; margin: 44px 0 16px; color: var(--green-deep); }
+.blog .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.blog .card { display: flex; flex-direction: column; border: 2px solid var(--green); border-radius: 14px; padding: 18px 18px 16px; text-decoration: none; color: var(--ink); background: var(--chalk); }
+.blog .card:hover { background: var(--green-tint); }
+.blog .card-tag { align-self: flex-start; background: var(--yellow); color: var(--green-deep); font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+.blog .card-body h2 { font-size: 18px; margin: 0 0 6px; }
+.blog .card-body p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+.blog .card-arrow { display: none; }
+.blog .cta-banner { background: var(--green); color: var(--chalk); border-radius: 16px; padding: 32px 28px; margin: 56px 0 24px; }
+.blog .cta-banner h2 { color: var(--chalk); font-size: 28px; margin-bottom: 8px; }
+.blog .cta-banner p { color: rgba(255,255,255,.9); margin-bottom: 18px; }
+.blog .cta-banner a { display: inline-flex; background: var(--yellow); color: var(--green-deep); padding: 14px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; }
