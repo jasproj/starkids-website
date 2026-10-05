@@ -16,25 +16,27 @@
   .top p { margin: 0; opacity: .9; line-height: 1.6; max-width: 60ch; }
   .notice { background: #FFF8E1; border: 1px solid var(--gold); border-left: 5px solid var(--gold); border-radius: 10px; padding: 16px 20px; margin-bottom: 28px; color: #5a4300; }
   .notice strong { color: #3d2d00; }
-  .mod { background: #fff; border: 1px solid #E5E8E0; border-radius: 14px; padding: 24px 28px; margin-bottom: 18px; display: block; text-decoration: none; color: var(--ink); transition: all .15s; }
+  .mod { background: #fff; border: 1px solid #E5E8E0; border-radius: 14px; padding: 24px 28px; margin-bottom: 14px; display: block; text-decoration: none; color: var(--ink); transition: all .15s; }
   .mod:hover { border-color: var(--green); background: var(--green-tint); transform: translateY(-2px); }
   .mod .pill-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
   .mod .pill { background: var(--yellow); color: var(--green-deep); font-weight: 700; font-size: 11px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; }
   .mod .pill-draft { background: #F0EFEA; color: #5a5a4e; }
-  .mod h2 { font-family: 'Fredoka', sans-serif; font-size: 24px; color: var(--green-deep); margin: 0 0 6px; }
-  .mod .sub { color: #4a5a4e; margin: 0 0 10px; font-weight: 500; }
-  .mod .stat { color: #666; font-size: 14px; }
-  .roadmap { margin-top: 36px; padding: 24px 28px; background: #fff; border: 1px dashed #B5BFB2; border-radius: 14px; }
-  .roadmap h3 { font-family: 'Fredoka', sans-serif; color: var(--green-deep); margin: 0 0 14px; font-size: 18px; }
-  .roadmap ol { margin: 0; padding-left: 22px; line-height: 1.9; }
-  .roadmap .done { color: var(--green); font-weight: 600; }
-  .roadmap .pending { color: #888; }
+  .mod h2 { font-family: 'Fredoka', sans-serif; font-size: 22px; color: var(--green-deep); margin: 0 0 6px; }
+  .mod .sub { color: #4a5a4e; margin: 0 0 8px; font-weight: 500; font-size: 15px; }
+  .mod .stat { color: #666; font-size: 14px; margin: 0; }
+  .totals { margin-top: 32px; padding: 24px 28px; background: #fff; border: 2px solid var(--green); border-radius: 14px; }
+  .totals h3 { font-family: 'Fredoka', sans-serif; color: var(--green-deep); margin: 0 0 14px; font-size: 20px; }
+  .totals table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  .totals th { background: var(--green-deep); color: #fff; text-align: left; padding: 8px 10px; font-weight: 600; }
+  .totals td { border-bottom: 1px solid #E5E8E0; padding: 8px 10px; }
+  .totals tr:last-child td { border-bottom: none; background: var(--green-tint); font-weight: 700; color: var(--green-deep); }
   .footer-note { margin-top: 32px; text-align: center; color: #888; font-size: 13px; }
   .footer-note a { color: var(--green); }
   @media (max-width: 720px) {
     .top { padding: 22px 20px; }
     .top h1 { font-size: 24px; }
     .mod { padding: 20px; }
+    .mod h2 { font-size: 19px; }
   }
 </style>
 </head>
@@ -44,11 +46,11 @@
   <div class="top">
     <div class="brand">Star Kids · Em Casa</div>
     <h1>Curriculum Drafts — Idades 2–4</h1>
-    <p>Roteiros de filmagem pros vídeos do curso "Star Kids em Casa". Página privada — compartilhar só com o Coach Lucas pra revisão antes de filmar.</p>
+    <p>Roteiros de filmagem dos 6 módulos do curso "Star Kids em Casa". 72 lições · ~95 palavras · ~6 h de vídeo. Página privada — compartilhar só com o Coach Lucas pra revisão antes de filmar.</p>
   </div>
 
   <div class="notice">
-    <strong>Status:</strong> drafts. Esperando Lucas decidir se o curso foca só em 2–4 ou se re-ranja todas as faixas etárias. Se mudar, estes dois roteiros precisam ser reescritos antes de filmar. <strong>Não gravar ainda.</strong>
+    <strong>Status:</strong> drafts completos. Esperando Lucas decidir se o curso foca só em 2–4 ou se re-ranja todas as faixas etárias. Se mudar, tudo precisa ser reescrito. <strong>Não gravar ainda.</strong>
   </div>
 
   <a class="mod" href="modulo-1.html">
@@ -58,7 +60,7 @@
     </div>
     <h2>Bola, Cores e Números</h2>
     <p class="sub">12 lições · 24 palavras · 4–5 min por lição</p>
-    <p class="stat">Ball, kick + 8 cores + 1–5 + run/stop/jump/go/star — a criança responde chutando, tocando, correndo.</p>
+    <p class="stat">Ball, kick + 8 cores + 1–5 + run/stop/jump/go/star. Criança responde chutando, tocando, correndo.</p>
   </a>
 
   <a class="mod" href="modulo-2.html">
@@ -67,20 +69,64 @@
       <span class="pill pill-draft">Draft 1 · 2026-10-05</span>
     </div>
     <h2>Animais e Frutas</h2>
-    <p class="sub">12 lições · 20 palavras novas · 4–5 min por lição</p>
-    <p class="stat">10 bichos (dog, cat, cow, pig, horse, sheep, duck, frog, bird, fish) + 6 frutas (apple, banana, grape, watermelon, strawberry, pineapple) + eat/yummy + hop/fly.</p>
+    <p class="sub">12 lições · 20 palavras novas</p>
+    <p class="stat">10 bichos (dog, cat, cow, pig, horse, sheep, duck, frog, bird, fish) + 6 frutas + eat/yummy + hop/fly.</p>
   </a>
 
-  <div class="roadmap">
-    <h3>Plano completo — 6 módulos</h3>
-    <ol>
-      <li class="done">✓ Módulo 1 — Bola, Cores, Números</li>
-      <li class="done">✓ Módulo 2 — Animais, Frutas</li>
-      <li class="pending">Módulo 3 — Corpo, Ações</li>
-      <li class="pending">Módulo 4 — Clima, Roupa</li>
-      <li class="pending">Módulo 5 — Comida, Família</li>
-      <li class="pending">Módulo 6 — Revisão, Celebração</li>
-    </ol>
+  <a class="mod" href="modulo-3.html">
+    <div class="pill-row">
+      <span class="pill">Módulo 3</span>
+      <span class="pill pill-draft">Draft 1 · 2026-10-05</span>
+    </div>
+    <h2>Corpo e Ações</h2>
+    <p class="sub">12 lições · 16 palavras novas</p>
+    <p class="stat">10 partes do corpo (head, hair, eyes, nose, mouth, ears, hand, foot, belly, legs) + 8 ações (clap, wave, throw, catch, dance, sing, touch, point).</p>
+  </a>
+
+  <a class="mod" href="modulo-4.html">
+    <div class="pill-row">
+      <span class="pill">Módulo 4</span>
+      <span class="pill pill-draft">Draft 1 · 2026-10-05</span>
+    </div>
+    <h2>Clima e Roupas</h2>
+    <p class="sub">12 lições · 14 palavras novas</p>
+    <p class="stat">Clima (sun, rain, hot, cold, cloud, wind, sky, snow) + roupas (hat, shirt, pants, shoes, socks, jacket) + verbo "wear".</p>
+  </a>
+
+  <a class="mod" href="modulo-5.html">
+    <div class="pill-row">
+      <span class="pill">Módulo 5</span>
+      <span class="pill pill-draft">Draft 1 · 2026-10-05</span>
+    </div>
+    <h2>Comida e Família</h2>
+    <p class="sub">12 lições · 18 palavras novas</p>
+    <p class="stat">8 comidas + família (mom, dad, sister, brother, baby, grandma, grandpa, family) + verbos "like" e "want" — primeira produção verbal do curso.</p>
+  </a>
+
+  <a class="mod" href="modulo-6.html">
+    <div class="pill-row">
+      <span class="pill">Módulo 6</span>
+      <span class="pill pill-draft">Draft 1 · 2026-10-05</span>
+    </div>
+    <h2>Revisão e Celebração</h2>
+    <p class="sub">12 lições-cenário · 0 obrigatórias, 5 bônus opcionais</p>
+    <p class="stat">Formatura: 6 cenários (morning, dressed, park, zoo, kitchen, bedtime) + 5 missões combinadas + Super Champion final com certificado dourado.</p>
+  </a>
+
+  <div class="totals">
+    <h3>Resumo do curso inteiro</h3>
+    <table>
+      <thead><tr><th>Módulo</th><th>Tema</th><th>Lições</th><th>Palavras</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Bola, Cores, Números</td><td>12</td><td>24</td></tr>
+        <tr><td>2</td><td>Animais, Frutas</td><td>12</td><td>20</td></tr>
+        <tr><td>3</td><td>Corpo, Ações</td><td>12</td><td>16</td></tr>
+        <tr><td>4</td><td>Clima, Roupas</td><td>12</td><td>14</td></tr>
+        <tr><td>5</td><td>Comida, Família</td><td>12</td><td>18</td></tr>
+        <tr><td>6</td><td>Revisão, Celebração</td><td>12</td><td>0–5 bônus</td></tr>
+        <tr><td colspan="2">Total</td><td>72</td><td>~95</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <p class="footer-note">
