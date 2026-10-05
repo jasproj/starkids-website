@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preços · Star Kids em Casa — Inglês + Futebol pra Crianças de 2 a 4 anos</title>
+<meta name="description" content="Curso online de inglês com futebol pra crianças de 2 a 4 anos. 6 módulos, 72 lições, ~95 palavras. Pague uma vez, use pra sempre.">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home.css">
+<style>
+  body { background: #FAFAF7; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 72px; }
+  .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+  .top-nav .logo { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 18px; color: var(--green-deep); text-decoration: none; }
+  .top-nav .back { color: var(--green); text-decoration: none; font-weight: 600; }
+
+  .hero-section { text-align: center; padding: 24px 0 48px; }
+  .hero-kicker { display: inline-block; background: var(--yellow); color: var(--green-deep); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .hero-section h1 { font-family: 'Fredoka', sans-serif; font-size: clamp(32px, 5vw, 48px); color: var(--green-deep); margin: 0 0 16px; max-width: 20ch; margin-left: auto; margin-right: auto; line-height: 1.1; }
+  .hero-section .lede { color: #555; max-width: 56ch; margin: 0 auto; font-size: 18px; line-height: 1.6; }
+
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 56px; }
+  .tier { background: #fff; border: 1px solid #E5E8E0; border-radius: 20px; padding: 32px 28px; display: flex; flex-direction: column; position: relative; }
+  .tier.featured { border: 3px solid var(--green); transform: scale(1.03); box-shadow: 0 20px 40px rgba(46,125,50,0.12); }
+  .tier.featured::before { content: 'MAIS ESCOLHIDO'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--green); color: #fff; font-weight: 700; font-size: 11px; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 999px; }
+  .tier h2 { font-family: 'Fredoka', sans-serif; font-size: 22px; color: var(--green-deep); margin: 0 0 6px; }
+  .tier .tagline { color: #666; font-size: 14px; margin: 0 0 24px; }
+  .tier .price { margin-bottom: 20px; }
+  .tier .price-full { font-family: 'Fredoka', sans-serif; font-size: 42px; font-weight: 700; color: var(--green-deep); line-height: 1; }
+  .tier .price-full .cents { font-size: 20px; }
+  .tier .price-split { color: #888; font-size: 13px; margin-top: 4px; }
+  .tier .lifetime { display: inline-block; background: var(--green-tint); color: var(--green-deep); font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; margin-bottom: 16px; }
+  .tier ul { list-style: none; padding: 0; margin: 0 0 24px; flex-grow: 1; }
+  .tier li { padding: 8px 0 8px 28px; position: relative; color: #333; font-size: 15px; line-height: 1.4; }
+  .tier li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; font-size: 18px; }
+  .tier li.no::before { content: '—'; color: #ccc; }
+  .tier li.no { color: #aaa; }
+  .tier .cta { display: block; text-align: center; background: var(--green); color: #fff; padding: 14px 20px; border-radius: 999px; text-decoration: none; font-weight: 700; margin-top: auto; }
+  .tier.featured .cta { background: var(--yellow); color: var(--green-deep); font-size: 17px; padding: 16px 20px; }
+  .tier .cta:hover { opacity: .92; }
+  .tier.outline .cta { background: #fff; color: var(--green); border: 2px solid var(--green); }
+
+  .guarantee { background: var(--green-tint); border-radius: 20px; padding: 32px 36px; display: flex; gap: 24px; align-items: center; margin-bottom: 48px; }
+  .guarantee .icon { font-size: 48px; }
+  .guarantee h3 { font-family: 'Fredoka', sans-serif; color: var(--green-deep); margin: 0 0 6px; font-size: 20px; }
+  .guarantee p { margin: 0; color: #333; line-height: 1.5; }
+
+  .what-inside { background: #fff; border: 1px solid #E5E8E0; border-radius: 20px; padding: 40px; margin-bottom: 48px; }
+  .what-inside h2 { font-family: 'Fredoka', sans-serif; font-size: 28px; color: var(--green-deep); margin: 0 0 24px; text-align: center; }
+  .inside-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .inside-item { padding: 16px; border-left: 3px solid var(--yellow); background: var(--green-tint); border-radius: 0 10px 10px 0; }
+  .inside-item strong { color: var(--green-deep); display: block; margin-bottom: 4px; }
+  .inside-item span { font-size: 14px; color: #555; }
+
+  .faq { margin-bottom: 48px; }
+  .faq h2 { font-family: 'Fredoka', sans-serif; font-size: 28px; color: var(--green-deep); margin: 0 0 24px; text-align: center; }
+  .faq details { background: #fff; border: 1px solid #E5E8E0; border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+  .faq summary { font-weight: 700; cursor: pointer; color: var(--green-deep); font-family: 'Fredoka', sans-serif; font-size: 17px; }
+  .faq summary::marker { color: var(--green); }
+  .faq details[open] summary { margin-bottom: 12px; }
+  .faq details p { margin: 0; color: #444; line-height: 1.6; }
+
+  .final-cta { text-align: center; padding: 48px 24px; background: var(--green-deep); color: #fff; border-radius: 20px; }
+  .final-cta h2 { font-family: 'Fredoka', sans-serif; font-size: 28px; margin: 0 0 12px; color: #fff; }
+  .final-cta p { opacity: .9; margin: 0 0 24px; }
+  .final-cta a { display: inline-block; background: var(--yellow); color: var(--green-deep); padding: 16px 32px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 17px; }
+
+  .legal-foot { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E5E8E0; color: #888; font-size: 13px; }
+  .legal-foot a { color: var(--green); margin: 0 10px; }
+
+  @media (max-width: 920px) {
+    .tiers { grid-template-columns: 1fr; }
+    .tier.featured { transform: none; }
+    .guarantee { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top-nav">
+    <a href="/" class="logo">Star Kids</a>
+    <a href="/em-casa.html" class="back">← Voltar</a>
+  </div>
+
+  <div class="hero-section">
+    <span class="hero-kicker">Curso online · Idades 2 a 4</span>
+    <h1>Seu filho fala inglês jogando futebol.</h1>
+    <p class="lede">72 lições de 5 min, 95 palavras, 6 módulos. Da bola e das cores à família e à comida — tudo com o Coach Lucas, metodologia Play Not Push.</p>
+  </div>
+
+  <div class="tiers">
+
+    <div class="tier outline">
+      <h2>Essencial</h2>
+      <p class="tagline">Comece pelo primeiro módulo</p>
+      <div class="price">
+        <span class="price-full">R$ 147<span class="cents">,00</span></span>
+        <div class="price-split">ou 12x de R$ 14,70</div>
+      </div>
+      <span class="lifetime">Acesso 12 meses</span>
+      <ul>
+        <li><strong>Módulo 1 completo</strong> — Bola, Cores, Números</li>
+        <li>12 lições em vídeo (~1h total)</li>
+        <li>24 palavras em inglês</li>
+        <li>Flashcards imprimíveis</li>
+        <li>Cartela de progresso + Certificado</li>
+        <li class="no">Módulos 2 a 6</li>
+        <li class="no">Call com o Coach Lucas</li>
+      </ul>
+      <a href="#" class="cta" data-tier="essencial">Começar agora</a>
+    </div>
+
+    <div class="tier featured">
+      <h2>Curso Completo</h2>
+      <p class="tagline">Tudo. Pra sempre.</p>
+      <div class="price">
+        <span class="price-full">R$ 497<span class="cents">,00</span></span>
+        <div class="price-split">ou 12x de R$ 49,70</div>
+      </div>
+      <span class="lifetime">⭐ Acesso vitalício</span>
+      <ul>
+        <li><strong>Todos os 6 módulos</strong></li>
+        <li>72 lições em vídeo (~6h total)</li>
+        <li><strong>95 palavras</strong> em inglês</li>
+        <li>95 flashcards imprimíveis</li>
+        <li>6 cartelas + 6 certificados + Super Certificado</li>
+        <li>Guia completo pros pais</li>
+        <li>Compre uma vez — use em todos os filhos</li>
+      </ul>
+      <a href="#" class="cta" data-tier="completo">Quero o completo</a>
+    </div>
+
+    <div class="tier outline">
+      <h2>Família + Coach</h2>
+      <p class="tagline">Com o Lucas presente</p>
+      <div class="price">
+        <span class="price-full">R$ 697<span class="cents">,00</span></span>
+        <div class="price-split">ou 12x de R$ 69,70</div>
+      </div>
+      <span class="lifetime">Curso vitalício + 12m serviço</span>
+      <ul>
+        <li>Tudo do Curso Completo</li>
+        <li><strong>1 videochamada mensal</strong> com o Coach Lucas</li>
+        <li>Grupo privado no WhatsApp</li>
+        <li>Suporte direto a dúvidas</li>
+        <li>Comunidade de famílias Star Kids</li>
+        <li class="no">—</li>
+        <li class="no">—</li>
+      </ul>
+      <a href="#" class="cta" data-tier="familia-coach">Quero com o Lucas</a>
+    </div>
+
+  </div>
+
+  <div class="guarantee">
+    <div class="icon">🛡️</div>
+    <div>
+      <h3>Garantia de 7 dias — Código de Defesa do Consumidor</h3>
+      <p>Experimente o curso por 7 dias. Se não gostar, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. É o direito de arrependimento garantido pela Lei do E-commerce (CDC Art. 49).</p>
+    </div>
+  </div>
+
+  <div class="what-inside">
+    <h2>O que seu filho vai aprender</h2>
+    <div class="inside-grid">
+      <div class="inside-item"><strong>Módulo 1 · 24 palavras</strong><span>Bola, Cores e Números — kick, red, blue, run, stop, one, two…</span></div>
+      <div class="inside-item"><strong>Módulo 2 · 20 palavras</strong><span>Animais e Frutas — dog, cat, cow, apple, banana, yummy…</span></div>
+      <div class="inside-item"><strong>Módulo 3 · 16 palavras</strong><span>Corpo e Ações — head, eyes, hand, clap, dance, throw, catch…</span></div>
+      <div class="inside-item"><strong>Módulo 4 · 14 palavras</strong><span>Clima e Roupas — sun, rain, hot, cold, hat, shirt, jacket…</span></div>
+      <div class="inside-item"><strong>Módulo 5 · 18 palavras</strong><span>Comida e Família — water, pizza, mom, dad, baby, like, want…</span></div>
+      <div class="inside-item"><strong>Módulo 6 · bônus</strong><span>Revisão e Celebração — 6 cenários + Super Champion</span></div>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Meu filho tem só 2 anos. É cedo demais?</summary>
+      <p>Não. O curso foi desenhado especificamente pra idade 2 a 4 — a janela em que o cérebro mais absorve língua. Cada lição dura 4 a 5 min, com 2 palavras novas. A criança responde com o corpo (chutando, correndo, apontando) — nunca precisa falar. Aos 2 anos a meta é entender e reagir; falar vem naturalmente depois.</p>
+    </details>
+
+    <details>
+      <summary>Preciso saber inglês pra ajudar?</summary>
+      <p>Não. O Coach Lucas fala em português e introduz as palavras em inglês com gestos e repetição. Cada lição tem instruções pros pais na tela. O curso te ensina junto com a criança.</p>
+    </details>
+
+    <details>
+      <summary>Quanto tempo por dia?</summary>
+      <p>4 a 5 minutos. Uma lição por dia é o ideal. Pode ser antes do banho, depois do almoço, antes de dormir — o importante é consistência, não duração.</p>
+    </details>
+
+    <details>
+      <summary>Como funciona o acesso vitalício?</summary>
+      <p>Você paga uma vez e os vídeos ficam disponíveis pra sempre na sua área do aluno. Pode assistir no celular, tablet ou TV. Se tiver mais filhos, pode usar com todos — o acesso é da família.</p>
+    </details>
+
+    <details>
+      <summary>Posso pedir reembolso?</summary>
+      <p>Sim. Você tem 7 dias corridos a partir da compra pra desistir e receber 100% do valor de volta, conforme o Art. 49 do Código de Defesa do Consumidor. Basta avisar no email ou WhatsApp.</p>
+    </details>
+
+    <details>
+      <summary>Qual a diferença pra Lingokids, Gracinha, Khan Kids?</summary>
+      <p>Apps de inglês infantil ensinam na tela (tocar, arrastar, apontar). Star Kids em Casa tira a criança da tela: cada lição é 4 min de vídeo, depois 10 min de brincadeira com bola na vida real. Não é um app passivo — é um guia pro pai e pra criança jogarem juntos.</p>
+    </details>
+
+    <details>
+      <summary>Como recebo o acesso depois de comprar?</summary>
+      <p>Imediatamente após a confirmação do pagamento (cartão: na hora; Pix: minutos; boleto: até 2 dias úteis), você recebe um email com login e link pra área do aluno. É só começar.</p>
+    </details>
+
+    <details>
+      <summary>Posso parcelar?</summary>
+      <p>Sim. Até 12x no cartão de crédito. Também aceitamos Pix (à vista com 5% de desconto) e boleto bancário.</p>
+    </details>
+  </div>
+
+  <div class="final-cta">
+    <h2>Comece com uma aula grátis</h2>
+    <p>Experimente a primeira lição do Módulo 1. Sem cartão. Só o email.</p>
+    <a href="/em-casa.html">Quero a aula grátis</a>
+  </div>
+
+  <div class="legal-foot">
+    <a href="/legal/termos.html">Termos de Uso</a> ·
+    <a href="/legal/privacidade.html">Privacidade</a> ·
+    <a href="/legal/reembolso.html">Reembolso</a>
+    <br><br>
+    Star Kids em Casa · Belo Horizonte, MG · contato@starkids.team
+  </div>
+
+</div>
+
+<script>
+  // Placeholder — all CTAs route to the waitlist page until Hotmart checkout is live.
+  // When Hotmart is set up, change the href attributes to the real checkout URLs
+  // (e.g. https://pay.hotmart.com/...) and ensure the FB Pixel / GA conversion events fire.
+  document.querySelectorAll('a.cta').forEach(a => {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      const tier = this.dataset.tier;
+      // TODO: replace with Hotmart URL per tier
+      location.href = '/em-casa.html?tier=' + tier;
+    });
+  });
+</script>
+</body>
+</html>

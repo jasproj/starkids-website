@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lição · Star Kids em Casa</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../home.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="player-wrap">
+
+  <div class="breadcrumb" id="crumb" style="margin-bottom:16px"></div>
+
+  <div id="player-area"></div>
+
+</div>
+
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+<script>
+  const course = window.STARKIDS_COURSE;
+  const SK = window.StarKids;
+
+  const url = new URL(location.href);
+  const mN = parseInt(url.searchParams.get('m') || '1', 10);
+  const lN = parseInt(url.searchParams.get('l') || '1', 10);
+  const module = course.modules.find(x => x.n === mN);
+  const lesson = module && module.lessons.find(x => x.n === lN);
+  if (!module || !lesson) { location.href = 'index.html'; }
+
+  document.title = `Lição ${lN}: ${lesson.title} · Star Kids em Casa`;
+  document.getElementById('crumb').innerHTML =
+    `<a href="index.html">Todos os módulos</a> › <a href="modulo.html?m=${mN}">Módulo ${mN}</a> › Lição ${lN}`;
+
+  const area = document.getElementById('player-area');
+
+  if (!SK.isLessonUnlocked(mN, lN)) {
+    area.innerHTML = `
+      <div class="locked-page">
+        <div class="lock-big">🔒</div>
+        <h2>Esta lição abre com a compra</h2>
+        <p>Experimente a Lição 1 do Módulo 1 gratuitamente, ou libere as 72 lições do curso completo.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
+          <a href="licao.html?m=1&l=1" class="btn-primary" style="padding:12px 24px; border-radius:999px; text-decoration:none">Aula grátis</a>
+          <a href="../preco.html" class="btn-secondary" style="padding:12px 24px; border-radius:999px; text-decoration:none; background:#fff; color:var(--green); border:2px solid var(--green)">Ver preços</a>
+        </div>
+      </div>
+    `;
+  } else {
+    const wordsHtml = lesson.words.length
+      ? '<div class="words-row">' + lesson.words.map(w => `<span class="word">${w}</span>`).join('') + '</div>'
+      : '';
+    const completed = SK.isCompleted(mN, lN);
+    const nextL = lN < 12 ? `licao.html?m=${mN}&l=${lN + 1}` : (mN < 6 ? `modulo.html?m=${mN + 1}` : 'index.html');
+
+    area.innerHTML = `
+      <div class="player">
+        <div class="placeholder">
+          <div class="play">▶</div>
+          <h2>Vídeo em produção</h2>
+          <p>O Coach Lucas está filmando. Essa aula entra aqui em breve.</p>
+        </div>
+      </div>
+      <div class="lesson-detail">
+        <div class="meta">
+          <span class="pill">Módulo ${mN} · Lição ${lN}</span>
+          ${lesson.free ? '<span class="pill" style="background:var(--yellow); color:var(--green-deep)">GRÁTIS</span>' : ''}
+          ${completed ? '<span class="pill" style="background:var(--gold); color:#fff">⭐ Concluída</span>' : ''}
+        </div>
+        <h1>${lesson.title}</h1>
+        ${lesson.words.length ? '<p style="color:#666; margin:0">Palavras novas desta lição:</p>' : '<p style="color:#666; margin:0">Revisão e celebração — sem palavras novas.</p>'}
+        ${wordsHtml}
+        <div class="lesson-actions">
+          <button id="mark-btn" class="btn-primary">${completed ? '✓ Concluída' : 'Marcar como concluída ⭐'}</button>
+          <a href="${nextL}" class="btn-secondary">Próxima lição →</a>
+          <a href="modulo.html?m=${mN}" class="btn-secondary" style="margin-left:auto">Voltar pro módulo</a>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('mark-btn').addEventListener('click', () => {
+      SK.markCompleted(mN, lN);
+      location.reload();
+    });
+  }
+</script>
+</body>
+</html>

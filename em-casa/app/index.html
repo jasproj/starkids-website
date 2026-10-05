@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Star Kids em Casa · Aulas</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../home.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app-wrap">
+
+  <div class="app-head">
+    <div>
+      <div class="brand">Star Kids · Em Casa</div>
+      <h1 id="greeting">Suas aulas</h1>
+    </div>
+    <div class="totals">
+      <div class="stat"><span class="n" id="stat-done">0</span><span class="l">Lições</span></div>
+      <div class="stat"><span class="n" id="stat-total">0 / 72</span><span class="l">Progresso</span></div>
+      <div class="stat"><span class="n" id="stat-pct">0%</span><span class="l">Completo</span></div>
+    </div>
+  </div>
+
+  <div id="demo-banner" class="demo-banner" style="display:none">
+    <strong>Modo demonstração.</strong> Você está vendo a aula grátis do Módulo 1. As outras 71 lições abrem depois da compra.
+    <a href="../preco.html">Ver preços →</a>
+  </div>
+
+  <div class="modules" id="modules"></div>
+
+</div>
+
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+<script>
+  const course = window.STARKIDS_COURSE;
+  const SK = window.StarKids;
+
+  // Totals
+  const tot = SK.totalProgress();
+  document.getElementById('stat-done').textContent = tot.done;
+  document.getElementById('stat-total').textContent = tot.done + ' / ' + tot.total;
+  document.getElementById('stat-pct').textContent = tot.pct + '%';
+
+  // Demo banner
+  if (!SK.hasFullAccess()) {
+    document.getElementById('demo-banner').style.display = 'block';
+  }
+
+  // Render module cards
+  const wrap = document.getElementById('modules');
+  course.modules.forEach(m => {
+    const prog = SK.moduleProgress(m.n);
+    const locked = !SK.hasFullAccess() && m.n > 1;
+    const a = document.createElement('a');
+    a.className = 'mod-card' + (locked ? ' locked' : '');
+    a.href = locked ? '../preco.html' : 'modulo.html?m=' + m.n;
+    a.innerHTML = `
+      <span class="mod-n">Módulo ${m.n}</span>
+      ${locked ? '<span class="lock-icon">🔒</span>' : ''}
+      <h2>${m.title}</h2>
+      <p class="mod-sub">12 lições · ${m.wordCount} palavras</p>
+      <div class="progress"><div class="progress-fill" style="width:${prog.pct}%"></div></div>
+      <div class="progress-text"><span>${prog.done} / ${prog.total}</span><span>${prog.pct}%</span></div>
+    `;
+    wrap.appendChild(a);
+  });
+</script>
+</body>
+</html>
