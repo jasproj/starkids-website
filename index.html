@@ -3,35 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Star Kids - Brazil's premier bilingual soccer + English program for schools. Cambridge-validated methodology combining physical activity with English language learning for ages 2-13.">
-    <meta name="keywords" content="English soccer classes, bilingual soccer program, school enrichment programs, kids English immersion sports, futebol e inglês, programa bilíngue escolas, Cambridge validated, play-based learning, Star Kids Brasil, Belo Horizonte">
-    <meta name="author" content="Star Kids Brasil">
+    <title>Star Kids Brasil — Aprenda inglês jogando futebol</title>
+    <meta name="description" content="Programa bilíngue premier de futebol + inglês para crianças de 2 a 13 anos. Aulas em Belo Horizonte, parceria com escolas e, em breve, o curso em casa. Metodologia Play Not Push validada por Cambridge.">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://starkids.team/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://starkids.team/">
-    <meta property="og:title" content="Star Kids Brasil - Futebol + Inglês para Escolas">
-    <meta property="og:description" content="Brazil's premier bilingual soccer + English program. Cambridge-validated methodology for ages 2-13.">
-    <meta property="og:image" content="https://starkids.team/images/logo-main-new.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://starkids.team/">
-    <meta property="twitter:title" content="Star Kids Brasil - Futebol + Inglês para Escolas">
-    <meta property="twitter:description" content="Brazil's premier bilingual soccer + English program. Cambridge-validated methodology for ages 2-13.">
-    <meta property="twitter:image" content="https://starkids.team/images/logo-main-new.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://starkids.team/">
-    
-    <title>Star Kids Brasil - Futebol + Inglês para Escolas | Cambridge Validated</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Analytics - Replace G-VWEEV4G2FS with your actual ID -->
+    <meta property="og:title" content="Star Kids Brasil — Aprenda inglês jogando futebol">
+    <meta property="og:description" content="Programa bilíngue premier para crianças de 2 a 13 anos. Em Belo Horizonte, nas escolas e, em breve, em casa.">
+    <meta property="og:image" content="https://starkids.team/images/og-parents.png">
+    <link rel="icon" href="images/logo-badge-new.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css?v=2">
+
+    <!-- Google Analytics 4 + Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWEEV4G2FS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -39,906 +26,242 @@
         gtag('js', new Date());
         gtag('config', 'G-VWEEV4G2FS');
         gtag('config', 'AW-17841101130');
+        function trackFormSubmit() {
+            gtag('event', 'form_submit', { event_category: 'conversion', event_label: 'school_contact' });
+            gtag('event', 'conversion', { send_to: 'AW-17841101130/TPSxCMrGqOcbEMqyprtC' });
+        }
+        function trackWhatsApp(where) {
+            gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: where });
+            gtag('event', 'conversion', { send_to: 'AW-17841101130/TPSxCMrGqOcbEMqyprtC' });
+        }
     </script>
-    
-    <!-- Facebook Pixel - Replace 1869589853656744 with your actual ID -->
+    <!-- Facebook Pixel -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1869589853656744');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1869589853656744&ev=PageView&noscript=1"/></noscript>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Star Kids Brasil","url":"https://starkids.team","image":"https://starkids.team/images/logo-main-new.jpg","telephone":"+55 31 97331-3443","address":{"@type":"PostalAddress","streetAddress":"Rua Congonhal 445","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"},"areaServed":"Belo Horizonte","description":"Programa bilíngue de futebol + inglês para crianças de 2 a 13 anos."}
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="logo-link">
-                    <img src="images/logo-main-new.jpg" alt="Star Kids Brasil" class="logo-img">
-                </a>
-                <div class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#solution" class="nav-link" data-pt="Nossa Solução" data-en="Our Solution">Nossa Solução</a></li>
-                    <li><a href="#method" class="nav-link" data-pt="Método Cambridge" data-en="Cambridge Method">Método Cambridge</a></li>
-                    <li><a href="#programs" class="nav-link" data-pt="Programas" data-en="Programs">Programas</a></li>
-                    <li><a href="#benefits" class="nav-link" data-pt="Benefícios" data-en="Benefits">Benefícios</a></li>
-                    <li><a href="#testimonials" class="nav-link" data-pt="Depoimentos" data-en="Testimonials">Depoimentos</a></li>
-                    <li><a href="#faq" class="nav-link" data-pt="FAQ" data-en="FAQ">FAQ</a></li>
-                    <li><a href="/blog/index.html" class="nav-link" data-pt="Blog" data-en="Blog">Blog</a></li>
-                    <li><a href="game/" class="nav-link nav-game" data-pt="🎮 Jogue" data-en="🎮 Play">🎮 Jogue</a></li>
-                    <li><a href="parents.html" class="nav-link" data-pt="👨‍👩‍👧 Pais" data-en="👨‍👩‍👧 Parents">👨‍👩‍👧 Pais</a></li>
-                    <li><a href="enroll.html" class="nav-link cta-nav" data-pt="Inscreva-se" data-en="Enroll Now">Inscreva-se</a></li>
-                    <li class="lang-switch">
-                        <button id="langBtn" class="lang-btn">EN</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-text">
-                        <h1 class="hero-title" data-pt="Futebol + Inglês para Sua Escola" data-en="Soccer + English for Your School">
-                            Futebol + Inglês para Sua Escola
-                        </h1>
-                        <p class="hero-subtitle" data-pt="Programa bilíngue premier de futebol + inglês do Brasil" 
-                           data-en="Brazil's premier bilingual soccer + English program">
-                            Programa bilíngue premier de futebol + inglês do Brasil
-                        </p>
-                        <div class="hero-badges">
-                            <div class="badge-item">
-                                <span class="badge-icon">🎓</span>
-                                <span data-pt="Validado por Cambridge" data-en="Cambridge Validated">Validado por Cambridge</span>
-                            </div>
-                            <div class="badge-item">
-                                <span class="badge-icon">⚽</span>
-                                <span data-pt="Idades 2-13 anos" data-en="Ages 2-13 years">Idades 2-13 anos</span>
-                            </div>
-                            <div class="badge-item">
-                                <span class="badge-icon">🤝</span>
-                                <span data-pt="Parceria Flexível" data-en="Flexible Partnership">Parceria Flexível</span>
-                            </div>
-                        </div>
-                        <div class="hero-cta">
-                            <a href="enroll.html" class="btn btn-primary" data-pt="Inscreva-se Agora" 
-                               data-en="Enroll Now">Inscreva-se Agora</a>
-                            <a href="#contact" class="btn btn-secondary" data-pt="Agendar Aula Grátis" 
-                               data-en="Schedule Free Class">Agendar Aula Grátis</a>
-                            <a href="game/" class="btn btn-game" data-pt="🎮 Jogue Nosso Game"
-                               data-en="🎮 Play Our Game">🎮 Jogue Nosso Game</a>
-                            <a href="em-casa.html" class="btn btn-emcasa" data-pt="🏠 Star Kids em Casa · Em breve"
-                               data-en="🏠 Star Kids at Home · Coming soon">🏠 Star Kids em Casa · Em breve</a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="images/logo-badge-new.png" alt="Star Kids Badge" class="hero-badge">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="nav">
+    <div class="wrap">
+        <a class="brand" href="/"><img src="images/logo-main-new.jpg" alt="" width="40" height="40">Star Kids</a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="menu">
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#onde">Onde</a></li>
+            <li><a href="#escolas">Escolas</a></li>
+            <li><a href="em-casa.html">Em casa</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" onclick="trackWhatsApp('nav')">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+            WhatsApp
+        </a>
+    </div>
+</header>
 
-    <!-- Star Kids em Casa — coming soon promo -->
-    <section class="emcasa-promo" aria-label="Star Kids em Casa">
-        <div class="container">
-            <a href="em-casa.html" class="emcasa-band">
-                <span class="emcasa-tag" data-pt="Em breve" data-en="Coming soon">Em breve</span>
-                <span class="emcasa-text">
-                    <strong data-pt="Star Kids em Casa" data-en="Star Kids at Home">Star Kids em Casa</strong>
-                    <span data-pt="12 vídeo-aulas com o Coach Lucas. Seu filho ou filha aprende inglês jogando futebol — em casa."
-                          data-en="12 video lessons with Coach Lucas. Your child learns English playing soccer — at home.">12 vídeo-aulas com o Coach Lucas. Seu filho ou filha aprende inglês jogando futebol — em casa.</span>
-                </span>
-                <span class="emcasa-cta" data-pt="Entrar na lista de espera →" data-en="Join the waitlist →">Entrar na lista de espera →</span>
+<main>
+
+<section class="hero" aria-labelledby="h1">
+    <svg class="pitch" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="3">
+        <rect x="40" y="30" width="1120" height="580"/>
+        <line x1="600" y1="30" x2="600" y2="610"/>
+        <circle cx="600" cy="320" r="92"/>
+        <circle cx="600" cy="320" r="4" fill="#fff"/>
+        <rect x="40" y="170" width="170" height="300"/>
+        <rect x="40" y="240" width="60" height="160"/>
+        <rect x="990" y="170" width="170" height="300"/>
+        <rect x="1100" y="240" width="60" height="160"/>
+        <path d="M210 260 a60 60 0 0 1 0 120"/>
+        <path d="M990 260 a60 60 0 0 0 0 120"/>
+    </svg>
+    <div class="wrap">
+        <p class="hero-kicker">Star Kids Brasil · Belo Horizonte</p>
+        <h1 id="h1">Aprenda inglês <em>jogando futebol.</em></h1>
+        <p class="hero-sub">O programa bilíngue premier para crianças de 2 a 13 anos. A criança corre, chuta e fala inglês sem perceber que está estudando.</p>
+
+        <div class="doors">
+            <a class="door" href="parents-whatsapp.html">
+                <h2>Sou pai ou mãe em BH</h2>
+                <p>Aulas presenciais em Santa Terezinha e no Castelo. Aula experimental grátis.</p>
+                <span class="go">Ver turmas e horários</span>
+            </a>
+            <a class="door" href="#escolas">
+                <h2>Sou de uma escola</h2>
+                <p>Levamos currículo, treinadores e material. A escola entra com o espaço.</p>
+                <span class="go">Conhecer a parceria</span>
+            </a>
+            <a class="door" href="em-casa.html">
+                <span class="soon">Em breve</span>
+                <h2>Quero em casa</h2>
+                <p>12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Em qualquer cidade.</p>
+                <span class="go">Entrar na lista de espera</span>
             </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Challenge Section -->
-    <section id="challenge" class="challenge">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="O Desafio que Escolas Enfrentam" data-en="The Challenge Schools Face">
-                    O Desafio que Escolas Enfrentam
-                </h2>
+<section class="section" id="metodo" aria-labelledby="h-metodo">
+    <div class="wrap">
+        <h2 id="h-metodo">Brincar, não pressionar.</h2>
+        <p class="lede">Nossa metodologia "Play Not Push" é validada por Cambridge: a pesquisa do PEDAL Centre mostra que a brincadeira guiada ensina mais que a instrução direta. Cada aula é um jogo de futebol onde o inglês é a regra.</p>
+        <div class="cols">
+            <div class="col"><div class="mark"></div><h3>Correr é aprender</h3><p>Cada palavra nova vem com um movimento: corre pra cor, chuta no número, pula no "jump". O corpo fixa a memória.</p></div>
+            <div class="col"><div class="mark"></div><h3>A pausa é a vez da criança</h3><p>O treinador fala, espera, e a criança responde — tocando, correndo, chutando. Ela nunca é obrigada a falar; ela quer.</p></div>
+            <div class="col"><div class="mark"></div><h3>Só reforço positivo</h3><p>Nunca "errou". Sempre "isso!". Em 12 meses são 176 palavras, 6 temas, zero pressão.</p></div>
+        </div>
+        <p class="note">Usamos a pesquisa publicada pelo PEDAL Centre da Universidade de Cambridge. Não somos certificados nem parceiros de Cambridge.</p>
+    </div>
+</section>
+
+<section class="section section-tint" id="programas" aria-labelledby="h-programas">
+    <div class="wrap">
+        <h2 id="h-programas">Uma turma pra cada idade.</h2>
+        <p class="lede">Meninos e meninas, de 2 a 13 anos. A aula cresce com a criança: começa sensorial, com o adulto junto, e termina em partida com frases completas.</p>
+        <div class="rows">
+            <div class="row"><h3>Little Stars</h3><span class="age">2–3 anos</span><span class="dur">45 min</span><p>Sensorial, com pai ou mãe na aula. Cores, bola, primeiros comandos.</p></div>
+            <div class="row"><h3>Rising Stars</h3><span class="age">3–4 anos</span><span class="dur">45 min</span><p>Independência e vocabulário. A criança já responde sozinha.</p></div>
+            <div class="row"><h3>Super Stars</h3><span class="age">5–6 anos</span><span class="dur">50 min</span><p>Prontidão para leitura, trabalho em equipe, jogos com regras em inglês.</p></div>
+            <div class="row"><h3>Shooting Stars</h3><span class="age">7–8 anos</span><span class="dur">60 min</span><p>Frases completas e partida de verdade — com o inglês comandando o jogo.</p></div>
+            <div class="row"><h3>Turma estendida</h3><span class="age">8–13 anos</span><span class="dur">sob consulta</span><p>Fale com a gente no WhatsApp para horários e grupos.</p></div>
+        </div>
+        <div class="themes" aria-label="Temas do currículo de 12 meses">
+            <div class="theme"><b>Meses 1–2</b><span>Cores e Números</span></div>
+            <div class="theme"><b>Meses 3–4</b><span>Animais e Frutas</span></div>
+            <div class="theme"><b>Meses 5–6</b><span>Corpo e Ações</span></div>
+            <div class="theme"><b>Meses 7–8</b><span>Tempo e Roupas</span></div>
+            <div class="theme"><b>Meses 9–10</b><span>Comida e Família</span></div>
+            <div class="theme"><b>Meses 11–12</b><span>Revisão e Festa</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="onde" aria-labelledby="h-onde">
+    <div class="wrap">
+        <h2 id="h-onde">Onde a gente joga.</h2>
+        <p class="lede">Duas sedes em Belo Horizonte. A primeira aula é experimental e grátis — é só chamar no WhatsApp.</p>
+        <div class="venues">
+            <div class="venue">
+                <h3>Santa Terezinha</h3>
+                <p class="addr">Quadra de Tênis da Cojam · Rua Congonhal 445</p>
+                <dl><dt>Dias</dt><dd>Terças e quintas</dd><dt>Horário</dt><dd>18:00</dd></dl>
+                <p class="price">R$100<small>/mês · 2x por semana</small></p>
             </div>
-            <div class="challenge-grid">
-                <div class="challenge-card">
-                    <div class="challenge-icon">⚽</div>
-                    <p data-pt="Programas tradicionais de futebol forçam competição cedo demais" 
-                       data-en="Traditional soccer programs push competition too early">
-                        Programas tradicionais de futebol forçam competição cedo demais
-                    </p>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-icon">🌍</div>
-                    <p data-pt="Crianças precisam de educação bilíngue desde cedo" 
-                       data-en="Children need bilingual education from an early age">
-                        Crianças precisam de educação bilíngue desde cedo
-                    </p>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-icon">👨‍👩‍👧</div>
-                    <p data-pt="Pais querem desenvolvimento integral, não apenas esportes" 
-                       data-en="Parents want holistic development, not just sports">
-                        Pais querem desenvolvimento integral, não apenas esportes
-                    </p>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-icon">🏫</div>
-                    <p data-pt="Escolas precisam de programas extracurriculares de qualidade" 
-                       data-en="Schools need quality extracurricular programs">
-                        Escolas precisam de programas extracurriculares de qualidade
-                    </p>
-                </div>
+            <div class="venue">
+                <h3>Castelo</h3>
+                <p class="addr">Vila Delícias · Av. dos Engenheiros 460</p>
+                <dl><dt>Dias</dt><dd>Consulte</dd><dt>Horário</dt><dd>Consulte</dd></dl>
+                <p class="price">R$250<small>/mês · sede premium</small></p>
             </div>
         </div>
-    </section>
+        <p class="note" style="margin-top:28px"><a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero agendar uma aula experimental grátis." target="_blank" rel="noopener" onclick="trackWhatsApp('onde')">Agendar aula experimental grátis</a></p>
+    </div>
+</section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="solution">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Nossa Solução" data-en="Our Solution">Nossa Solução</h2>
-                <p class="tagline" data-pt="Brincar, Não Pressionar - Onde Futebol Encontra Inglês" 
-                   data-en="Play Not Push - Where Soccer Meets English">
-                    Brincar, Não Pressionar - Onde Futebol Encontra Inglês
-                </p>
+<section class="section section-tint" id="escolas" aria-labelledby="h-escolas">
+    <div class="wrap">
+        <div class="split">
+            <div>
+                <h2 id="h-escolas">Para escolas: parceria flexível.</h2>
+                <p class="lede">O Star Kids vira a atividade extracurricular bilíngue da sua escola. A gente entra com tudo; a escola entra com o espaço e os alunos.</p>
+                <ul class="gives">
+                    <li>Currículo completo de 12 meses, pronto para aplicar</li>
+                    <li>Treinadores Star Kids formados na metodologia</li>
+                    <li>Bolas, cones, coletes e material didático</li>
+                    <li>Adaptável à estrutura de turmas que a escola já tem</li>
+                    <li>Relatório mensal de vocabulário para as famílias</li>
+                    <li>Apresentação e aula demonstrativa sem custo</li>
+                </ul>
             </div>
-            <div class="solution-grid">
-                <div class="solution-feature">
-                    <div class="feature-icon yellow">🎮</div>
-                    <h3 data-pt="Aprendizado Lúdico" data-en="Play-Based Learning">Aprendizado Lúdico</h3>
-                    <p data-pt="Ambiente divertido e sem pressão onde crianças aprendem naturalmente através da brincadeira" 
-                       data-en="Fun, pressure-free environment where children learn naturally through play">
-                        Ambiente divertido e sem pressão onde crianças aprendem naturalmente através da brincadeira
-                    </p>
-                </div>
-                <div class="solution-feature">
-                    <div class="feature-icon green">🌟</div>
-                    <h3 data-pt="Desenvolvimento Bilíngue" data-en="Bilingual Development">Desenvolvimento Bilíngue</h3>
-                    <p data-pt="Integração perfeita de futebol + inglês em cada aula" 
-                       data-en="Seamless integration of soccer + English in every class">
-                        Integração perfeita de futebol + inglês em cada aula
-                    </p>
-                </div>
-                <div class="solution-feature">
-                    <div class="feature-icon blue">💪</div>
-                    <h3 data-pt="Crescimento Integral" data-en="Holistic Growth">Crescimento Integral</h3>
-                    <p data-pt="Desenvolvimento físico, social, cognitivo e emocional" 
-                       data-en="Physical, social, cognitive and emotional development">
-                        Desenvolvimento físico, social, cognitivo e emocional
-                    </p>
-                </div>
-            </div>
+            <form class="form" action="https://formspree.io/f/manrldeg" method="POST" onsubmit="trackFormSubmit()">
+                <input type="hidden" name="_subject" value="Escola — pedido de demonstração">
+                <input type="hidden" name="source" value="home-escolas">
+                <input type="hidden" name="_next" value="https://starkids.team/thank-you.html">
+                <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+                <h3>Agendar uma demonstração</h3>
+                <p>Respondemos em até um dia útil.</p>
+                <label for="school">Escola</label>
+                <input id="school" name="school" type="text" required>
+                <label for="contact">Seu nome</label>
+                <input id="contact" name="contact" type="text" required autocomplete="name">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+                <label for="phone">WhatsApp</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+                <label for="message">Quantos alunos e quais idades?</label>
+                <textarea id="message" name="message"></textarea>
+                <button class="btn btn-yellow" type="submit">Pedir demonstração</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Cambridge Method Section -->
-    <section id="method" class="cambridge">
-        <div class="container">
-            <div class="cambridge-content">
-                <div class="cambridge-text">
-                    <div class="cambridge-badge">
-                        <span class="badge-label" data-pt="Validado por" data-en="Validated by">Validado por</span>
-                        <h2 data-pt="Universidade de Cambridge" data-en="Cambridge University">Universidade de Cambridge</h2>
-                        <p class="cambridge-subtitle" data-pt="Centro de Pesquisa PEDAL" data-en="PEDAL Research Centre">
-                            Centro de Pesquisa PEDAL
-                        </p>
-                    </div>
-                    <h3 data-pt="Método Baseado em Pesquisa" data-en="Research-Backed Method">Método Baseado em Pesquisa</h3>
-                    <p data-pt="O Centro de Pesquisa PEDAL da Universidade de Cambridge valida que:" 
-                       data-en="Cambridge University's PEDAL Research Centre validates that:">
-                        O Centro de Pesquisa PEDAL da Universidade de Cambridge valida que:
-                    </p>
-                    <ul class="cambridge-list">
-                        <li data-pt="Brincadeira guiada é mais eficaz que instrução direta" 
-                            data-en="Guided play is more effective than direct instruction">
-                            Brincadeira guiada é mais eficaz que instrução direta
-                        </li>
-                        <li data-pt="Aprendizado lúdico apoia desenvolvimento integral da criança" 
-                            data-en="Play-based learning supports holistic child development">
-                            Aprendizado lúdico apoia desenvolvimento integral da criança
-                        </li>
-                        <li data-pt="Atividade física precoce cria hábitos saudáveis para a vida" 
-                            data-en="Early physical activity creates lifelong healthy habits">
-                            Atividade física precoce cria hábitos saudáveis para a vida
-                        </li>
-                        <li data-pt="Habilidades sociais se desenvolvem naturalmente através da brincadeira estruturada" 
-                            data-en="Social skills develop naturally through structured play">
-                            Habilidades sociais se desenvolvem naturalmente através da brincadeira estruturada
-                        </li>
-                    </ul>
-                </div>
-                <div class="cambridge-visual">
-                    <div class="method-card">
-                        <h4 data-pt="Nossa Abordagem Comprovada" data-en="Our Proven Approach">Nossa Abordagem Comprovada</h4>
-                        <div class="method-items">
-                            <div class="method-item">✓ <span data-pt="Pesquisa da Universidade de Cambridge" 
-                                data-en="Cambridge University research">Pesquisa da Universidade de Cambridge</span></div>
-                            <div class="method-item">✓ <span data-pt="Educação bilíngue de excelência" 
-                                data-en="Excellence in bilingual education">Educação bilíngue de excelência</span></div>
-                            <div class="method-item">✓ <span data-pt="Desenvolvimento esportivo adequado à idade" 
-                                data-en="Age-appropriate sports development">Desenvolvimento esportivo adequado à idade</span></div>
-                            <div class="method-item">✓ <span data-pt="Psicologia infantil aplicada" 
-                                data-en="Applied child psychology">Psicologia infantil aplicada</span></div>
-                            <div class="method-item">✓ <span data-pt="Treinamento profissional e divertido" 
-                                data-en="Professional and fun training">Treinamento profissional e divertido</span></div>
-                        </div>
-                        <div class="method-footer">
-                            <strong data-pt="Baseado em Pesquisa • Profissional • Orientado a Resultados" 
-                                    data-en="Research-Backed • Professional • Results-Driven">
-                                Baseado em Pesquisa • Profissional • Orientado a Resultados
-                            </strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="section emcasa" aria-labelledby="h-emcasa">
+    <div class="wrap">
+        <div>
+            <span class="tag">Em breve</span>
+            <h2 id="h-emcasa">Star Kids em Casa: o mesmo método, no seu quintal.</h2>
+            <p class="lede">12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Duas palavras por lição, um gesto, um jogo. Só precisa de uma bola.</p>
         </div>
-    </section>
+        <a class="btn btn-yellow" href="em-casa.html">Entrar na lista de espera</a>
+    </div>
+</section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Currículo Adequado à Idade" data-en="Age-Appropriate Curriculum">
-                    Currículo Adequado à Idade
-                </h2>
-                <p class="section-subtitle" data-pt="Quatro programas distintos, cada um projetado para o desenvolvimento ideal" 
-                   data-en="Four distinct programs, each designed for optimal development">
-                    Quatro programas distintos, cada um projetado para o desenvolvimento ideal
-                </p>
-            </div>
-            <div class="programs-grid">
-                <div class="program-card tots">
-                    <div class="program-header">
-                        <h3>Star Tots</h3>
-                        <p class="age" data-pt="18 meses - 2,5 anos" data-en="18 months - 2.5 years">18 meses - 2,5 anos</p>
-                        <p class="duration">45 min</p>
-                    </div>
-                    <div class="program-body">
-                        <p data-pt="Interativo com pais, movimentos básicos, cores e números em inglês" 
-                           data-en="Parent-interactive, basic movements, colors & numbers in English">
-                            Interativo com pais, movimentos básicos, cores e números em inglês
-                        </p>
-                    </div>
-                </div>
-
-                <div class="program-card juniors">
-                    <div class="program-header">
-                        <h3>Star Juniors</h3>
-                        <p class="age" data-pt="2,5 - 3,5 anos" data-en="2.5 - 3.5 years">2,5 - 3,5 anos</p>
-                        <p class="duration">45 min</p>
-                    </div>
-                    <div class="program-body">
-                        <p data-pt="Desenvolvendo independência, jogos simples, palavras de ação em inglês" 
-                           data-en="Building independence, simple games, action words in English">
-                            Desenvolvendo independência, jogos simples, palavras de ação em inglês
-                        </p>
-                    </div>
-                </div>
-
-                <div class="program-card players">
-                    <div class="program-header">
-                        <h3>Star Players</h3>
-                        <p class="age" data-pt="3,5 - 5 anos" data-en="3.5 - 5 years">3,5 - 5 anos</p>
-                        <p class="duration">50 min</p>
-                    </div>
-                    <div class="program-body">
-                        <p data-pt="Velocidade e coordenação, introdução a partidas, vocabulário de jogo em inglês" 
-                           data-en="Speed & coordination, match play introduction, game vocabulary in English">
-                            Velocidade e coordenação, introdução a partidas, vocabulário de jogo em inglês
-                        </p>
-                    </div>
-                </div>
-
-                <div class="program-card champions">
-                    <div class="program-header">
-                        <h3>Star Champions</h3>
-                        <p class="age" data-pt="5 - 8 anos" data-en="5 - 8 years">5 - 8 anos</p>
-                        <p class="duration">60 min</p>
-                    </div>
-                    <div class="program-body">
-                        <p data-pt="Habilidades avançadas, partidas de 20 min, termos táticos em inglês" 
-                           data-en="Advanced skills, 20-min matches, tactical terms in English">
-                            Habilidades avançadas, partidas de 20 min, termos táticos em inglês
-                        </p>
-                    </div>
-                </div>
-            </div>
+<section class="section" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+        <h2 id="h-faq">Perguntas de quem está chegando.</h2>
+        <div class="faq">
+            <details><summary>Meu filho não fala nada de inglês. Tem problema?</summary><p>Nenhum. Toda turma começa do zero. A primeira aula já é em inglês — e a criança entende pelo jogo, não pela tradução.</p></details>
+            <details><summary>Precisa saber jogar futebol?</summary><p>Não. A bola é o pretexto. O que importa é correr, tocar, chutar e se divertir. Ninguém fica no banco.</p></details>
+            <details><summary>Como é a aula experimental?</summary><p>É uma aula normal, na turma da idade da criança, sem custo e sem compromisso. Você chama no WhatsApp, a gente marca o dia.</p></details>
+            <details><summary>Quanto tempo até a criança falar alguma coisa?</summary><p>Nas primeiras semanas ela já responde a comandos — "kick", "run", "stop". Palavras soltas vêm no primeiro mês; frases, nas turmas maiores, ao longo do ano.</p></details>
+            <details><summary>O que a criança precisa levar?</summary><p>Roupa confortável, tênis e água. Bola, cones e coletes são nossos.</p></details>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Six Learning Areas -->
-    <section id="learning" class="learning">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Seis Áreas Centrais de Aprendizado" data-en="Six Core Learning Areas">
-                    Seis Áreas Centrais de Aprendizado
-                </h2>
-            </div>
-            <div class="learning-grid">
-                <div class="learning-card">
-                    <div class="learning-icon">🏃</div>
-                    <h4 data-pt="Desenvolvimento Físico" data-en="Physical Development">Desenvolvimento Físico</h4>
-                    <p data-pt="Habilidades motoras, coordenação, condicionamento" 
-                       data-en="Motor skills, coordination, fitness">
-                        Habilidades motoras, coordenação, condicionamento
-                    </p>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">👥</div>
-                    <h4 data-pt="Habilidades Sociais" data-en="Social Skills">Habilidades Sociais</h4>
-                    <p data-pt="Trabalho em equipe, cooperação, compartilhamento" 
-                       data-en="Teamwork, cooperation, sharing">
-                        Trabalho em equipe, cooperação, compartilhamento
-                    </p>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">🧠</div>
-                    <h4 data-pt="Desenvolvimento Cognitivo" data-en="Cognitive Development">Desenvolvimento Cognitivo</h4>
-                    <p data-pt="Resolução de problemas, compreensão" 
-                       data-en="Problem-solving, understanding">
-                        Resolução de problemas, compreensão
-                    </p>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">🗣️</div>
-                    <h4 data-pt="Comunicação" data-en="Communication">Comunicação</h4>
-                    <p data-pt="Língua inglesa, escuta" 
-                       data-en="English language, listening">
-                        Língua inglesa, escuta
-                    </p>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">❤️</div>
-                    <h4 data-pt="Inteligência Emocional" data-en="Emotional Intelligence">Inteligência Emocional</h4>
-                    <p data-pt="Confiança, resiliência" 
-                       data-en="Confidence, resilience">
-                        Confiança, resiliência
-                    </p>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">⚽</div>
-                    <h4 data-pt="Fundamentos do Futebol" data-en="Soccer Fundamentals">Fundamentos do Futebol</h4>
-                    <p data-pt="Drible, passe, chute" 
-                       data-en="Dribbling, passing, shooting">
-                        Drible, passe, chute
-                    </p>
-                </div>
-            </div>
+<section class="section contact" id="contato" aria-labelledby="h-contato">
+    <div class="wrap">
+        <div>
+            <h2 id="h-contato">Vamos conversar.</h2>
+            <p class="lede">O jeito mais rápido é o WhatsApp do Coach Lucas. Respondemos em minutos durante o dia.</p>
         </div>
-    </section>
-
-    <!-- Benefits for Schools -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Benefícios para Sua Escola" data-en="Benefits for Your School">
-                    Benefícios para Sua Escola
-                </h2>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌟</div>
-                    <h3 data-pt="Diferenciação" data-en="Differentiation">Diferenciação</h3>
-                    <p data-pt="Programa bilíngue premier de futebol + inglês validado por Cambridge" 
-                       data-en="Premier bilingual soccer + English program validated by Cambridge">
-                        Programa bilíngue premier de futebol + inglês validado por Cambridge
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">😊</div>
-                    <h3 data-pt="Satisfação dos Pais" data-en="Parent Satisfaction">Satisfação dos Pais</h3>
-                    <p data-pt="Abordagem de desenvolvimento integral que pais adoram" 
-                       data-en="Holistic development approach that parents love">
-                        Abordagem de desenvolvimento integral que pais adoram
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3 data-pt="Receita Adicional" data-en="Additional Revenue">Receita Adicional</h3>
-                    <p data-pt="Modelo de parceria flexível com condições favoráveis"
-                       data-en="Flexible partnership model with favorable conditions">
-                        Modelo de parceria flexível com condições favoráveis
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎓</div>
-                    <h3 data-pt="Validado por Pesquisa" data-en="Research Validated">Validado por Pesquisa</h3>
-                    <p data-pt="Metodologia validada pela Universidade de Cambridge" 
-                       data-en="Cambridge University validated methodology">
-                        Metodologia validada pela Universidade de Cambridge
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔧</div>
-                    <h3 data-pt="Solução Completa" data-en="Turnkey Solution">Solução Completa</h3>
-                    <p data-pt="Fornecemos currículo, treinamento e equipamentos" 
-                       data-en="We provide curriculum, training and equipment">
-                        Fornecemos currículo, treinamento e equipamentos
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3 data-pt="Implementação Rápida" data-en="Fast Implementation">Implementação Rápida</h3>
-                    <p data-pt="Comece em 2-3 semanas após o acordo" 
-                       data-en="Start in 2-3 weeks after agreement">
-                        Comece em 2-3 semanas após o acordo
-                    </p>
-                </div>
-            </div>
+        <div class="ways">
+            <a href="https://wa.me/5531973313443" target="_blank" rel="noopener" onclick="trackWhatsApp('contato')">+55 31 97331-3443 <small>WhatsApp · Coach Lucas</small></a>
+            <a href="mailto:lucas@starkids.team">lucas@starkids.team <small>Pais e escolas em BH</small></a>
+            <a href="mailto:jason@starkids.team">jason@starkids.team <small>Parcerias e imprensa</small></a>
+            <a href="https://instagram.com/brazilstarkids" target="_blank" rel="noopener">@brazilstarkids <small>Instagram</small></a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Partnership Model -->
-    <section id="partnership" class="partnership">
-        <div class="container">
-            <div class="section-header centered white">
-                <h2 class="section-title" data-pt="Modelo de Parceria" data-en="Partnership Model">Modelo de Parceria</h2>
-                <p class="partnership-intro" data-pt="Parceria Completa - Nós Cuidamos de Tudo"
-                   data-en="Full Partnership - We Handle Everything">
-                    Parceria Completa - Nós Cuidamos de Tudo
-                </p>
-            </div>
-            <div class="partnership-simple">
-                <div class="partnership-column school">
-                    <h3 data-pt="Sua Escola Fornece" data-en="Your School Provides">Sua Escola Fornece</h3>
-                    <ul>
-                        <li data-pt="Espaço físico para as aulas" data-en="Physical space for classes">
-                            Espaço físico para as aulas
-                        </li>
-                        <li data-pt="Promoção para as famílias matriculadas" data-en="Promotion to enrolled families">
-                            Promoção para as famílias matriculadas
-                        </li>
-                        <li data-pt="Suporte de comunicação" data-en="Communication support">
-                            Suporte de comunicação
-                        </li>
-                        <li data-pt="Coordenação de horários" data-en="Schedule coordination">
-                            Coordenação de horários
-                        </li>
-                    </ul>
-                </div>
-                <div class="partnership-divider">
-                    <div class="plus-sign">+</div>
-                </div>
-                <div class="partnership-column starkids">
-                    <h3>Star Kids <span data-pt="Fornece" data-en="Provides">Fornece</span></h3>
-                    <ul>
-                        <li data-pt="Currículo completo e planos de aula" data-en="Complete curriculum and lesson plans">
-                            Currículo completo e planos de aula
-                        </li>
-                        <li data-pt="Treinadores bilíngues certificados" data-en="Certified bilingual coaches">
-                            Treinadores bilíngues certificados
-                        </li>
-                        <li data-pt="Todos os equipamentos" data-en="All equipment">
-                            Todos os equipamentos
-                        </li>
-                        <li data-pt="Gestão e administração do programa" data-en="Program management and administration">
-                            Gestão e administração do programa
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="partnership-benefits">
-                <h4 data-pt="Por Que Este Modelo Funciona" data-en="Why This Model Works">Por Que Este Modelo Funciona</h4>
-                <div class="partnership-features">
-                    <div class="feature-item">
-                        <span class="check">✓</span>
-                        <span data-pt="Sem custos iniciais para sua escola" data-en="No upfront costs for your school">
-                            Sem custos iniciais para sua escola
-                        </span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="check">✓</span>
-                        <span data-pt="Risco compartilhado - crescemos juntos" data-en="Shared risk - we grow together">
-                            Risco compartilhado - crescemos juntos
-                        </span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="check">✓</span>
-                        <span data-pt="Incentivos alinhados para maximizar matrículas" data-en="Aligned incentives to maximize enrollment">
-                            Incentivos alinhados para maximizar matrículas
-                        </span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="check">✓</span>
-                        <span data-pt="Contabilidade completamente transparente" data-en="Completely transparent accounting">
-                            Contabilidade completamente transparente
-                        </span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="check">✓</span>
-                        <span data-pt="Você foca na educação, nós cuidamos das operações" data-en="You focus on education, we handle operations">
-                            Você foca na educação, nós cuidamos das operações
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</main>
 
-    <!-- Program Structure -->
-    <section id="structure" class="structure">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Estrutura do Programa" data-en="Program Structure">Estrutura do Programa</h2>
-            </div>
-            <div class="structure-grid">
-                <div class="structure-item">
-                    <div class="structure-icon">⏱️</div>
-                    <h4 data-pt="Duração" data-en="Duration">Duração</h4>
-                    <p>45-60 <span data-pt="minutos por sessão" data-en="minutes per session">minutos por sessão</span></p>
-                </div>
-                <div class="structure-item">
-                    <div class="structure-icon">📅</div>
-                    <h4 data-pt="Frequência" data-en="Frequency">Frequência</h4>
-                    <p>1-2 <span data-pt="vezes por semana" data-en="times per week">vezes por semana</span></p>
-                </div>
-                <div class="structure-item">
-                    <div class="structure-icon">👥</div>
-                    <h4 data-pt="Tamanho da Turma" data-en="Class Size">Tamanho da Turma</h4>
-                    <p data-pt="Adaptável à estrutura existente da sua turma" data-en="Adaptable to your existing class structure">Adaptável à estrutura existente da sua turma</p>
-                </div>
-                <div class="structure-item">
-                    <div class="structure-icon">👨‍🏫</div>
-                    <h4 data-pt="Equipe" data-en="Staffing">Equipe</h4>
-                    <p data-pt="1-2 treinadores bilíngues" data-en="1-2 bilingual coaches">1-2 treinadores bilíngues</p>
-                </div>
-                <div class="structure-item">
-                    <div class="structure-icon">📍</div>
-                    <h4 data-pt="Local" data-en="Location">Local</h4>
-                    <p>Indoor/outdoor (20m x 20m <span data-pt="mín" data-en="min">mín</span>)</p>
-                </div>
-                <div class="structure-item">
-                    <div class="structure-icon">⚽</div>
-                    <h4 data-pt="Equipamentos" data-en="Equipment">Equipamentos</h4>
-                    <p data-pt="Fornecidos pela Star Kids" data-en="Provided by Star Kids">Fornecidos pela Star Kids</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+    <div class="wrap">
+        <span>© <span id="y"></span> Star Kids Brasil · Belo Horizonte, MG</span>
+        <span><a href="blog/index.html">Blog</a> · <a href="game/">Jogo Kick &amp; Learn</a> · <a href="enroll.html">Matrícula</a> · <a href="em-casa.html">Em casa</a></span>
+    </div>
+</footer>
 
-    <!-- Next Steps -->
-    <section id="steps" class="steps">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Próximos Passos" data-en="Next Steps">Próximos Passos</h2>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 data-pt="Aula Experimental Grátis" data-en="Free Trial Class">Aula Experimental Grátis</h3>
-                    <p data-pt="Oferecemos uma aula demonstrativa gratuita para seus alunos" 
-                       data-en="We offer a complimentary demonstration class for your students">
-                        Oferecemos uma aula demonstrativa gratuita para seus alunos
-                    </p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 data-pt="Sessão de Informação para Pais" data-en="Parent Information Session">Sessão de Informação para Pais</h3>
-                    <p data-pt="Apresentamos o programa às famílias interessadas" 
-                       data-en="We present the program to interested families">
-                        Apresentamos o programa às famílias interessadas
-                    </p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 data-pt="Inscrição e Lançamento" data-en="Enrollment & Launch">Inscrição e Lançamento</h3>
-                    <p data-pt="Iniciamos aulas dentro de 2-3 semanas após o acordo" 
-                       data-en="We start classes within 2-3 weeks after agreement">
-                        Iniciamos aulas dentro de 2-3 semanas após o acordo
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<a class="wa-float" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="trackWhatsApp('float')">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+</a>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="O Que Dizem Sobre Nós" data-en="What People Say About Us">
-                    O Que Dizem Sobre Nós
-                </h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p data-pt="&quot;Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele.&quot;" 
-                           data-en="&quot;My son loves the classes! He's learning English without even realizing it while having fun playing soccer. It's amazing to see his progress.&quot;">
-                            "Meu filho adora as aulas! Ele está aprendendo inglês sem nem perceber, enquanto se diverte jogando futebol. É incrível ver o progresso dele."
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👩</div>
-                        <div class="author-info">
-                            <h4>Maria Santos</h4>
-                            <p data-pt="Mãe de aluno, 5 anos" data-en="Parent of 5-year-old student">Mãe de aluno, 5 anos</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p data-pt="&quot;O programa Star Kids trouxe um diferencial enorme para nossa escola. Os pais adoram e as crianças sempre pedem para repetir as aulas.&quot;" 
-                           data-en="&quot;The Star Kids program brought a huge differentiator to our school. Parents love it and the children always ask to repeat the classes.&quot;">
-                            "O programa Star Kids trouxe um diferencial enorme para nossa escola. Os pais adoram e as crianças sempre pedem para repetir as aulas."
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍🏫</div>
-                        <div class="author-info">
-                            <h4>Prof. Carlos Oliveira</h4>
-                            <p data-pt="Coordenador Pedagógico" data-en="Academic Coordinator">Coordenador Pedagógico</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p data-pt="&quot;A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!&quot;" 
-                           data-en="&quot;The Play Not Push methodology really works. My daughter developed confidence, social skills, and now speaks several words in English!&quot;">
-                            "A metodologia Play Not Push realmente funciona. Minha filha desenvolveu confiança, habilidades sociais e agora fala várias palavras em inglês!"
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨</div>
-                        <div class="author-info">
-                            <h4>Roberto Lima</h4>
-                            <p data-pt="Pai de aluna, 4 anos" data-en="Parent of 4-year-old student">Pai de aluna, 4 anos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header centered">
-                <h2 class="section-title" data-pt="Perguntas Frequentes" data-en="Frequently Asked Questions">
-                    Perguntas Frequentes
-                </h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="Como funciona a metodologia Play Not Push?" data-en="How does the Play Not Push methodology work?">
-                        Como funciona a metodologia Play Not Push?
-                    </div>
-                    <div class="faq-answer" data-pt="Nossa metodologia, validada pela Universidade de Cambridge, usa brincadeiras guiadas para ensinar. As crianças aprendem inglês naturalmente enquanto jogam futebol, sem pressão ou competição excessiva." 
-                         data-en="Our methodology, validated by Cambridge University, uses guided play to teach. Children learn English naturally while playing soccer, without pressure or excessive competition.">
-                        Nossa metodologia, validada pela Universidade de Cambridge, usa brincadeiras guiadas para ensinar. As crianças aprendem inglês naturalmente enquanto jogam futebol, sem pressão ou competição excessiva.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="Qual é a idade ideal para começar?" data-en="What is the ideal age to start?">
-                        Qual é a idade ideal para começar?
-                    </div>
-                    <div class="faq-answer" data-pt="Nosso programa atende crianças de 18 meses a 8 anos, divididos em 4 grupos por idade: Star Tots (18m-2,5 anos), Star Juniors (2,5-3,5 anos), Star Players (3,5-5 anos) e Star Champions (5-8 anos)." 
-                         data-en="Our program serves children from 18 months to 8 years, divided into 4 age groups: Star Tots (18m-2.5 years), Star Juniors (2.5-3.5 years), Star Players (3.5-5 years), and Star Champions (5-8 years).">
-                        Nosso programa atende crianças de 18 meses a 8 anos, divididos em 4 grupos por idade: Star Tots (18m-2,5 anos), Star Juniors (2,5-3,5 anos), Star Players (3,5-5 anos) e Star Champions (5-8 anos).
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="Quanto custa para a escola implementar o programa?" data-en="How much does it cost for the school to implement the program?">
-                        Quanto custa para a escola implementar o programa?
-                    </div>
-                    <div class="faq-answer" data-pt="A Star Kids oferece condições flexíveis de parceria. Entre em contato conosco para discutir os detalhes do modelo de parceria para sua escola."
-                         data-en="Star Kids offers flexible partnership terms. Contact us to discuss the partnership model details for your school.">
-                        A Star Kids oferece condições flexíveis de parceria. Entre em contato conosco para discutir os detalhes do modelo de parceria para sua escola.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="Os treinadores são qualificados?" data-en="Are the coaches qualified?">
-                        Os treinadores são qualificados?
-                    </div>
-                    <div class="faq-answer" data-pt="Sim! Todos os nossos treinadores são bilíngues, certificados e treinados em nossa metodologia exclusiva baseada em pesquisas da Universidade de Cambridge." 
-                         data-en="Yes! All our coaches are bilingual, certified, and trained in our exclusive methodology based on Cambridge University research.">
-                        Sim! Todos os nossos treinadores são bilíngues, certificados e treinados em nossa metodologia exclusiva baseada em pesquisas da Universidade de Cambridge.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="Quanto tempo leva para implementar o programa na escola?" data-en="How long does it take to implement the program at school?">
-                        Quanto tempo leva para implementar o programa na escola?
-                    </div>
-                    <div class="faq-answer" data-pt="Após a aula experimental gratuita e acordo de parceria, as aulas podem começar em apenas 2-3 semanas. Nós cuidamos de toda a logística!" 
-                         data-en="After the free trial class and partnership agreement, classes can start in just 2-3 weeks. We handle all the logistics!">
-                        Após a aula experimental gratuita e acordo de parceria, as aulas podem começar em apenas 2-3 semanas. Nós cuidamos de toda a logística!
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" data-pt="As crianças recebem certificados?" data-en="Do children receive certificates?">
-                        As crianças recebem certificados?
-                    </div>
-                    <div class="faq-answer" data-pt="Sim! Todas as crianças recebem certificados de conquista ao completar cada nível do programa, celebrando seu desenvolvimento em inglês e futebol." 
-                         data-en="Yes! All children receive achievement certificates upon completing each level of the program, celebrating their development in English and soccer.">
-                        Sim! Todas as crianças recebem certificados de conquista ao completar cada nível do programa, celebrando seu desenvolvimento em inglês e futebol.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-content">
-                    <h2 data-pt="Vamos Construir Campeões!" data-en="Let's Build Champions!">Vamos Construir Campeões!</h2>
-                    <p data-pt="Agende sua aula experimental gratuita hoje e veja a diferença que Star Kids pode fazer na sua escola." 
-                       data-en="Schedule your free trial class today and see the difference Star Kids can make at your school.">
-                        Agende sua aula experimental gratuita hoje e veja a diferença que Star Kids pode fazer na sua escola.
-                    </p>
-                    <div class="contact-info">
-                        <div class="contact-person">
-                            <h4>Lucas Silva</h4>
-                            <p class="role" data-pt="Co-Fundador" data-en="Co-Founder">Co-Fundador</p>
-                            <a href="/cdn-cgi/l/email-protection#1f736a7c7e6c5f6c6b7e6d74767b6c316b7a7e72" class="contact-link">
-                                <span class="icon">✉️</span> <span class="__cf_email__" data-cfemail="e28e97818391a291968390898b8691cc9687838f">[email&#160;protected]</span>
-                            </a>
-                            <a href="tel:+5531973313443" class="contact-link">
-                                <span class="icon">📱</span> +55 31 97331-3443
-                            </a>
-                        </div>
-                        <div class="contact-person">
-                            <h4>Jason Dudney</h4>
-                            <p class="role" data-pt="Co-Fundador" data-en="Co-Founder">Co-Fundador</p>
-                            <a href="/cdn-cgi/l/email-protection#375d5644585977444356455c5e5344194352565a" class="contact-link">
-                                <span class="icon">✉️</span> <span class="__cf_email__" data-cfemail="254f44564a4b65565144574e4c41560b51404448">[email&#160;protected]</span>
-                            </a>
-                            <a href="tel:+17276232652" class="contact-link">
-                                <span class="icon">📱</span> +1 727-623-2652
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-section">
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/manrldeg" method="POST" onsubmit="trackFormSubmit()">
-                        <h3 data-pt="Solicitar Informações" data-en="Request Information">Solicitar Informações</h3>
-                        <div class="form-group">
-                            <input type="text" name="school" placeholder="Nome da Escola / School Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="contact" placeholder="Seu Nome / Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Telefone / Phone">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="city" placeholder="Cidade / City">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="4" placeholder="Mensagem / Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary full-width" data-pt="Agendar Demo Grátis" 
-                                data-en="Schedule Free Demo">Agendar Demo Grátis</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo-main-new.jpg" alt="Star Kids" class="footer-logo">
-                    <p class="footer-tagline" data-pt="Brincar, Não Pressionar - Onde Futebol Encontra Inglês" 
-                       data-en="Play Not Push - Where Soccer Meets English">
-                        Brincar, Não Pressionar - Onde Futebol Encontra Inglês
-                    </p>
-                    <p class="footer-cambridge" data-pt="Metodologia validada pela Universidade de Cambridge" 
-                       data-en="Cambridge University validated methodology">
-                        Metodologia validada pela Universidade de Cambridge
-                    </p>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-pt="Contato" data-en="Contact">Contato</h4>
-                    <p>Lucas Silva: <a href="/cdn-cgi/l/email-protection#bbd7ced8dac8fbc8cfdac9d0d2dfc895cfdedad6"><span class="__cf_email__" data-cfemail="90fce5f3f1e3d0e3e4f1e2fbf9f4e3bee4f5f1fd">[email&#160;protected]</span></a></p>
-                    <p>Jason Dudney: <a href="/cdn-cgi/l/email-protection#bcd6ddcfd3d2fccfc8ddced7d5d8cf92c8d9ddd1"><span class="__cf_email__" data-cfemail="3c565d4f53527c4f485d4e5755584f1248595d51">[email&#160;protected]</span></a></p>
-                    <p data-pt="Website: starkids.team" data-en="Website: starkids.team">Website: starkids.team</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Star Kids Brasil. <span data-pt="Todos os direitos reservados." 
-                       data-en="All rights reserved.">Todos os direitos reservados.</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5531973313443?text=Olá! Gostaria de saber mais sobre o programa Star Kids para minha escola." 
-       class="floating-whatsapp" target="_blank" rel="noopener" onclick="trackWhatsApp('floating')">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
-
-    <style>
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s;
-        }
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-        }
-        .floating-whatsapp svg {
-            width: 32px;
-            height: 32px;
-            color: white;
-        }
-    </style>
-
-    <!-- Tracking Scripts -->
-    <script>
-        function trackWhatsApp(location) {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'whatsapp_click', {
-                    'event_category': 'conversion',
-                    'event_label': location
-                });
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17841101130/TPSxCMrGqOcbEMqyprtC'
-                });
-            }
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Contact', {content_name: 'WhatsApp Click', content_category: location});
-            }
-        }
-        
-        function trackFormSubmit() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submit', {
-                    'event_category': 'conversion',
-                    'event_label': 'school_contact'
-                });
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17841101130/TPSxCMrGqOcbEMqyprtC'
-                });
-            }
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {content_name: 'School Contact Form'});
-            }
-        }
-    </script>
-
-    <script src="script.js"></script>
+<script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    var t = document.querySelector('.nav-toggle'), m = document.getElementById('menu');
+    t.addEventListener('click', function () {
+        var open = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    m.addEventListener('click', function (e) { if (e.target.tagName === 'A') { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); } });
+</script>
 </body>
 </html>
