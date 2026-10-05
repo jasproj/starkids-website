@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aulas de inglês para crianças de 2-13 anos em Castelo, BH. Inglês infantil com futebol no espaço kids da Vila Delícias. Metodologia Cambridge. Atendemos Castelo, Manacás, Buritis e Luxemburgo. Fale no WhatsApp!">
+    <title>Escolinha de Futebol + Inglês no Castelo | BH | Star Kids</title>
+    <meta name="description" content="Escolinha de futebol com inglês no Castelo, BH, na Vila Delícias. Crianças de 2 a 13 anos. Aula experimental grátis — fale no WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://starkids.team/parents-vila-delicias.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://starkids.team/parents-vila-delicias.html">
+    <meta property="og:title" content="Escolinha de Futebol + Inglês no Castelo, BH | Star Kids">
+    <meta property="og:description" content="Seu filho ou filha aprende inglês jogando futebol. Aula experimental grátis na Vila Delícias, no Castelo.">
+    <meta property="og:image" content="https://starkids.team/images/og-parents.png">
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1024">
+    <link rel="icon" href="images/logo-badge-new.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css?v=2">
+    <style>
+        /* page-specific: ads landing */
+        .hero-cta { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+        .hero-cta .btn-wa { font-size: 18px; padding: 18px 28px; }
+        .hero-cta .note { color: rgba(255,255,255,.9); font-size: 15px; margin: 0; }
+        .proof { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 28px; font-size: 15px; font-weight: 600; }
+        .proof span::before { content: "✓ "; color: var(--yellow); }
+        .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; background: var(--chalk); border-top: 1px solid #DCE8DC; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: none; }
+        .sticky .btn { width: 100%; justify-content: center; }
+        .nav .btn-wa { display: inline-flex; }
+        @media (max-width: 720px) { .sticky { display: block; } .wa-float { display: none; } body { padding-bottom: 76px; } .nav .btn-wa { display: none; } }
+        .back { font-size: 14px; }
+    </style>
 
-    <title>Inglês para Crianças em Castelo BH | Inglês Infantil Manacás | Star Kids</title>
-
-    <!-- Google Analytics -->
+    <!-- Google Analytics 4 + Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWEEV4G2FS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,569 +41,171 @@
         gtag('js', new Date());
         gtag('config', 'G-VWEEV4G2FS');
         gtag('config', 'AW-17841101130');
+        function trackWhatsApp(where) {
+            gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: where });
+            gtag('event', 'conversion', { send_to: 'AW-17841101130/TPSxCMrGqOcbEMqyprtC' });
+            if (typeof fbq !== 'undefined') fbq('track', 'Contact', { content_name: 'WhatsApp Click', content_category: where });
+        }
+        function trackLead() {
+            gtag('event', 'generate_lead', { event_category: 'conversion', event_label: 'form_submit' });
+            gtag('event', 'conversion', { send_to: 'AW-17841101130/TPSxCMrGqOcbEMqyprtC' });
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'Form Submit' });
+        }
     </script>
-
     <!-- Facebook Pixel -->
     <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1869589853656744');
         fbq('track', 'PageView');
     </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --green: #16a34a;
-            --green-dark: #15803d;
-            --whatsapp: #25D366;
-            --whatsapp-dark: #128C7E;
-            --yellow: #fbbf24;
-            --red: #dc2626;
-            --gray-900: #111827;
-            --gray-600: #4b5563;
-            --gray-100: #f3f4f6;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--gray-900);
-            padding-bottom: 80px;
-        }
-
-        /* URGENCY BANNER */
-        .banner {
-            background: var(--red);
-            color: white;
-            text-align: center;
-            padding: 10px 15px;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        /* HERO */
-        .hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(22, 163, 74, 0.88) 0%, rgba(21, 128, 61, 0.9) 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--yellow);
-            color: var(--gray-900);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 2.4rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span { color: var(--yellow); }
-
-        .hero-subtitle {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--whatsapp);
-            color: white;
-            padding: 18px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s;
-        }
-
-        .hero-cta:hover {
-            background: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
-        }
-
-        .hero-cta svg { width: 28px; height: 28px; }
-
-        .hero-note {
-            color: rgba(255,255,255,0.9);
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-
-        /* TRUST BAR */
-        .trust {
-            background: var(--gray-900);
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 14px;
-        }
-
-        .trust span { opacity: 0.9; }
-        .trust strong { color: var(--yellow); }
-
-        /* BENEFITS */
-        .benefits {
-            padding: 50px 20px;
-            background: white;
-        }
-
-        .benefits h2 {
-            text-align: center;
-            font-size: 1.6rem;
-            margin-bottom: 30px;
-            color: var(--gray-900);
-        }
-
-        .benefits-grid {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .benefit {
-            background: var(--gray-100);
-            padding: 25px;
-            border-radius: 16px;
-            text-align: center;
-        }
-
-        .benefit-icon { font-size: 2.5rem; margin-bottom: 10px; }
-        .benefit h3 { font-size: 1rem; margin-bottom: 8px; color: var(--gray-900); }
-        .benefit p { font-size: 0.9rem; color: var(--gray-600); }
-
-        /* INFO SECTION */
-        .info {
-            padding: 50px 20px;
-            background: var(--gray-100);
-        }
-
-        .info-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .info h2 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            color: var(--gray-900);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .info-item {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        .info-item .icon { font-size: 1.5rem; margin-bottom: 8px; }
-        .info-item .label { font-size: 0.8rem; color: var(--gray-600); margin-bottom: 3px; }
-        .info-item .value { font-weight: 700; color: var(--green); font-size: 1.1rem; }
-
-        .venue-note {
-            background: white;
-            border-left: 4px solid var(--green);
-            padding: 15px 20px;
-            border-radius: 8px;
-            text-align: left;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            color: var(--gray-600);
-        }
-
-        .info-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--whatsapp);
-            color: white;
-            padding: 16px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .info-cta:hover {
-            background: var(--whatsapp-dark);
-            transform: translateY(-2px);
-        }
-
-        /* TESTIMONIAL */
-        .testimonial {
-            padding: 50px 20px;
-            background: white;
-            text-align: center;
-        }
-
-        .testimonial-content {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .testimonial-quote {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--gray-900);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--green);
-        }
-
-        /* CONTACT FORM */
-        .contact-form {
-            padding: 50px 20px;
-            background: var(--gray-100);
-        }
-
-        .contact-form h2 {
-            text-align: center;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--gray-900);
-        }
-
-        .contact-form .subtitle {
-            text-align: center;
-            color: var(--gray-600);
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
-
-        .contact-form form {
-            max-width: 400px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input, .contact-form select {
-            padding: 14px 18px;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus, .contact-form select:focus {
-            outline: none;
-            border-color: var(--green);
-        }
-
-        .contact-form button {
-            background: var(--green);
-            color: white;
-            padding: 16px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: var(--green-dark);
-        }
-
-        /* STICKY BOTTOM CTA */
-        .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 12px 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .sticky-text {
-            font-size: 0.9rem;
-            color: var(--gray-600);
-        }
-
-        .sticky-text strong {
-            color: var(--red);
-        }
-
-        .sticky-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--whatsapp);
-            color: white;
-            padding: 14px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-        }
-
-        .sticky-btn svg { width: 22px; height: 22px; }
-
-        /* FOOTER */
-        .footer {
-            padding: 30px 20px;
-            background: var(--gray-900);
-            color: rgba(255,255,255,0.7);
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        .footer a { color: var(--yellow); text-decoration: none; }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.9rem; }
-            .hero-cta { padding: 16px 28px; font-size: 1rem; }
-            .trust { gap: 15px; font-size: 12px; }
-            .info-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-            .sticky-text { display: none; }
-            .sticky-cta { justify-content: center; }
-        }
-    </style>
 </head>
 <body>
-    <!-- Urgency Banner -->
-    <div class="banner">
-        🔥 TURMAS DE FEVEREIRO — Apenas 12 vagas restantes!
-    </div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://starkids.team/starkids_hero_v2_slow.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">🎓 Metodologia Cambridge</div>
-            <h1><span>Inglês + Futebol</span> para Crianças em <span>Castelo, BH</span></h1>
-            <p class="hero-subtitle">Aulas presenciais para meninos e meninas de 2 a 13 anos na Vila Delícias — Castelo, Manacás, Buritis e Luxemburgo. Diversão garantida!</p>
-
-            <a href="https://wa.me/5531973313443?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20com%20futebol%20na%20Vila%20Del%C3%ADcias%20(Castelo)." class="hero-cta" target="_blank" rel="noopener" onclick="trackWhatsApp('hero')">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Falar no WhatsApp
-            </a>
-            <p class="hero-note">✓ Resposta em minutos • Aula experimental grátis</p>
-        </div>
-    </section>
-
-    <!-- Trust Bar -->
-    <div class="trust">
-        <span>👨‍👩‍👧‍👦 <strong>47</strong> famílias inscritas</span>
-        <span>⭐ <strong>4.9</strong> avaliação</span>
-        <span>📍 <strong>Castelo</strong>, BH</span>
-    </div>
-
-    <!-- Benefits -->
-    <section class="benefits">
-        <h2>Por que os pais escolhem Star Kids?</h2>
-        <div class="benefits-grid">
-            <div class="benefit">
-                <div class="benefit-icon">⚽</div>
-                <h3>Aprende Brincando</h3>
-                <p>Inglês natural através de jogos e futebol. Sem pressão!</p>
-            </div>
-            <div class="benefit">
-                <div class="benefit-icon">🧒</div>
-                <h3>Idade Certa</h3>
-                <p>2-13 anos: janela de ouro para aprender idiomas.</p>
-            </div>
-            <div class="benefit">
-                <div class="benefit-icon">🎓</div>
-                <h3>Método Cambridge</h3>
-                <p>"Play Not Push" — validado cientificamente.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Info -->
-    <section class="info">
-        <div class="info-content">
-            <h2>Informações das Aulas</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <div class="icon">📅</div>
-                    <div class="label">Horários</div>
-                    <div class="value">Consulte horários disponíveis</div>
-                </div>
-                <div class="info-item">
-                    <div class="icon">📍</div>
-                    <div class="label">Local</div>
-                    <div class="value">Castelo, BH</div>
-                </div>
-                <div class="info-item">
-                    <div class="icon">🏠</div>
-                    <div class="label">Bairros</div>
-                    <div class="value">Castelo · Manacás · Buritis · Luxemburgo</div>
-                </div>
-                <div class="info-item">
-                    <div class="icon">💰</div>
-                    <div class="label">A partir de</div>
-                    <div class="value">R$250/mês</div>
-                </div>
-            </div>
-
-            <div class="venue-note">
-                🏟️ Aulas no espaço kids da Vila Delícias - ambiente familiar e seguro<br>
-                <strong>Av. dos Engenheiros, 460, Castelo, Belo Horizonte</strong>
-            </div>
-
-            <a href="https://wa.me/5531973313443?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20com%20futebol%20na%20Vila%20Del%C3%ADcias%20(Castelo)." class="info-cta" target="_blank" rel="noopener" onclick="trackWhatsApp('info')">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Agendar Aula Grátis
-            </a>
-        </div>
-    </section>
-
-    <!-- Testimonial -->
-    <section class="testimonial">
-        <div class="testimonial-content">
-            <p class="testimonial-quote">"Minha filha de 5 anos adora! Em 3 meses já fala cores e números em inglês. Super recomendo!"</p>
-            <p class="testimonial-author">— Fernanda R., mãe da Sofia</p>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form">
-        <h2>📧 Prefere receber informações por email?</h2>
-        <p class="subtitle">Deixe seus dados e entraremos em contato</p>
-        <form action="https://formspree.io/f/manrldeg" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="tel" name="whatsapp" placeholder="WhatsApp (31) 99999-9999" required>
-            <select name="idade_crianca" required>
-                <option value="" disabled selected>Idade da criança</option>
-                <option value="2-3">2-3 anos</option>
-                <option value="3-4">3-4 anos</option>
-                <option value="4-5">4-5 anos</option>
-                <option value="5-6">5-6 anos</option>
-                <option value="6-7">6-7 anos</option>
-                <option value="7-8">7-8 anos</option>
-                <option value="8-9">8-9 anos</option>
-                <option value="9-10">9-10 anos</option>
-                <option value="10-11">10-11 anos</option>
-                <option value="11-12">11-12 anos</option>
-                <option value="12-13">12-13 anos</option>
-            </select>
-            <input type="hidden" name="source" value="parents-vila-delicias-landing">
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p><strong>Star Kids Brasil</strong> • Vila Delícias — Av. dos Engenheiros, 460, Castelo, Belo Horizonte</p>
-        <p><a href="tel:+5531973313443">(31) 97331-3443</a> • <a href="mailto:contato@starkids.team">contato@starkids.team</a></p>
-    </footer>
-
-    <!-- Sticky Bottom CTA -->
-    <div class="sticky-cta">
-        <span class="sticky-text"><strong>12 vagas</strong> restantes</span>
-        <a href="https://wa.me/5531973313443?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20com%20futebol%20na%20Vila%20Del%C3%ADcias%20(Castelo)." class="sticky-btn" target="_blank" rel="noopener" onclick="trackWhatsApp('sticky')">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
+<header class="nav">
+    <div class="wrap">
+        <a class="brand" href="/"><img src="images/logo-main-new.jpg" alt="" width="40" height="40">Star Kids</a>
+        <a class="back" href="/">starkids.team</a>
+        <a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" onclick="trackWhatsApp('nav')">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+            Falar no WhatsApp
         </a>
     </div>
+</header>
 
-    <!-- Tracking Script -->
-    <script>
-        function trackWhatsApp(location) {
-            // Google Analytics 4
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'whatsapp_click', {
-                    'event_category': 'conversion',
-                    'event_label': location
-                });
-                // Google Ads Conversion
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17841101130/TPSxCMrGqOcbEMqyprtC'
-                });
-            }
-            // Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Contact', {content_name: 'WhatsApp Click', content_category: location});
-            }
-        }
-    </script>
+<main>
+
+<section class="hero" aria-labelledby="h1">
+    <svg class="pitch" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="3">
+        <rect x="40" y="30" width="1120" height="580"/><line x1="600" y1="30" x2="600" y2="610"/><circle cx="600" cy="320" r="92"/><circle cx="600" cy="320" r="4" fill="#fff"/>
+        <rect x="40" y="170" width="170" height="300"/><rect x="40" y="240" width="60" height="160"/><rect x="990" y="170" width="170" height="300"/><rect x="1100" y="240" width="60" height="160"/>
+        <path d="M210 260 a60 60 0 0 1 0 120"/><path d="M990 260 a60 60 0 0 0 0 120"/>
+    </svg>
+    <div class="wrap">
+        <p class="hero-kicker">Vila Delícias · Castelo · Belo Horizonte</p>
+        <h1 id="h1">Escolinha de futebol <em>+ inglês</em> no Castelo.</h1>
+        <p class="hero-sub">Para meninos e meninas de 2 a 13 anos. A criança corre, chuta e aprende inglês sem perceber que está estudando. A primeira aula é grátis.</p>
+        <div class="hero-cta">
+            <a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" onclick="trackWhatsApp('hero')">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+                Agendar aula grátis no WhatsApp
+            </a>
+            <p class="note">Resposta em minutos.</p>
+        </div>
+        <div class="proof">
+            <span>Metodologia "Play Not Push" validada por Cambridge</span>
+            <span>Turmas por idade, de 2 a 13 anos</span>
+            <span>Aula experimental sem compromisso</span>
+        </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="h-porque">
+    <div class="wrap">
+        <h2 id="h-porque">Por que os pais escolhem a Star Kids.</h2>
+        <div class="cols">
+            <div class="col"><div class="mark"></div><h3>Futebol de verdade, inglês de verdade</h3><p>Não é aula de inglês com uma bola no canto. É treino — e cada comando, cada cor, cada número do jogo é em inglês.</p></div>
+            <div class="col"><div class="mark"></div><h3>A idade certa</h3><p>Entre 2 e 8 anos o cérebro absorve um segundo idioma sem esforço. A gente aproveita essa janela brincando, não forçando.</p></div>
+            <div class="col"><div class="mark"></div><h3>Zero pressão</h3><p>Nunca "errou, tenta de novo". Sempre "isso!". A criança quer voltar — e é assim que aprende.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-tint" id="onde" aria-labelledby="h-onde">
+    <div class="wrap">
+        <h2 id="h-onde">Onde e quando.</h2>
+        <p class="lede">Na Vila Delícias, com espaço kids e a família por perto. A primeira aula é experimental e grátis.</p>
+        <div class="venues">
+            <div class="venue">
+                <h3>Castelo</h3>
+                <p class="addr">Vila Delícias · Av. dos Engenheiros 460 · Castelo / Manacás</p>
+                <dl><dt>Dias</dt><dd>Consulte no WhatsApp</dd><dt>Horário</dt><dd>Consulte no WhatsApp</dd></dl>
+                <p class="price">R$250<small>/mês · sede premium</small></p>
+            </div>
+            <div class="venue">
+                <h3>Santa Terezinha</h3>
+                <p class="addr">Quadra de Tênis da Cojam · Rua Congonhal 445 · perto de Buritis, Carmo e Serra</p>
+                <dl><dt>Dias</dt><dd>Terças e quintas</dd><dt>Horário</dt><dd>18:00</dd></dl>
+                <p class="price">R$100<small>/mês · 2x por semana</small></p>
+            </div>
+        </div>
+        <p class="note" style="margin-top:28px"><a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero agendar uma aula experimental grátis." target="_blank" rel="noopener" onclick="trackWhatsApp('onde')">Agendar aula experimental grátis</a></p>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="h-como">
+    <div class="wrap">
+        <h2 id="h-como">Como funciona a aula experimental.</h2>
+        <div class="cols">
+            <div class="col"><div class="mark"></div><h3>Você chama no WhatsApp</h3><p>Diz a idade da criança e a sede. O Coach Lucas responde com os dias livres.</p></div>
+            <div class="col"><div class="mark"></div><h3>A criança faz uma aula normal</h3><p>Na turma da idade dela, com os outros alunos. Roupa confortável, tênis e água — o resto é nosso.</p></div>
+            <div class="col"><div class="mark"></div><h3>Vocês decidem</h3><p>Gostou, matricula. Não gostou, sem custo e sem cobrança. Simples assim.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section emcasa" aria-labelledby="h-emcasa">
+    <div class="wrap">
+        <div>
+            <span class="tag">Em breve</span>
+            <h2 id="h-emcasa">Longe das nossas sedes? Vem o Star Kids em Casa.</h2>
+            <p class="lede">12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos, em qualquer cidade. Entre na lista de espera.</p>
+        </div>
+        <a class="btn btn-yellow" href="em-casa.html" onclick="gtag('event','emcasa_promo_click',{page:'parents-vila-delicias'})">Lista de espera</a>
+    </div>
+</section>
+
+<section class="section section-tint" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+        <h2 id="h-faq">Perguntas de quem está chegando.</h2>
+        <div class="faq">
+            <details><summary>Meu filho não fala nada de inglês. Tem problema?</summary><p>Nenhum. Toda turma começa do zero. A criança entende pelo jogo, não pela tradução.</p></details>
+            <details><summary>Com 2 anos já dá?</summary><p>Dá. A turma Little Stars (2–3 anos) é sensorial e o pai ou a mãe fica na quadra junto.</p></details>
+            <details><summary>Precisa saber jogar futebol?</summary><p>Não. A bola é o pretexto. Ninguém fica no banco.</p></details>
+            <details><summary>Como pago?</summary><p>Mensalidade por Pix, direto com o Coach Lucas.</p></details>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="email" aria-labelledby="h-email">
+    <div class="wrap">
+        <div class="split">
+            <div>
+                <h2 id="h-email">Prefere por e-mail ou mensagem?</h2>
+                <p class="lede">Deixa seu contato e a gente te chama. Mas o WhatsApp é mais rápido.</p>
+            </div>
+            <form class="form" action="https://formspree.io/f/manrldeg" method="POST" onsubmit="trackLead()">
+                <input type="hidden" name="_subject" value="Lead — página Vila Delícias (Castelo)">
+                <input type="hidden" name="source" value="parents-vila-delicias-landing">
+                <input type="hidden" name="_next" value="https://starkids.team/thank-you.html">
+                <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+                <h3>Quero saber mais</h3>
+                <label for="nome">Seu nome</label>
+                <input id="nome" name="nome" type="text" required autocomplete="name">
+                <label for="whatsapp">WhatsApp</label>
+                <input id="whatsapp" name="whatsapp" type="tel" required inputmode="tel" placeholder="(31) 9 9999-9999" autocomplete="tel">
+                <label for="idade">Idade da criança</label>
+                <input id="idade" name="idade_crianca" type="text" required placeholder="ex.: 4 anos">
+                <button class="btn btn-yellow" type="submit">Pedir contato</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <span>Star Kids Brasil · Belo Horizonte, MG</span>
+        <span><a href="/">starkids.team</a> · <a href="em-casa.html">Em casa</a> · <a href="blog/index.html">Blog</a></span>
+    </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="trackWhatsApp('float')">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+</a>
+<div class="sticky">
+    <a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" onclick="trackWhatsApp('sticky')">Agendar aula grátis no WhatsApp</a>
+</div>
+
 </body>
 </html>
