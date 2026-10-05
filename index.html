@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Kids Brasil — Aprenda inglês jogando futebol</title>
+    <title><span data-pt="Star Kids Brasil — Aprenda inglês jogando futebol" data-en="Star Kids Brasil — Learn English by playing soccer">Star Kids Brasil — Aprenda inglês jogando futebol</span></title>
     <meta name="description" content="Programa bilíngue premier de futebol + inglês para crianças de 2 a 13 anos. Aulas em Belo Horizonte, parceria com escolas e, em breve, o curso em casa. Metodologia Play Not Push: a criança aprende brincando.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://starkids.team/">
@@ -52,19 +52,60 @@
         <a class="brand" href="/"><img src="images/logo-main-new.jpg" alt="" width="40" height="40">Star Kids</a>
         <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul class="nav-links" id="menu">
-            <li><a href="#metodo">Método</a></li>
-            <li><a href="#programas">Programas</a></li>
-            <li><a href="#onde">Onde</a></li>
-            <li><a href="#escolas">Escolas</a></li>
-            <li><a href="em-casa.html">Em casa</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="#metodo"><span data-pt="Método" data-en="Method">Método</span></a></li>
+            <li><a href="#programas"><span data-pt="Programas" data-en="Programs">Programas</span></a></li>
+            <li><a href="#onde"><span data-pt="Onde" data-en="Locations">Onde</span></a></li>
+            <li><a href="#escolas"><span data-pt="Escolas" data-en="Schools">Escolas</span></a></li>
+            <li><a href="em-casa.html"><span data-pt="Em casa" data-en="At home">Em casa</span></a></li>
+            <li><a href="blog/index.html"><span data-pt="Blog" data-en="Blog">Blog</span></a></li>
         </ul>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language" title="Switch language">EN</button>
         <a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero saber sobre as aulas de inglês com futebol para meu filho(a)." target="_blank" rel="noopener" onclick="trackWhatsApp('nav')">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
             WhatsApp
         </a>
     </div>
 </header>
+
+<style>
+  .lang-toggle {
+    background: transparent;
+    color: var(--green-deep);
+    border: 2px solid var(--green);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all .15s;
+  }
+  .lang-toggle:hover { background: var(--green); color: #fff; }
+</style>
+
+<script>
+  (function () {
+    const btn = document.getElementById('lang-toggle');
+    const KEY = 'starkids_lang';
+    function apply(lang) {
+      document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'pt-BR');
+      document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      btn.textContent = lang === 'en' ? 'PT' : 'EN';
+      try { localStorage.setItem(KEY, lang); } catch(e) {}
+    }
+    let initial = 'pt';
+    try { initial = localStorage.getItem(KEY) || 'pt'; } catch(e) {}
+    apply(initial);
+    btn.addEventListener('click', () => {
+      const cur = btn.textContent.trim() === 'EN' ? 'pt' : 'en';
+      apply(cur === 'pt' ? 'en' : 'pt');
+    });
+  })();
+</script>
 
 <main>
 
@@ -82,26 +123,26 @@
         <path d="M990 260 a60 60 0 0 0 0 120"/>
     </svg>
     <div class="wrap">
-        <p class="hero-kicker">Star Kids Brasil · Belo Horizonte</p>
-        <h1 id="h1">Aprenda inglês <em>jogando futebol.</em></h1>
-        <p class="hero-sub">O programa bilíngue premier para crianças de 2 a 13 anos. A criança corre, chuta e fala inglês sem perceber que está estudando.</p>
+        <p class="hero-kicker"><span data-pt="Star Kids Brasil · Belo Horizonte" data-en="Star Kids Brasil · Belo Horizonte">Star Kids Brasil · Belo Horizonte</span></p>
+        <h1 id="h1"><span data-pt="Aprenda inglês <em>jogando futebol.</em>" data-en="Learn English <em>by playing soccer.</em>">Aprenda inglês <em>jogando futebol.</em></span></h1>
+        <p class="hero-sub"><span data-pt="O programa bilíngue premier para crianças de 2 a 13 anos. A criança corre, chuta e fala inglês sem perceber que está estudando." data-en="The premier bilingual program for kids ages 2 to 13. Children run, kick, and speak English without realizing they're learning.">O programa bilíngue premier para crianças de 2 a 13 anos. A criança corre, chuta e fala inglês sem perceber que está estudando.</span></p>
 
         <div class="doors">
             <a class="door" href="parents-whatsapp.html">
-                <h2>Sou pai ou mãe em BH</h2>
-                <p>Aulas presenciais em Santa Terezinha e no Castelo. Aula experimental grátis.</p>
-                <span class="go">Ver turmas e horários</span>
+                <h2><span data-pt="Sou pai ou mãe em BH" data-en="I'm a parent in BH">Sou pai ou mãe em BH</span></h2>
+                <p><span data-pt="Aulas presenciais em Santa Terezinha e no Castelo. Aula experimental grátis." data-en="In-person classes in Santa Terezinha and Castelo. Free trial class.">Aulas presenciais em Santa Terezinha e no Castelo. Aula experimental grátis.</span></p>
+                <span class="go"><span data-pt="Ver turmas e horários" data-en="See classes and times">Ver turmas e horários</span></span>
             </a>
             <a class="door" href="#escolas">
-                <h2>Sou de uma escola</h2>
-                <p>Levamos currículo, treinadores e material. A escola entra com o espaço.</p>
-                <span class="go">Conhecer a parceria</span>
+                <h2><span data-pt="Sou de uma escola" data-en="I represent a school">Sou de uma escola</span></h2>
+                <p><span data-pt="Levamos currículo, treinadores e material. A escola entra com o espaço." data-en="We bring the curriculum, coaches, and equipment. The school provides the space.">Levamos currículo, treinadores e material. A escola entra com o espaço.</span></p>
+                <span class="go"><span data-pt="Conhecer a parceria" data-en="See the partnership">Conhecer a parceria</span></span>
             </a>
             <a class="door" href="em-casa.html">
-                <span class="soon">Em breve</span>
-                <h2>Quero em casa</h2>
-                <p>12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Em qualquer cidade.</p>
-                <span class="go">Entrar na lista de espera</span>
+                <span class="soon"><span data-pt="Em breve" data-en="Coming soon">Em breve</span></span>
+                <h2><span data-pt="Quero em casa" data-en="I want it at home">Quero em casa</span></h2>
+                <p><span data-pt="12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Em qualquer cidade." data-en="12 video lessons with Coach Lucas for kids ages 2 to 4. In any city.">12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Em qualquer cidade.</span></p>
+                <span class="go"><span data-pt="Entrar na lista de espera" data-en="Join the waitlist">Entrar na lista de espera</span></span>
             </a>
         </div>
     </div>
@@ -109,57 +150,57 @@
 
 <section class="section" id="metodo" aria-labelledby="h-metodo">
     <div class="wrap">
-        <h2 id="h-metodo">Brincar, não pressionar.</h2>
-        <p class="lede">Nossa metodologia é "Play Not Push": brincadeira guiada em vez de instrução direta. A pesquisa em educação infantil é consistente — criança pequena aprende mais fazendo do que ouvindo. Cada aula é um jogo de futebol onde o inglês é a regra.</p>
+        <h2 id="h-metodo"><span data-pt="Brincar, não pressionar." data-en="Play, don't push.">Brincar, não pressionar.</span></h2>
+        <p class="lede"><span data-pt="Nossa metodologia é &quot;Play Not Push&quot;: brincadeira guiada em vez de instrução direta. A pesquisa em educação infantil é consistente — criança pequena aprende mais fazendo do que ouvindo. Cada aula é um jogo de futebol onde o inglês é a regra." data-en="Our methodology is &quot;Play Not Push&quot;: guided play instead of direct instruction. Research in early childhood education is consistent — young children learn more by doing than by listening. Every class is a soccer game where English is the rule.">Nossa metodologia é "Play Not Push": brincadeira guiada em vez de instrução direta. A pesquisa em educação infantil é consistente — criança pequena aprende mais fazendo do que ouvindo. Cada aula é um jogo de futebol onde o inglês é a regra.</span></p>
         <div class="cols">
-            <div class="col"><div class="mark"></div><h3>Correr é aprender</h3><p>Cada palavra nova vem com um movimento: corre pra cor, chuta no número, pula no "jump". O corpo fixa a memória.</p></div>
-            <div class="col"><div class="mark"></div><h3>A pausa é a vez da criança</h3><p>O treinador fala, espera, e a criança responde — tocando, correndo, chutando. Ela nunca é obrigada a falar; ela quer.</p></div>
-            <div class="col"><div class="mark"></div><h3>Só reforço positivo</h3><p>Nunca "errou". Sempre "isso!". Em 12 meses são 176 palavras, 6 temas, zero pressão.</p></div>
+            <div class="col"><div class="mark"></div><h3><span data-pt="Correr é aprender" data-en="Running is learning">Correr é aprender</span></h3><p><span data-pt="Cada palavra nova vem com um movimento: corre pra cor, chuta no número, pula no &quot;jump&quot;. O corpo fixa a memória." data-en="Every new word comes with a movement: run to the color, kick the number, jump on &quot;jump&quot;. The body anchors the memory.">Cada palavra nova vem com um movimento: corre pra cor, chuta no número, pula no "jump". O corpo fixa a memória.</span></p></div>
+            <div class="col"><div class="mark"></div><h3><span data-pt="A pausa é a vez da criança" data-en="The pause is the child's turn">A pausa é a vez da criança</span></h3><p><span data-pt="O treinador fala, espera, e a criança responde — tocando, correndo, chutando. Ela nunca é obrigada a falar; ela quer." data-en="The coach speaks, waits, and the child responds — touching, running, kicking. She's never forced to speak; she wants to.">O treinador fala, espera, e a criança responde — tocando, correndo, chutando. Ela nunca é obrigada a falar; ela quer.</span></p></div>
+            <div class="col"><div class="mark"></div><h3><span data-pt="Só reforço positivo" data-en="Positive reinforcement only">Só reforço positivo</span></h3><p><span data-pt="Nunca &quot;errou&quot;. Sempre &quot;isso!&quot;. Em 12 meses são 176 palavras, 6 temas, zero pressão." data-en="Never &quot;wrong&quot;. Always &quot;that's it!&quot;. In 12 months: 176 words, 6 themes, zero pressure.">Nunca "errou". Sempre "isso!". Em 12 meses são 176 palavras, 6 temas, zero pressão.</span></p></div>
         </div>
     </div>
 </section>
 
 <section class="section section-tint" id="programas" aria-labelledby="h-programas">
     <div class="wrap">
-        <h2 id="h-programas">Uma turma pra cada idade.</h2>
-        <p class="lede">Meninos e meninas, de 2 a 13 anos. A aula cresce com a criança: começa sensorial, com o adulto junto, e termina em partida com frases completas.</p>
+        <h2 id="h-programas"><span data-pt="Uma turma pra cada idade." data-en="A class for every age.">Uma turma pra cada idade.</span></h2>
+        <p class="lede"><span data-pt="Meninos e meninas, de 2 a 13 anos. A aula cresce com a criança: começa sensorial, com o adulto junto, e termina em partida com frases completas." data-en="Boys and girls, ages 2 to 13. The class grows with the child: starts sensory with the adult present, and ends in a real match with full sentences.">Meninos e meninas, de 2 a 13 anos. A aula cresce com a criança: começa sensorial, com o adulto junto, e termina em partida com frases completas.</span></p>
         <div class="rows">
-            <div class="row"><h3>Little Stars</h3><span class="age">2–3 anos</span><span class="dur">45 min</span><p>Sensorial, com pai ou mãe na aula. Cores, bola, primeiros comandos.</p></div>
-            <div class="row"><h3>Rising Stars</h3><span class="age">3–4 anos</span><span class="dur">45 min</span><p>Independência e vocabulário. A criança já responde sozinha.</p></div>
-            <div class="row"><h3>Super Stars</h3><span class="age">5–6 anos</span><span class="dur">50 min</span><p>Prontidão para leitura, trabalho em equipe, jogos com regras em inglês.</p></div>
-            <div class="row"><h3>Shooting Stars</h3><span class="age">7–8 anos</span><span class="dur">60 min</span><p>Frases completas e partida de verdade — com o inglês comandando o jogo.</p></div>
-            <div class="row"><h3>Turma estendida</h3><span class="age">8–13 anos</span><span class="dur">sob consulta</span><p>Fale com a gente no WhatsApp para horários e grupos.</p></div>
+            <div class="row"><h3>Little Stars</h3><span class="age"><span data-pt="2–3 anos" data-en="2–3 years">2–3 anos</span></span><span class="dur"><span data-pt="45 min" data-en="45 min">45 min</span></span><p><span data-pt="Sensorial, com pai ou mãe na aula. Cores, bola, primeiros comandos." data-en="Sensory, with parent in class. Colors, ball, first commands.">Sensorial, com pai ou mãe na aula. Cores, bola, primeiros comandos.</span></p></div>
+            <div class="row"><h3>Rising Stars</h3><span class="age"><span data-pt="3–4 anos" data-en="3–4 years">3–4 anos</span></span><span class="dur">45 min</span><p><span data-pt="Independência e vocabulário. A criança já responde sozinha." data-en="Independence and vocabulary. The child responds on her own.">Independência e vocabulário. A criança já responde sozinha.</span></p></div>
+            <div class="row"><h3>Super Stars</h3><span class="age"><span data-pt="5–6 anos" data-en="5–6 years">5–6 anos</span></span><span class="dur"><span data-pt="50 min" data-en="50 min">50 min</span></span><p><span data-pt="Prontidão para leitura, trabalho em equipe, jogos com regras em inglês." data-en="Reading readiness, teamwork, games with rules in English.">Prontidão para leitura, trabalho em equipe, jogos com regras em inglês.</span></p></div>
+            <div class="row"><h3>Shooting Stars</h3><span class="age"><span data-pt="7–8 anos" data-en="7–8 years">7–8 anos</span></span><span class="dur"><span data-pt="60 min" data-en="60 min">60 min</span></span><p><span data-pt="Frases completas e partida de verdade — com o inglês comandando o jogo." data-en="Full sentences and a real match — with English driving the game.">Frases completas e partida de verdade — com o inglês comandando o jogo.</span></p></div>
+            <div class="row"><h3><span data-pt="Turma estendida" data-en="Extended class">Turma estendida</span></h3><span class="age"><span data-pt="8–13 anos" data-en="8–13 years">8–13 anos</span></span><span class="dur"><span data-pt="sob consulta" data-en="on request">sob consulta</span></span><p><span data-pt="Fale com a gente no WhatsApp para horários e grupos." data-en="Talk to us on WhatsApp for schedules and groups.">Fale com a gente no WhatsApp para horários e grupos.</span></p></div>
         </div>
         <div class="themes" aria-label="Temas do currículo de 12 meses">
-            <div class="theme"><b>Meses 1–2</b><span>Cores e Números</span></div>
-            <div class="theme"><b>Meses 3–4</b><span>Animais e Frutas</span></div>
-            <div class="theme"><b>Meses 5–6</b><span>Corpo e Ações</span></div>
-            <div class="theme"><b>Meses 7–8</b><span>Tempo e Roupas</span></div>
-            <div class="theme"><b>Meses 9–10</b><span>Comida e Família</span></div>
-            <div class="theme"><b>Meses 11–12</b><span>Revisão e Festa</span></div>
+            <div class="theme"><b><span data-pt="Meses 1–2" data-en="Months 1–2">Meses 1–2</span></b><span><span data-pt="Cores e Números" data-en="Colors and Numbers">Cores e Números</span></span></div>
+            <div class="theme"><b><span data-pt="Meses 3–4" data-en="Months 3–4">Meses 3–4</span></b><span><span data-pt="Animais e Frutas" data-en="Animals and Fruits">Animais e Frutas</span></span></div>
+            <div class="theme"><b><span data-pt="Meses 5–6" data-en="Months 5–6">Meses 5–6</span></b><span><span data-pt="Corpo e Ações" data-en="Body and Actions">Corpo e Ações</span></span></div>
+            <div class="theme"><b><span data-pt="Meses 7–8" data-en="Months 7–8">Meses 7–8</span></b><span><span data-pt="Tempo e Roupas" data-en="Weather and Clothes">Tempo e Roupas</span></span></div>
+            <div class="theme"><b><span data-pt="Meses 9–10" data-en="Months 9–10">Meses 9–10</span></b><span><span data-pt="Comida e Família" data-en="Food and Family">Comida e Família</span></span></div>
+            <div class="theme"><b><span data-pt="Meses 11–12" data-en="Months 11–12">Meses 11–12</span></b><span><span data-pt="Revisão e Festa" data-en="Review and Celebration">Revisão e Festa</span></span></div>
         </div>
     </div>
 </section>
 
 <section class="section" id="onde" aria-labelledby="h-onde">
     <div class="wrap">
-        <h2 id="h-onde">Onde a gente joga.</h2>
-        <p class="lede">Duas sedes em Belo Horizonte. A primeira aula é experimental e grátis — é só chamar no WhatsApp.</p>
+        <h2 id="h-onde"><span data-pt="Onde a gente joga." data-en="Where we play.">Onde a gente joga.</span></h2>
+        <p class="lede"><span data-pt="Duas sedes em Belo Horizonte. A primeira aula é experimental e grátis — é só chamar no WhatsApp." data-en="Two locations in Belo Horizonte. The first class is a free trial — just message us on WhatsApp.">Duas sedes em Belo Horizonte. A primeira aula é experimental e grátis — é só chamar no WhatsApp.</span></p>
         <div class="venues">
             <div class="venue">
                 <h3>Santa Terezinha</h3>
                 <p class="addr">Quadra de Tênis da Cojam · Rua Congonhal 445</p>
-                <dl><dt>Dias</dt><dd>Terças e quintas</dd><dt>Horário</dt><dd>18:00</dd></dl>
-                <p class="price">R$100<small>/mês · 2x por semana</small></p>
+                <dl><dt><span data-pt="Dias" data-en="Days">Dias</span></dt><dd><span data-pt="Terças e quintas" data-en="Tuesdays and Thursdays">Terças e quintas</span></dd><dt><span data-pt="Horário" data-en="Time">Horário</span></dt><dd>18:00</dd></dl>
+                <p class="price">R$100<small><span data-pt="/mês · 2x por semana" data-en="/month · 2x per week">/mês · 2x por semana</span></small></p>
             </div>
             <div class="venue">
                 <h3>Castelo</h3>
                 <p class="addr">Vila Delícias · Av. dos Engenheiros 460</p>
-                <dl><dt>Dias</dt><dd>Consulte</dd><dt>Horário</dt><dd>Consulte</dd></dl>
-                <p class="price">R$250<small>/mês · sede premium</small></p>
+                <dl><dt>Dias</dt><dd><span data-pt="Consulte" data-en="Ask us">Consulte</span></dd><dt>Horário</dt><dd>Consulte</dd></dl>
+                <p class="price">R$250<small><span data-pt="/mês · sede premium" data-en="/month · premium location">/mês · sede premium</span></small></p>
             </div>
         </div>
-        <p class="note" style="margin-top:28px"><a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero agendar uma aula experimental grátis." target="_blank" rel="noopener" onclick="trackWhatsApp('onde')">Agendar aula experimental grátis</a></p>
+        <p class="note" style="margin-top:28px"><a class="btn btn-wa" href="https://wa.me/5531973313443?text=Olá! Quero agendar uma aula experimental grátis." target="_blank" rel="noopener" onclick="trackWhatsApp('onde')"><span data-pt="Agendar aula experimental grátis" data-en="Book a free trial class">Agendar aula experimental grátis</span></a></p>
     </div>
 </section>
 
@@ -167,15 +208,15 @@
     <div class="wrap">
         <div class="split">
             <div>
-                <h2 id="h-escolas">Para escolas: parceria flexível.</h2>
-                <p class="lede">O Star Kids vira a atividade extracurricular bilíngue da sua escola. A gente entra com tudo; a escola entra com o espaço e os alunos.</p>
+                <h2 id="h-escolas"><span data-pt="Para escolas: parceria flexível." data-en="For schools: a flexible partnership.">Para escolas: parceria flexível.</span></h2>
+                <p class="lede"><span data-pt="O Star Kids vira a atividade extracurricular bilíngue da sua escola. A gente entra com tudo; a escola entra com o espaço e os alunos." data-en="Star Kids becomes your school's bilingual extracurricular activity. We bring everything; the school provides the space and students.">O Star Kids vira a atividade extracurricular bilíngue da sua escola. A gente entra com tudo; a escola entra com o espaço e os alunos.</span></p>
                 <ul class="gives">
-                    <li>Currículo completo de 12 meses, pronto para aplicar</li>
-                    <li>Treinadores Star Kids formados na metodologia</li>
-                    <li>Bolas, cones, coletes e material didático</li>
-                    <li>Adaptável à estrutura de turmas que a escola já tem</li>
-                    <li>Relatório mensal de vocabulário para as famílias</li>
-                    <li>Apresentação e aula demonstrativa sem custo</li>
+                    <li><span data-pt="Currículo completo de 12 meses, pronto para aplicar" data-en="Complete 12-month curriculum, ready to use">Currículo completo de 12 meses, pronto para aplicar</span></li>
+                    <li><span data-pt="Treinadores Star Kids formados na metodologia" data-en="Star Kids coaches trained in our method">Treinadores Star Kids formados na metodologia</span></li>
+                    <li><span data-pt="Bolas, cones, coletes e material didático" data-en="Balls, cones, vests, and teaching materials">Bolas, cones, coletes e material didático</span></li>
+                    <li><span data-pt="Adaptável à estrutura de turmas que a escola já tem" data-en="Adaptable to the class structure your school already has">Adaptável à estrutura de turmas que a escola já tem</span></li>
+                    <li><span data-pt="Relatório mensal de vocabulário para as famílias" data-en="Monthly vocabulary report for families">Relatório mensal de vocabulário para as famílias</span></li>
+                    <li><span data-pt="Apresentação e aula demonstrativa sem custo" data-en="Free presentation and demonstration class">Apresentação e aula demonstrativa sem custo</span></li>
                 </ul>
             </div>
             <form class="form" action="https://formspree.io/f/manrldeg" method="POST" onsubmit="trackFormSubmit()">
@@ -183,19 +224,19 @@
                 <input type="hidden" name="source" value="home-escolas">
                 <input type="hidden" name="_next" value="https://starkids.team/thank-you.html">
                 <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
-                <h3>Agendar uma demonstração</h3>
-                <p>Respondemos em até um dia útil.</p>
-                <label for="school">Escola</label>
+                <h3><span data-pt="Agendar uma demonstração" data-en="Book a demonstration">Agendar uma demonstração</span></h3>
+                <p><span data-pt="Respondemos em até um dia útil." data-en="We respond within one business day.">Respondemos em até um dia útil.</span></p>
+                <label for="school"><span data-pt="Escola" data-en="School">Escola</span></label>
                 <input id="school" name="school" type="text" required>
-                <label for="contact">Seu nome</label>
+                <label for="contact"><span data-pt="Seu nome" data-en="Your name">Seu nome</span></label>
                 <input id="contact" name="contact" type="text" required autocomplete="name">
-                <label for="email">E-mail</label>
+                <label for="email"><span data-pt="E-mail" data-en="Email">E-mail</span></label>
                 <input id="email" name="email" type="email" required autocomplete="email">
-                <label for="phone">WhatsApp</label>
+                <label for="phone"><span data-pt="WhatsApp" data-en="WhatsApp">WhatsApp</span></label>
                 <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
-                <label for="message">Quantos alunos e quais idades?</label>
+                <label for="message"><span data-pt="Quantos alunos e quais idades?" data-en="How many students and what ages?">Quantos alunos e quais idades?</span></label>
                 <textarea id="message" name="message"></textarea>
-                <button class="btn btn-yellow" type="submit">Pedir demonstração</button>
+                <button class="btn btn-yellow" type="submit"><span data-pt="Pedir demonstração" data-en="Request demonstration">Pedir demonstração</span></button>
             </form>
         </div>
     </div>
@@ -205,25 +246,25 @@
     <div class="wrap">
         <div>
             <span class="tag">Em breve</span>
-            <h2 id="h-emcasa">Star Kids em Casa: o mesmo método, no seu quintal.</h2>
-            <p class="lede">12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Duas palavras por lição, um gesto, um jogo. Só precisa de uma bola.</p>
+            <h2 id="h-emcasa"><span data-pt="Star Kids em Casa: o mesmo método, no seu quintal." data-en="Star Kids at Home: the same method, in your backyard.">Star Kids em Casa: o mesmo método, no seu quintal.</span></h2>
+            <p class="lede"><span data-pt="12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Duas palavras por lição, um gesto, um jogo. Só precisa de uma bola." data-en="12 video lessons with Coach Lucas for kids ages 2 to 4. Two words per lesson, one gesture, one game. You just need a ball.">12 vídeo-aulas com o Coach Lucas para crianças de 2 a 4 anos. Duas palavras por lição, um gesto, um jogo. Só precisa de uma bola.</span></p>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap">
             <a class="btn btn-yellow" href="em-casa.html">Entrar na lista de espera</a>
-            <a class="btn btn-chalk" href="em-casa/preco.html">Ver preços</a>
+            <a class="btn btn-chalk" href="em-casa/preco.html"><span data-pt="Ver preços" data-en="See pricing">Ver preços</span></a>
         </div>
     </div>
 </section>
 
 <section class="section" id="faq" aria-labelledby="h-faq">
     <div class="wrap">
-        <h2 id="h-faq">Perguntas de quem está chegando.</h2>
+        <h2 id="h-faq"><span data-pt="Perguntas de quem está chegando." data-en="Questions from new parents.">Perguntas de quem está chegando.</span></h2>
         <div class="faq">
-            <details><summary>Meu filho não fala nada de inglês. Tem problema?</summary><p>Nenhum. Toda turma começa do zero. A primeira aula já é em inglês — e a criança entende pelo jogo, não pela tradução.</p></details>
-            <details><summary>Precisa saber jogar futebol?</summary><p>Não. A bola é o pretexto. O que importa é correr, tocar, chutar e se divertir. Ninguém fica no banco.</p></details>
-            <details><summary>Como é a aula experimental?</summary><p>É uma aula normal, na turma da idade da criança, sem custo e sem compromisso. Você chama no WhatsApp, a gente marca o dia.</p></details>
-            <details><summary>Quanto tempo até a criança falar alguma coisa?</summary><p>Nas primeiras semanas ela já responde a comandos — "kick", "run", "stop". Palavras soltas vêm no primeiro mês; frases, nas turmas maiores, ao longo do ano.</p></details>
-            <details><summary>O que a criança precisa levar?</summary><p>Roupa confortável, tênis e água. Bola, cones e coletes são nossos.</p></details>
+            <details><summary><span data-pt="Meu filho não fala nada de inglês. Tem problema?" data-en="My child doesn't speak any English. Is that a problem?">Meu filho não fala nada de inglês. Tem problema?</span></summary><p><span data-pt="Nenhum. Toda turma começa do zero. A primeira aula já é em inglês — e a criança entende pelo jogo, não pela tradução." data-en="Not at all. Every class starts from zero. The first class is already in English — and the child understands through the game, not through translation.">Nenhum. Toda turma começa do zero. A primeira aula já é em inglês — e a criança entende pelo jogo, não pela tradução.</span></p></details>
+            <details><summary><span data-pt="Precisa saber jogar futebol?" data-en="Do they need to know how to play soccer?">Precisa saber jogar futebol?</span></summary><p><span data-pt="Não. A bola é o pretexto. O que importa é correr, tocar, chutar e se divertir. Ninguém fica no banco." data-en="No. The ball is the pretext. What matters is running, touching, kicking, and having fun. Nobody sits on the bench.">Não. A bola é o pretexto. O que importa é correr, tocar, chutar e se divertir. Ninguém fica no banco.</span></p></details>
+            <details><summary><span data-pt="Como é a aula experimental?" data-en="What's the trial class like?">Como é a aula experimental?</span></summary><p><span data-pt="É uma aula normal, na turma da idade da criança, sem custo e sem compromisso. Você chama no WhatsApp, a gente marca o dia." data-en="It's a normal class, with the age-group that fits your child, free and no commitment. Message us on WhatsApp and we'll book a day.">É uma aula normal, na turma da idade da criança, sem custo e sem compromisso. Você chama no WhatsApp, a gente marca o dia.</span></p></details>
+            <details><summary><span data-pt="Quanto tempo até a criança falar alguma coisa?" data-en="How long until my child says something?">Quanto tempo até a criança falar alguma coisa?</span></summary><p><span data-pt="Nas primeiras semanas ela já responde a comandos — &quot;kick&quot;, &quot;run&quot;, &quot;stop&quot;. Palavras soltas vêm no primeiro mês; frases, nas turmas maiores, ao longo do ano." data-en="In the first weeks they already respond to commands — &quot;kick&quot;, &quot;run&quot;, &quot;stop&quot;. Individual words come in the first month; sentences, in older groups, over the year.">Nas primeiras semanas ela já responde a comandos — "kick", "run", "stop". Palavras soltas vêm no primeiro mês; frases, nas turmas maiores, ao longo do ano.</span></p></details>
+            <details><summary><span data-pt="O que a criança precisa levar?" data-en="What does my child need to bring?">O que a criança precisa levar?</span></summary><p><span data-pt="Roupa confortável, tênis e água. Bola, cones e coletes são nossos." data-en="Comfortable clothes, sneakers, and water. We provide the ball, cones, and vests.">Roupa confortável, tênis e água. Bola, cones e coletes são nossos.</span></p></details>
         </div>
     </div>
 </section>
@@ -231,14 +272,14 @@
 <section class="section contact" id="contato" aria-labelledby="h-contato">
     <div class="wrap">
         <div>
-            <h2 id="h-contato">Vamos conversar.</h2>
-            <p class="lede">O jeito mais rápido é o WhatsApp do Coach Lucas. Respondemos em minutos durante o dia.</p>
+            <h2 id="h-contato"><span data-pt="Vamos conversar." data-en="Let's talk.">Vamos conversar.</span></h2>
+            <p class="lede"><span data-pt="O jeito mais rápido é o WhatsApp do Coach Lucas. Respondemos em minutos durante o dia." data-en="The fastest way is Coach Lucas's WhatsApp. We respond in minutes during the day.">O jeito mais rápido é o WhatsApp do Coach Lucas. Respondemos em minutos durante o dia.</span></p>
         </div>
         <div class="ways">
-            <a href="https://wa.me/5531973313443" target="_blank" rel="noopener" onclick="trackWhatsApp('contato')">+55 31 97331-3443 <small>WhatsApp · Coach Lucas</small></a>
-            <a href="mailto:lucas@starkids.team">lucas@starkids.team <small>Pais e escolas em BH</small></a>
-            <a href="mailto:jason@starkids.team">jason@starkids.team <small>Parcerias e imprensa</small></a>
-            <a href="https://instagram.com/brazilstarkids" target="_blank" rel="noopener">@brazilstarkids <small>Instagram</small></a>
+            <a href="https://wa.me/5531973313443" target="_blank" rel="noopener" onclick="trackWhatsApp('contato')">+55 31 97331-3443 <small><span data-pt="WhatsApp · Coach Lucas" data-en="WhatsApp · Coach Lucas">WhatsApp · Coach Lucas</span></small></a>
+            <a href="mailto:lucas@starkids.team">lucas@starkids.team <small><span data-pt="Pais e escolas em BH" data-en="Parents and schools in BH">Pais e escolas em BH</span></small></a>
+            <a href="mailto:jason@starkids.team">jason@starkids.team <small><span data-pt="Parcerias e imprensa" data-en="Partnerships and press">Parcerias e imprensa</span></small></a>
+            <a href="https://instagram.com/brazilstarkids" target="_blank" rel="noopener">@brazilstarkids <small><span data-pt="Instagram" data-en="Instagram">Instagram</span></small></a>
         </div>
     </div>
 </section>
@@ -248,7 +289,7 @@
 <footer class="footer">
     <div class="wrap">
         <span>© <span id="y"></span> Star Kids Brasil · Belo Horizonte, MG</span>
-        <span><a href="blog/index.html">Blog</a> · <a href="game/">Jogo Kick &amp; Learn</a> · <a href="enroll.html">Matrícula</a> · <a href="em-casa.html">Em casa</a> · <a href="em-casa/preco.html">Preços</a> · <a href="legal/termos.html">Termos</a> · <a href="legal/privacidade.html">Privacidade</a></span>
+        <span><a href="blog/index.html">Blog</a> · <a href="game/"><span data-pt="Jogo Kick &amp; Learn" data-en="Game Kick &amp; Learn">Jogo Kick &amp; Learn</span></a> · <a href="enroll.html"><span data-pt="Matrícula" data-en="Enrollment">Matrícula</span></a> · <a href="em-casa.html">Em casa</a> · <a href="em-casa/preco.html"><span data-pt="Preços" data-en="Pricing">Preços</span></a> · <a href="legal/termos.html"><span data-pt="Termos" data-en="Terms">Termos</span></a> · <a href="legal/privacidade.html"><span data-pt="Privacidade" data-en="Privacy">Privacidade</span></a></span>
     </div>
 </footer>
 
