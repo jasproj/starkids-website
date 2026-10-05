@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Módulo · Star Kids em Casa</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../home.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app-wrap">
+
+  <div class="breadcrumb" style="margin-bottom:14px"><a href="index.html">← Todos os módulos</a></div>
+
+  <div class="app-head">
+    <div>
+      <div class="brand" id="mod-pill">Módulo</div>
+      <h1 id="mod-title">—</h1>
+    </div>
+    <div class="totals">
+      <div class="stat"><span class="n" id="mod-done">0</span><span class="l">Lições</span></div>
+      <div class="stat"><span class="n" id="mod-pct">0%</span><span class="l">Completo</span></div>
+    </div>
+  </div>
+
+  <div id="demo-banner" class="demo-banner" style="display:none">
+    <strong>Modo demonstração.</strong> Só a Lição 1 do Módulo 1 está liberada.
+    <a href="../preco.html">Liberar tudo →</a>
+  </div>
+
+  <div class="lessons" id="lessons"></div>
+
+</div>
+
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+<script>
+  const course = window.STARKIDS_COURSE;
+  const SK = window.StarKids;
+
+  const mN = parseInt(new URL(location.href).searchParams.get('m') || '1', 10);
+  const module = course.modules.find(x => x.n === mN);
+  if (!module) { location.href = 'index.html'; }
+
+  document.title = `Módulo ${mN}: ${module.title} · Star Kids em Casa`;
+  document.getElementById('mod-pill').textContent = 'Módulo ' + mN;
+  document.getElementById('mod-title').textContent = module.title;
+
+  const prog = SK.moduleProgress(mN);
+  document.getElementById('mod-done').textContent = prog.done + ' / ' + prog.total;
+  document.getElementById('mod-pct').textContent = prog.pct + '%';
+
+  if (!SK.hasFullAccess()) {
+    document.getElementById('demo-banner').style.display = 'block';
+  }
+
+  // If not purchased and not in Module 1, bounce
+  if (!SK.hasFullAccess() && mN !== 1) {
+    document.getElementById('lessons').innerHTML = `
+      <div class="locked-page" style="grid-column: 1 / -1">
+        <div class="lock-big">🔒</div>
+        <h2>Este módulo abre com a compra</h2>
+        <p>Você pode experimentar a Lição 1 do Módulo 1 gratuitamente. Pra desbloquear os 6 módulos completos (72 lições, 95 palavras), conheça o curso completo.</p>
+        <a href="../preco.html" class="btn-primary" style="padding:12px 24px; border-radius:999px; text-decoration:none; display:inline-block">Ver preços</a>
+      </div>
+    `;
+  } else {
+    const wrap = document.getElementById('lessons');
+    module.lessons.forEach(l => {
+      const unlocked = SK.isLessonUnlocked(mN, l.n);
+      const completed = SK.isCompleted(mN, l.n);
+      const a = document.createElement('a');
+      a.className = 'lesson-card'
+        + (unlocked ? '' : ' locked')
+        + (completed ? ' completed' : '')
+        + (l.free ? ' free' : '');
+      a.href = unlocked ? `licao.html?m=${mN}&l=${l.n}` : '../preco.html';
+      const wordsHtml = l.words.length ? `<p class="words">${l.words.join(' · ')}</p>` : '<p class="words">Revisão / celebração</p>';
+      a.innerHTML = `
+        ${!unlocked ? '<span class="lock">🔒</span>' : ''}
+        <span class="star">⭐</span>
+        <div class="lesson-n">Lição ${l.n}</div>
+        <h3>${l.title}</h3>
+        ${wordsHtml}
+      `;
+      wrap.appendChild(a);
+    });
+  }
+</script>
+</body>
+</html>
