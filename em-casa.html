@@ -66,7 +66,10 @@
         .hero h1 { font-size: clamp(32px, 6vw, 54px); font-weight: 700; margin-bottom: 14px; }
         .hero h1 span { color: var(--yellow); }
         .hero p.lead { font-size: clamp(17px, 2.4vw, 21px); max-width: 640px; margin: 0 auto 28px; opacity: .95; }
-        .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 32px; }
+        .cast { display: flex; justify-content: center; align-items: flex-end; margin: 0 auto 22px; }
+        .cast img { height: clamp(120px, 22vw, 200px); width: auto; filter: drop-shadow(0 6px 10px rgba(0,0,0,.28)); }
+        .cast img.mid { height: clamp(145px, 27vw, 245px); margin: 0 -6px; position: relative; z-index: 1; }
+        .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 24px; }
         .facts span { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 17px; padding: 16px 28px; border-radius: 999px; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s, box-shadow .15s; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.18); }
@@ -146,18 +149,20 @@
         <div class="wrap">
             <div class="soon"><span class="dot"></span> Em breve · Lista de espera aberta</div>
             <h1>Star Kids <span>em Casa</span></h1>
-            <p class="lead">Seu filho ou filha aprende inglês <strong>jogando futebol</strong> — na sala, no quintal, onde der. 12 vídeo-aulas com o Coach Lucas. Só precisa de uma bola.</p>
+            <p class="lead">Seu filho ou filha aprende inglês <strong>jogando futebol</strong> com o Coach Lucas, a Evelyn e o Capy. Só precisa de uma bola.</p>
+            <div class="cast">
+                <img src="em-casa/app/img/evelyn-cheer.png" alt="Evelyn, a amiga que faz os jogos com a criança" width="177" height="350">
+                <img class="mid" src="em-casa/app/img/lucas-point.png" alt="Coach Lucas, o professor de futebol e inglês" width="291" height="350">
+                <img src="em-casa/app/img/capy-thumbs.png" alt="Capy, a capivara que a criança ensina" width="243" height="350">
+            </div>
             <div class="facts">
                 <span>🎥 12 lições de 4–5 min</span>
-                <span>🗣️ 24 palavras em inglês</span>
                 <span>🧒 2 a 4 anos</span>
-                <span>🎓 Metodologia Play Not Push</span>
             </div>
-            <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:8px">
+            <div style="display:flex; justify-content:center">
                 <a href="#lista" class="btn btn-yellow" onclick="gtag('event','emcasa_hero_cta')">Quero entrar na lista de espera</a>
-                <a href="em-casa/preco.html" class="btn" style="background:transparent; color:var(--white); border:2px solid rgba(255,255,255,.4)" onclick="gtag('event','emcasa_hero_preco')">Ver preços e aulas →</a>
             </div>
-            <p style="margin-top:14px; font-size:14px; opacity:.8"><a href="em-casa/app/" style="color:var(--yellow); text-decoration:underline" onclick="gtag('event','emcasa_hero_preview')">Pré-visualize a área do aluno</a> · <a href="em-casa/app/licao.html?m=1&amp;l=1" style="color:var(--yellow); text-decoration:underline" onclick="gtag('event','emcasa_hero_free_lesson')">Veja a Lição 1 grátis</a></p>
+            <p style="margin-top:16px; font-size:15px"><a href="em-casa/preco.html" style="color:var(--white); text-decoration:underline" onclick="gtag('event','emcasa_hero_preco')">Ver preços e aulas</a> · <a href="em-casa/app/licao.html?m=1&amp;l=1" style="color:var(--yellow); text-decoration:underline" onclick="gtag('event','emcasa_hero_free_lesson')">Veja a Lição 1 grátis</a></p>
         </div>
     </section>
 
