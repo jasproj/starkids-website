@@ -341,3 +341,19 @@ body { background: #FAFAF7; min-height: 100vh; }
   .lesson-detail { padding: 22px 20px; }
   .lesson-detail h1 { font-size: 24px; }
 }
+
+/* Characters */
+.placeholder{position:relative;overflow:hidden}
+.host-img{width:150px;height:100px;object-fit:cover;border-radius:16px;border:4px solid var(--yellow);margin-bottom:10px}
+.buddy-note{display:flex;gap:14px;align-items:center;background:var(--green-tint);border-radius:16px;padding:12px 16px;margin:16px 0}
+.buddy-note img{width:84px;height:84px;object-fit:cover;border-radius:50%;border:4px solid var(--yellow);flex:none}
+.buddy-note p{margin:0;line-height:1.45}
+.welcome{display:flex;gap:16px;align-items:center;background:#fff;border:2px solid var(--yellow);border-radius:20px;padding:14px 18px;margin:0 0 20px}
+.welcome img{width:96px;height:96px;object-fit:cover;border-radius:50%;border:4px solid var(--yellow);flex:none}
+.welcome p{margin:0;line-height:1.5}
+.celebrate{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px}
+.celebrate-card{background:#fff;border-radius:24px;padding:24px;max-width:380px;text-align:center}
+.celebrate-card img{width:100%;border-radius:16px;margin-bottom:12px}
+.celebrate-card h2{font-family:'Fredoka',sans-serif;color:var(--green-deep);margin:0 0 4px}
+.host-img{display:block;margin:0 auto 10px}
+.celebrate-card .btn-primary{background:var(--green);color:#fff;border:0;border-radius:999px;padding:12px 28px;font:600 16px Poppins,sans-serif;cursor:pointer}
