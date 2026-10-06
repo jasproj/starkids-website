@@ -4,6 +4,8 @@
   var posBottom = document.currentScript && document.currentScript.getAttribute('data-pos') === 'bottom';
   var lang = 'pt';
   try { lang = localStorage.getItem(KEY) || 'pt'; } catch (e) {}
+  var q = (location.search.match(/[?&]lang=(en|pt)/) || [])[1];
+  if (q) lang = q;
   var root = document.documentElement;
   var titlePt = document.title;
 
