@@ -59,6 +59,7 @@
     area.innerHTML = `
       <div class="player">
         <div class="placeholder">
+          <img class="host-img" src="img/lucas-point.jpg" alt="Coach Lucas apontando">
           <div class="play">▶</div>
           <h2>Vídeo em produção</h2>
           <p>O Coach Lucas está filmando. Essa aula entra aqui em breve.</p>
@@ -73,6 +74,7 @@
         <h1>${lesson.title}</h1>
         ${lesson.words.length ? '<p style="color:#666; margin:0">Palavras novas desta lição:</p>' : '<p style="color:#666; margin:0">Revisão e celebração — sem palavras novas.</p>'}
         ${wordsHtml}
+        <div class="buddy-note"><img src="img/capy-thumbs.jpg" alt="Capy"><p><strong>Capy</strong> está esperando. Ele quer aprender ${lesson.words.length ? 'essas palavras' : 'tudo de novo'} com seu filho. <em>Seu filho ensina o Capy!</em></p></div>
         <div class="lesson-actions">
           <button id="mark-btn" class="btn-primary">${completed ? '✓ Concluída' : 'Marcar como concluída ⭐'}</button>
           <a href="${nextL}" class="btn-secondary">Próxima lição →</a>
@@ -83,7 +85,11 @@
 
     document.getElementById('mark-btn').addEventListener('click', () => {
       SK.markCompleted(mN, lN);
-      location.reload();
+      const o = document.createElement('div');
+      o.className = 'celebrate';
+      o.innerHTML = `<div class="celebrate-card"><img src="img/capy-kick.jpg" alt="Capy chutando"><h2>Goooool! ⭐</h2><p>Lição ${lN} concluída. O Capy adorou!</p><button class="btn-primary" id="cel-ok">Continuar</button></div>`;
+      document.body.appendChild(o);
+      document.getElementById('cel-ok').addEventListener('click', () => location.reload());
     });
   }
 </script>
